@@ -103,7 +103,6 @@
 - (IBAction)push_clear:(id)sender {
     
     if (calc_model != nil) {
-        //[calc_model release];
         calc_model = nil;
     }
     
@@ -125,11 +124,23 @@
         [_s_button setState:0];
         [_calc_display setStringValue:@""];
     }
-        if ([[_calc_display stringValue] rangeOfString:@"."].location != 0) {
+    
+    NSError *error = NULL;
+    NSRegularExpression *regex = [NSRegularExpression
+                                  regularExpressionWithPattern:@"[.]"
+                                  options:NSRegularExpressionCaseInsensitive
+                                  error:&error];
+    NSUInteger numMatches = [regex numberOfMatchesInString:[_calc_display stringValue] options:0 range:NSMakeRange(0, [[_calc_display stringValue] length])];
+
+    if (numMatches == 0) {
         [_calc_display setStringValue:[[_calc_display stringValue] stringByAppendingString:@"."]];
     }
     
     /*
+    if ([[_calc_display stringValue] rangeOfString:@"."].location != 0) {
+        [_calc_display setStringValue:[[_calc_display stringValue] stringByAppendingString:@"."]];
+    }
+     
      NSString *someRegexp = @"[.]";
      NSPredicate *myTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", someRegexp];
 
