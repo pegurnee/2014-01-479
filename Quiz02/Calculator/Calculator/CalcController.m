@@ -101,12 +101,12 @@
 }
 
 - (IBAction)push_clear:(id)sender {
-    /*
+    
     if (calc_model != nil) {
         //[calc_model release];
         calc_model = nil;
     }
-     */
+    
     
     [_calc_display setIntValue:0];
     
@@ -125,9 +125,10 @@
         [_s_button setState:0];
         [_calc_display setStringValue:@""];
     }
-        if (![[_calc_display stringValue] rangeOfString:@"."].location != -1) {
+        if ([[_calc_display stringValue] rangeOfString:@"."].location != 0) {
         [_calc_display setStringValue:[[_calc_display stringValue] stringByAppendingString:@"."]];
     }
+    
     /*
      NSString *someRegexp = @"[.]";
      NSPredicate *myTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", someRegexp];
@@ -143,6 +144,10 @@
     calc_model.first_call = YES;
 }
 
+- (IBAction)push_plusMinus:(id)sender {
+    
+}
+
 - (void) push_number: (id) sender {
     if ([self sign_pushed]) {
         [_a_button setState:0];
@@ -152,10 +157,12 @@
         [_calc_display setStringValue:@""];
     }
     
-    if ([[_calc_display stringValue] compare:@"0"] && !calc_model.first_call)
+    if ([[_calc_display stringValue] compare:@"0"] && !calc_model.first_call) {
         [_calc_display setStringValue:[[_calc_display stringValue] stringByAppendingString:[sender title]]];
-    else
+    } else {
         [_calc_display setStringValue:[sender title]];
+        calc_model.first_call = NO;
+    }
     
 }
 - (BOOL) sign_pushed {

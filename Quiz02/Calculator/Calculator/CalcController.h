@@ -40,6 +40,7 @@
 - (IBAction)push_clear:(id)sender;
 - (IBAction)push_decimal:(id)sender;
 - (IBAction)push_equal:(id)sender;
+- (IBAction)push_plusMinus:(id)sender;
 
 //other button events
 -(void) push_number: (id) sender;
