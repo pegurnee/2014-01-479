@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		C5B2E6A418A0540600852413 /* myCalc.png in Resources */ = {isa = PBXBuildFile; fileRef = C5B2E6A218A0540600852413 /* myCalc.png */; };
 		C5B2E6A518A0540600852413 /* macCalc.png in Resources */ = {isa = PBXBuildFile; fileRef = C5B2E6A318A0540600852413 /* macCalc.png */; };
-		C5B2E6A718A059F300852413 /* File in Resources */ = {isa = PBXBuildFile; fileRef = C5B2E6A618A059F300852413 /* File */; };
 		C5B2E6AA18A05A4D00852413 /* CalcController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B2E6A918A05A4D00852413 /* CalcController.m */; };
 		C5B7D7A3189B22AE006B4A6C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5B7D7A2189B22AE006B4A6C /* Cocoa.framework */; };
 		C5B7D7AD189B22AE006B4A6C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C5B7D7AB189B22AE006B4A6C /* InfoPlist.strings */; };
@@ -38,7 +37,6 @@
 /* Begin PBXFileReference section */
 		C5B2E6A218A0540600852413 /* myCalc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myCalc.png; sourceTree = "<group>"; };
 		C5B2E6A318A0540600852413 /* macCalc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = macCalc.png; sourceTree = "<group>"; };
-		C5B2E6A618A059F300852413 /* File */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
 		C5B2E6A818A05A4D00852413 /* CalcController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalcController.h; sourceTree = "<group>"; };
 		C5B2E6A918A05A4D00852413 /* CalcController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalcController.m; sourceTree = "<group>"; };
 		C5B7D79F189B22AE006B4A6C /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,7 +136,6 @@
 				C5B7D7B7189B22AF006B4A6C /* MainMenu.xib */,
 				C5B7D7BA189B22AF006B4A6C /* Images.xcassets */,
 				C5B7D7A9189B22AE006B4A6C /* Supporting Files */,
-				C5B2E6A618A059F300852413 /* File */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -251,7 +248,6 @@
 			files = (
 				C5B7D7AD189B22AE006B4A6C /* InfoPlist.strings in Resources */,
 				C5B2E6A418A0540600852413 /* myCalc.png in Resources */,
-				C5B2E6A718A059F300852413 /* File in Resources */,
 				C5B2E6A518A0540600852413 /* macCalc.png in Resources */,
 				C5B7D7BB189B22AF006B4A6C /* Images.xcassets in Resources */,
 				C5B7D7B3189B22AE006B4A6C /* Credits.rtf in Resources */,

@@ -162,7 +162,6 @@
             [_calc_display setStringValue: [@"-" stringByAppendingString: [_calc_display stringValue]]];
         }
     }
-    
 }
 
 - (void) push_number: (id) sender {
@@ -180,7 +179,6 @@
         [_calc_display setStringValue:[sender title]];
         calc_model.first_call = NO;
     }
-    
 }
 - (BOOL) sign_pushed {
     if ([_a_button state] == NSOnState || [_s_button state] == NSOnState || [_m_button state] == NSOnState || [_d_button state] == NSOnState)
@@ -196,7 +194,6 @@
     }
     @catch (NSException *ex) {
         NSLog(@"check_calc_model: Caught %@: %@", [ex name], [ex reason]);
-    }
-    
+    }    
 }
 @end
