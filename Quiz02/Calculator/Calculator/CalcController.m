@@ -145,6 +145,13 @@
 }
 
 - (IBAction)push_plusMinus:(id)sender {
+    if ([_calc_display floatValue] != 0) {
+        if ([[_calc_display stringValue] characterAtIndex:0] == '-' ) {
+            [_calc_display setStringValue: [[_calc_display stringValue] substringFromIndex:1]];
+        } else {
+            [_calc_display setStringValue: [@"-" stringByAppendingString: [_calc_display stringValue]]];
+        }
+    }
     
 }
 
@@ -171,15 +178,15 @@
     else return NO;
 }
 - (void) check_calc_model {
-   // @try {
+    @try {
         if (calc_model == nil) {
             calc_model = [[CalcModel alloc] init];
             calc_model.first_call = YES;
         }
-   // }
-   // @catch (NSException *ex) {
-    //    NSLog(@"check_calc_model: Caught %@: %@", [ex name], [ex reason]);
-  //  }
+    }
+    @catch (NSException *ex) {
+        NSLog(@"check_calc_model: Caught %@: %@", [ex name], [ex reason]);
+    }
     
 }
 @end
