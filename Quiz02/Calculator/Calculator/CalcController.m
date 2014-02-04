@@ -106,7 +106,6 @@
         calc_model = nil;
     }
     
-    
     [_calc_display setIntValue:0];
     
     if ([self sign_pushed]) {
@@ -124,28 +123,21 @@
         [_s_button setState:0];
         [_calc_display setStringValue:@""];
     }
-    
-    NSError *error = NULL;
-    NSRegularExpression *regex = [NSRegularExpression
-                                  regularExpressionWithPattern:@"[.]"
-                                  options:NSRegularExpressionCaseInsensitive
-                                  error:&error];
-    NSUInteger numMatches = [regex numberOfMatchesInString:[_calc_display stringValue] options:0 range:NSMakeRange(0, [[_calc_display stringValue] length])];
-
-    if (numMatches == 0) {
+    if ([[_calc_display stringValue] rangeOfString:@"."].location == NSNotFound) {
         [_calc_display setStringValue:[[_calc_display stringValue] stringByAppendingString:@"."]];
     }
     
     /*
-    if ([[_calc_display stringValue] rangeOfString:@"."].location != 0) {
-        [_calc_display setStringValue:[[_calc_display stringValue] stringByAppendingString:@"."]];
-    }
+     NSError *error = NULL;
+     NSRegularExpression *regex = [NSRegularExpression
+     regularExpressionWithPattern:@"[.]"
+     options:NSRegularExpressionCaseInsensitive
+     error:&error];
+     NSUInteger numMatches = [regex numberOfMatchesInString:[_calc_display stringValue] options:0 range:NSMakeRange(0, [[_calc_display stringValue] length])];
      
-     NSString *someRegexp = @"[.]";
-     NSPredicate *myTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", someRegexp];
-
-    if (![[_calc_display stringValue] isMatchedByRegex:@"[.]"])
-        [_calc_display setStringValue:[[_calc_display stringValue] stringByAppendingString:@"."]];
+     if (numMatches == 0) {
+     [_calc_display setStringValue:[[_calc_display stringValue] stringByAppendingString:@"."]];
+     }
      */
 }
 - (IBAction)push_equal:(id)sender {
@@ -156,6 +148,13 @@
 }
 
 - (IBAction)push_plusMinus:(id)sender {
+    if ([self sign_pushed]) {
+        [_a_button setState:0];
+        [_d_button setState:0];
+        [_m_button setState:0];
+        [_s_button setState:0];
+    }
+    
     if ([_calc_display floatValue] != 0) {
         if ([[_calc_display stringValue] characterAtIndex:0] == '-' ) {
             [_calc_display setStringValue: [[_calc_display stringValue] substringFromIndex:1]];
