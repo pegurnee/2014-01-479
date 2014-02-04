@@ -1,0 +1,491 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C5CED6141891EA76008B143C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5CED6131891EA75008B143C /* Cocoa.framework */; };
+		C5CED61E1891EA76008B143C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C5CED61C1891EA76008B143C /* InfoPlist.strings */; };
+		C5CED6201891EA76008B143C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CED61F1891EA76008B143C /* main.m */; };
+		C5CED6241891EA76008B143C /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = C5CED6221891EA76008B143C /* Credits.rtf */; };
+		C5CED6271891EA76008B143C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CED6261891EA76008B143C /* AppDelegate.m */; };
+		C5CED62A1891EA76008B143C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5CED6281891EA76008B143C /* MainMenu.xib */; };
+		C5CED62C1891EA76008B143C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5CED62B1891EA76008B143C /* Images.xcassets */; };
+		C5CED6331891EA76008B143C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5CED6321891EA76008B143C /* XCTest.framework */; };
+		C5CED6341891EA76008B143C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5CED6131891EA75008B143C /* Cocoa.framework */; };
+		C5CED63C1891EA76008B143C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C5CED63A1891EA76008B143C /* InfoPlist.strings */; };
+		C5CED63E1891EA76008B143C /* BankAccountTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CED63D1891EA76008B143C /* BankAccountTests.m */; };
+		C5CED6491891EB6F008B143C /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CED6481891EB6F008B143C /* Account.m */; };
+		C5CED64C1891EE50008B143C /* AccountController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CED64B1891EE50008B143C /* AccountController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C5CED6351891EA76008B143C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C5CED6081891EA75008B143C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C5CED60F1891EA75008B143C;
+			remoteInfo = BankAccount;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C5CED6101891EA75008B143C /* BankAccount.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankAccount.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5CED6131891EA75008B143C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		C5CED6161891EA76008B143C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		C5CED6171891EA76008B143C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		C5CED6181891EA76008B143C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C5CED61B1891EA76008B143C /* BankAccount-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BankAccount-Info.plist"; sourceTree = "<group>"; };
+		C5CED61D1891EA76008B143C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C5CED61F1891EA76008B143C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C5CED6211891EA76008B143C /* BankAccount-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BankAccount-Prefix.pch"; sourceTree = "<group>"; };
+		C5CED6231891EA76008B143C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		C5CED6251891EA76008B143C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C5CED6261891EA76008B143C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C5CED6291891EA76008B143C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		C5CED62B1891EA76008B143C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C5CED6311891EA76008B143C /* BankAccountTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BankAccountTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5CED6321891EA76008B143C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		C5CED6391891EA76008B143C /* BankAccountTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BankAccountTests-Info.plist"; sourceTree = "<group>"; };
+		C5CED63B1891EA76008B143C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C5CED63D1891EA76008B143C /* BankAccountTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BankAccountTests.m; sourceTree = "<group>"; };
+		C5CED6471891EB6F008B143C /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
+		C5CED6481891EB6F008B143C /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
+		C5CED64A1891EE50008B143C /* AccountController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountController.h; sourceTree = "<group>"; };
+		C5CED64B1891EE50008B143C /* AccountController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C5CED60D1891EA75008B143C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5CED6141891EA76008B143C /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5CED62E1891EA76008B143C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5CED6341891EA76008B143C /* Cocoa.framework in Frameworks */,
+				C5CED6331891EA76008B143C /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C5CED6071891EA75008B143C = {
+			isa = PBXGroup;
+			children = (
+				C5CED6191891EA76008B143C /* BankAccount */,
+				C5CED6371891EA76008B143C /* BankAccountTests */,
+				C5CED6121891EA75008B143C /* Frameworks */,
+				C5CED6111891EA75008B143C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C5CED6111891EA75008B143C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C5CED6101891EA75008B143C /* BankAccount.app */,
+				C5CED6311891EA76008B143C /* BankAccountTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C5CED6121891EA75008B143C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C5CED6131891EA75008B143C /* Cocoa.framework */,
+				C5CED6321891EA76008B143C /* XCTest.framework */,
+				C5CED6151891EA76008B143C /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C5CED6151891EA76008B143C /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C5CED6161891EA76008B143C /* AppKit.framework */,
+				C5CED6171891EA76008B143C /* CoreData.framework */,
+				C5CED6181891EA76008B143C /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		C5CED6191891EA76008B143C /* BankAccount */ = {
+			isa = PBXGroup;
+			children = (
+				C5CED6471891EB6F008B143C /* Account.h */,
+				C5CED6481891EB6F008B143C /* Account.m */,
+				C5CED64A1891EE50008B143C /* AccountController.h */,
+				C5CED64B1891EE50008B143C /* AccountController.m */,
+				C5CED6251891EA76008B143C /* AppDelegate.h */,
+				C5CED6261891EA76008B143C /* AppDelegate.m */,
+				C5CED6281891EA76008B143C /* MainMenu.xib */,
+				C5CED62B1891EA76008B143C /* Images.xcassets */,
+				C5CED61A1891EA76008B143C /* Supporting Files */,
+			);
+			path = BankAccount;
+			sourceTree = "<group>";
+		};
+		C5CED61A1891EA76008B143C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C5CED61B1891EA76008B143C /* BankAccount-Info.plist */,
+				C5CED61C1891EA76008B143C /* InfoPlist.strings */,
+				C5CED61F1891EA76008B143C /* main.m */,
+				C5CED6211891EA76008B143C /* BankAccount-Prefix.pch */,
+				C5CED6221891EA76008B143C /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C5CED6371891EA76008B143C /* BankAccountTests */ = {
+			isa = PBXGroup;
+			children = (
+				C5CED63D1891EA76008B143C /* BankAccountTests.m */,
+				C5CED6381891EA76008B143C /* Supporting Files */,
+			);
+			path = BankAccountTests;
+			sourceTree = "<group>";
+		};
+		C5CED6381891EA76008B143C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C5CED6391891EA76008B143C /* BankAccountTests-Info.plist */,
+				C5CED63A1891EA76008B143C /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C5CED60F1891EA75008B143C /* BankAccount */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C5CED6411891EA76008B143C /* Build configuration list for PBXNativeTarget "BankAccount" */;
+			buildPhases = (
+				C5CED60C1891EA75008B143C /* Sources */,
+				C5CED60D1891EA75008B143C /* Frameworks */,
+				C5CED60E1891EA75008B143C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BankAccount;
+			productName = BankAccount;
+			productReference = C5CED6101891EA75008B143C /* BankAccount.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C5CED6301891EA76008B143C /* BankAccountTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C5CED6441891EA76008B143C /* Build configuration list for PBXNativeTarget "BankAccountTests" */;
+			buildPhases = (
+				C5CED62D1891EA76008B143C /* Sources */,
+				C5CED62E1891EA76008B143C /* Frameworks */,
+				C5CED62F1891EA76008B143C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C5CED6361891EA76008B143C /* PBXTargetDependency */,
+			);
+			name = BankAccountTests;
+			productName = BankAccountTests;
+			productReference = C5CED6311891EA76008B143C /* BankAccountTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C5CED6081891EA75008B143C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Edward Gurnee";
+				TargetAttributes = {
+					C5CED6301891EA76008B143C = {
+						TestTargetID = C5CED60F1891EA75008B143C;
+					};
+				};
+			};
+			buildConfigurationList = C5CED60B1891EA75008B143C /* Build configuration list for PBXProject "BankAccount" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C5CED6071891EA75008B143C;
+			productRefGroup = C5CED6111891EA75008B143C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C5CED60F1891EA75008B143C /* BankAccount */,
+				C5CED6301891EA76008B143C /* BankAccountTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C5CED60E1891EA75008B143C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5CED61E1891EA76008B143C /* InfoPlist.strings in Resources */,
+				C5CED62C1891EA76008B143C /* Images.xcassets in Resources */,
+				C5CED6241891EA76008B143C /* Credits.rtf in Resources */,
+				C5CED62A1891EA76008B143C /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5CED62F1891EA76008B143C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5CED63C1891EA76008B143C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C5CED60C1891EA75008B143C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5CED6491891EB6F008B143C /* Account.m in Sources */,
+				C5CED6271891EA76008B143C /* AppDelegate.m in Sources */,
+				C5CED6201891EA76008B143C /* main.m in Sources */,
+				C5CED64C1891EE50008B143C /* AccountController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5CED62D1891EA76008B143C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5CED63E1891EA76008B143C /* BankAccountTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C5CED6361891EA76008B143C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C5CED60F1891EA75008B143C /* BankAccount */;
+			targetProxy = C5CED6351891EA76008B143C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C5CED61C1891EA76008B143C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C5CED61D1891EA76008B143C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C5CED6221891EA76008B143C /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C5CED6231891EA76008B143C /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		C5CED6281891EA76008B143C /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C5CED6291891EA76008B143C /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		C5CED63A1891EA76008B143C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C5CED63B1891EA76008B143C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C5CED63F1891EA76008B143C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C5CED6401891EA76008B143C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		C5CED6421891EA76008B143C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BankAccount/BankAccount-Prefix.pch";
+				INFOPLIST_FILE = "BankAccount/BankAccount-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C5CED6431891EA76008B143C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BankAccount/BankAccount-Prefix.pch";
+				INFOPLIST_FILE = "BankAccount/BankAccount-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C5CED6451891EA76008B143C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BankAccount.app/Contents/MacOS/BankAccount";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BankAccount/BankAccount-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "BankAccountTests/BankAccountTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		C5CED6461891EA76008B143C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BankAccount.app/Contents/MacOS/BankAccount";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BankAccount/BankAccount-Prefix.pch";
+				INFOPLIST_FILE = "BankAccountTests/BankAccountTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C5CED60B1891EA75008B143C /* Build configuration list for PBXProject "BankAccount" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5CED63F1891EA76008B143C /* Debug */,
+				C5CED6401891EA76008B143C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C5CED6411891EA76008B143C /* Build configuration list for PBXNativeTarget "BankAccount" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5CED6421891EA76008B143C /* Debug */,
+				C5CED6431891EA76008B143C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C5CED6441891EA76008B143C /* Build configuration list for PBXNativeTarget "BankAccountTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5CED6451891EA76008B143C /* Debug */,
+				C5CED6461891EA76008B143C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C5CED6081891EA75008B143C /* Project object */;
+}
