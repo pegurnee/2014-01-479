@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CalcModel.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController {
+    
+    
+    CalcModel *calc_model;
+}
+
+-(IBAction)push_action:(id)sender;
+
+-(IBAction)push_number:(id)sender;
 
 @end

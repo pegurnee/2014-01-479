@@ -26,4 +26,18 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)push_add:(id)sender {
+}
+
+- (IBAction)push_subtract:(id)sender {
+}
+
+- (IBAction)push_multiply:(id)sender {
+}
+
+- (IBAction)push_divide:(id)sender {
+}
+
+- (IBAction)push_action:(id)sender {
+}
 @end
