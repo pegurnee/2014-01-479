@@ -260,6 +260,12 @@
                         </subviews>
                         <color key="backgroundColor" red="0.15537958559782605" green="0.15537958559782605" blue="0.15537958559782605" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="a_button" destination="rDR-aU-6rw" id="UJf-Jg-ifB"/>
+                        <outlet property="d_button" destination="4Oz-dg-5y1" id="26K-no-HXE"/>
+                        <outlet property="m_button" destination="uZj-L4-LID" id="zrr-2J-rx0"/>
+                        <outlet property="s_button" destination="Z6z-Pj-zvQ" id="MFA-1d-Igi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

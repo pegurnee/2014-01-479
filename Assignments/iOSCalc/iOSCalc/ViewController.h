@@ -10,6 +10,10 @@
 #import "CalcModel.h"
 
 @interface ViewController : UIViewController {
+    IBOutlet UIButton *a_button;
+    IBOutlet UIButton *s_button;
+    IBOutlet UIButton *m_button;
+    IBOutlet UIButton *d_button;
     CalcModel *calc_model;
 }
 
