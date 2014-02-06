@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C5BF5AC418A41B14008287D1 /* CalcController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5BF5AC318A41B14008287D1 /* CalcController.m */; };
+		C5BF5AC718A41B93008287D1 /* CalcModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5BF5AC618A41B93008287D1 /* CalcModel.m */; };
 		C5FCAA8318A1BBE000AFAC5F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5FCAA8218A1BBE000AFAC5F /* Foundation.framework */; };
 		C5FCAA8518A1BBE000AFAC5F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5FCAA8418A1BBE000AFAC5F /* CoreGraphics.framework */; };
 		C5FCAA8718A1BBE000AFAC5F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5FCAA8618A1BBE000AFAC5F /* UIKit.framework */; };
@@ -34,6 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C5BF5AC218A41B14008287D1 /* CalcController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalcController.h; sourceTree = "<group>"; };
+		C5BF5AC318A41B14008287D1 /* CalcController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalcController.m; sourceTree = "<group>"; };
+		C5BF5AC518A41B93008287D1 /* CalcModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalcModel.h; sourceTree = "<group>"; };
+		C5BF5AC618A41B93008287D1 /* CalcModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalcModel.m; sourceTree = "<group>"; };
 		C5FCAA7F18A1BBE000AFAC5F /* iOSCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5FCAA8218A1BBE000AFAC5F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C5FCAA8418A1BBE000AFAC5F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -112,6 +118,10 @@
 		C5FCAA8818A1BBE000AFAC5F /* iOSCalc */ = {
 			isa = PBXGroup;
 			children = (
+				C5BF5AC218A41B14008287D1 /* CalcController.h */,
+				C5BF5AC318A41B14008287D1 /* CalcController.m */,
+				C5BF5AC518A41B93008287D1 /* CalcModel.h */,
+				C5BF5AC618A41B93008287D1 /* CalcModel.m */,
 				C5FCAA9118A1BBE000AFAC5F /* AppDelegate.h */,
 				C5FCAA9218A1BBE000AFAC5F /* AppDelegate.m */,
 				C5FCAA9418A1BBE000AFAC5F /* Main.storyboard */,
@@ -249,8 +259,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5BF5AC718A41B93008287D1 /* CalcModel.m in Sources */,
 				C5FCAA9918A1BBE000AFAC5F /* ViewController.m in Sources */,
 				C5FCAA9318A1BBE000AFAC5F /* AppDelegate.m in Sources */,
+				C5BF5AC418A41B14008287D1 /* CalcController.m in Sources */,
 				C5FCAA8F18A1BBE000AFAC5F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,6 +472,7 @@
 				C5FCAAB318A1BBE000AFAC5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C5FCAAB418A1BBE000AFAC5F /* Build configuration list for PBXNativeTarget "iOSCalcTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +481,7 @@
 				C5FCAAB618A1BBE000AFAC5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
