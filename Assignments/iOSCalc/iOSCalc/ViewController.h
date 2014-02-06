@@ -14,6 +14,7 @@
     IBOutlet UIButton *s_button;
     IBOutlet UIButton *m_button;
     IBOutlet UIButton *d_button;
+    IBOutlet UILabel *calc_display;
     CalcModel *calc_model;
 }
 

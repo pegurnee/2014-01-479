@@ -262,6 +262,7 @@
                     </view>
                     <connections>
                         <outlet property="a_button" destination="rDR-aU-6rw" id="UJf-Jg-ifB"/>
+                        <outlet property="calc_display" destination="w4a-BC-7p6" id="V2x-fg-M94"/>
                         <outlet property="d_button" destination="4Oz-dg-5y1" id="26K-no-HXE"/>
                         <outlet property="m_button" destination="uZj-L4-LID" id="zrr-2J-rx0"/>
                         <outlet property="s_button" destination="Z6z-Pj-zvQ" id="MFA-1d-Igi"/>
