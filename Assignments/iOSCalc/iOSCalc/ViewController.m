@@ -44,11 +44,22 @@
        calc_model.sign_state = 'd';
     }
     
-    [calc_model computeNewDisplayVal:[[calc_display text] floatValue]];
-    [calc_display setText: [NSString stringWithFormat: @"%f", calc_model.running_total]];
+    [calc_model computeNewDisplayVal: [NSDecimalNumber decimalNumberWithString: [calc_display text]];
+    [calc_display setText: [NSString stringWithFormat: @"%@", calc_model.running_total]];
+    
+    self->sign_pushed = YES;
 }
 
 - (IBAction)push_clear:(id)sender {
+    if (calc_model != nil) {
+        calc_model = nil;
+    }
+    
+    [calc_display setText: @"0"];
+    
+    if (self->sign_pushed) {
+        calc_model.sign_state = '0';
+    }
 }
 
 - (IBAction)push_decimal:(id)sender {
