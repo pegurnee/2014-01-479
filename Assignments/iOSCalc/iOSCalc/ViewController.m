@@ -31,7 +31,7 @@
         [calc_display setText:@""];
     }
     
-    if ([[calc_display text] compare:@"0"] && !calc_model.first_call) {
+    if ([[calc_display text] isEqualToString:@"0"] && !calc_model.first_call) {
         [calc_display setText:[[calc_display text] stringByAppendingString:[sender title]]];
     } else {
         [calc_display setText:[sender title]];
@@ -47,13 +47,13 @@
         [self push_equal:0];
     }
     
-    if ([[sender title] isEqual: @"+"]) {
+    if ([[sender title] isEqualToString: @"+"]) {
        calc_model.sign_state = 'a';
-    } else  if ([[sender title]  isEqual: @"-"]) {
+    } else  if ([[sender title]  isEqualToString: @"-"]) {
        calc_model.sign_state = 's';
-    } else  if ([[sender title]  isEqual: @"*"]) {
+    } else  if ([[sender title]  isEqualToString: @"*"]) {
        calc_model.sign_state = 'm';
-    } else  if ([[sender title]  isEqual: @"+"]) {
+    } else  if ([[sender title]  isEqualToString: @"+"]) {
        calc_model.sign_state = 'd';
     }
     
