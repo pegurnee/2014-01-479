@@ -44,8 +44,8 @@
        calc_model.sign_state = 'd';
     }
     
-    [calc_model computeNewDisplayVal: [NSDecimalNumber decimalNumberWithString: [calc_display text]];
-    [calc_display setText: [NSString stringWithFormat: @"%@", calc_model.running_total]];
+    [calc_model computeNewDisplayVal: [NSDecimalNumber decimalNumberWithString: [calc_display text]]];
+    [calc_display setText: [NSString stringWithFormat: @"%@", [calc_model running_total]]];
     
     self->sign_pushed = YES;
 }

@@ -10,17 +10,17 @@
 #import <Foundation/Foundation.h>
 
 @interface CalcModel : NSObject {
-    NSDecimal *running_total;
+    NSDecimalNumber *running_total;
     char  sign_state;
     bool  first_call;
 }
 
 //Establishing some public-facing properties.
-@property(readwrite) NSDecimal running_total;
+@property(readwrite) NSDecimalNumber *running_total;
 @property(readwrite) char  sign_state;
 @property(readwrite) bool  first_call;
 
 //Used for computing and maintaing the model data.
-- (void) computeNewDisplayVal: (NSDecimal) currDisplayVal;
+- (void) computeNewDisplayVal: (NSDecimalNumber*) currDisplayVal;
 
 @end
