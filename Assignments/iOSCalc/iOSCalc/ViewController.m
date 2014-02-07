@@ -27,7 +27,17 @@
 }
 
 - (IBAction)push_number:(id)sender {
+    if (self->sign_pushed) {
+        [calc_display setText:@""];
+    }
     
+    if ([[calc_display text] compare:@"0"] && !calc_model.first_call) {
+        [calc_display setText:[[calc_display text] stringByAppendingString:[sender title]]];
+    } else {
+        [calc_display setText:[sender title]];
+        calc_model.first_call = NO;
+    }
+
 }
 
 - (IBAction)push_action:(id)sender {
