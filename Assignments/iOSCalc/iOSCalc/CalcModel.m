@@ -33,6 +33,8 @@
             case 's':
                 self.running_total = [self.running_total decimalNumberBySubtracting: currDisplayVal];
                 break;
+            case '0':
+                break;
         }
     }
 }

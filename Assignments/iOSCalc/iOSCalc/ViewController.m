@@ -31,8 +31,11 @@
 }
 
 - (IBAction)push_action:(id)sender {
-    if (!calc_model.first_call)
+    [self check_calc_model];
+    
+    if (!calc_model.first_call) {
         [self push_equal:0];
+    }
     
     if ([[sender title] isEqual: @"+"]) {
        calc_model.sign_state = 'a';
@@ -46,8 +49,10 @@
     
     [calc_model computeNewDisplayVal: [NSDecimalNumber decimalNumberWithString: [calc_display text]]];
     [calc_display setText: [NSString stringWithFormat: @"%@", [calc_model running_total]]];
+    [sign_display setText: [sender title]];
     
     self->sign_pushed = YES;
+    
 }
 
 - (IBAction)push_clear:(id)sender {

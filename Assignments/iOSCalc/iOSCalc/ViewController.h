@@ -15,6 +15,7 @@
     IBOutlet UIButton *m_button;
     IBOutlet UIButton *d_button;
     IBOutlet UILabel *calc_display;
+    IBOutlet UILabel *sign_display;
     CalcModel *calc_model;
     BOOL sign_pushed;
 }
