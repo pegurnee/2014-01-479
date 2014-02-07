@@ -14,7 +14,7 @@
 //Implicity declaring the setters/getters for our properties.
 @synthesize running_total, sign_state, first_call;
 
-- (void) computeNewDisplayVal: (float) currDisplayVal {
+- (void) computeNewDisplayVal: (NSDecimal) currDisplayVal {
     if (self.first_call) {
         self.running_total = currDisplayVal;
         self.first_call = NO;
