@@ -16,6 +16,7 @@
     IBOutlet UIButton *d_button;
     IBOutlet UILabel *calc_display;
     CalcModel *calc_model;
+    BOOL sign_pushed;
 }
 
 //used for all of the mathematical button events
@@ -32,7 +33,6 @@
 - (IBAction)push_plusMinus:(id)sender;
 
 //background events
--(BOOL) sign_pushed;
 -(void) check_calc_model;
 
 @end

@@ -44,7 +44,7 @@
        calc_model.sign_state = 'd';
     }
     
-    [calc_model computeNewDisplayVal:[[calc_display text ]floatValue]];
+    [calc_model computeNewDisplayVal:[[calc_display text] floatValue]];
     [calc_display setText: [NSString stringWithFormat: @"%f", calc_model.running_total]];
 }
 
@@ -58,11 +58,6 @@
 }
 
 - (IBAction)push_plusMinus:(id)sender {
-}
-- (BOOL) sign_pushed {
-    if ([a_button state] == NSOnState || [s_button state] == NSOnState || [m_button state] == NSOnState || [d_button state] == NSOnState)
-        return YES;
-    else return NO;
 }
 - (void) check_calc_model {
     @try {
