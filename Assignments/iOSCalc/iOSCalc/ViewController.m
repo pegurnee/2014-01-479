@@ -31,7 +31,7 @@
         [calc_display setText:@""];
     }
     
-    if ([[calc_display text] isEqualToString:@"0"] && !calc_model.first_call) {
+    if ([[calc_display text] compare:@"0"] && !calc_model.first_call) {
         [calc_display setText:[[calc_display text] stringByAppendingString:[sender title]]];
     } else {
         [calc_display setText:[sender title]];
