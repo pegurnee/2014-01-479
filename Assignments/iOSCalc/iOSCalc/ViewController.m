@@ -51,11 +51,11 @@
     
     if ([[sender currentTitle] compare: @"+"]) {
        calc_model.sign_state = 'a';
-    } else  if ([[sender currentTitle]  compare: @"-"]) {
+    } else  if ([[sender currentTitle] compare: @"−"]) {
        calc_model.sign_state = 's';
-    } else  if ([[sender currentTitle]  compare: @"*"]) {
+    } else  if ([[sender currentTitle] compare: @"×"]) {
        calc_model.sign_state = 'm';
-    } else  if ([[sender currentTitle]  compare: @"+"]) {
+    } else  if ([[sender currentTitle] compare: @"÷"]) {
        calc_model.sign_state = 'd';
     }
     
