@@ -96,6 +96,17 @@
 }
 
 - (IBAction)push_plusMinus:(id)sender {
+    if (self->sign_pushed) {
+        self->sign_pushed = NO;
+    }
+    
+    if ([[calc_display text] floatValue] != 0) {
+        if ([[calc_display text] characterAtIndex:0] == '-' ) {
+            [calc_display setText: [[calc_display text] substringFromIndex:1]];
+        } else {
+            [calc_display setText: [@"-" stringByAppendingString: [calc_display text]]];
+        }
+    }
 }
 - (void) check_calc_model {
     @try {
