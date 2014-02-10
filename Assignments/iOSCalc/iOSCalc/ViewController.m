@@ -78,6 +78,12 @@
 }
 
 - (IBAction)push_decimal:(id)sender {
+    if ([self->sign_pushed]) {
+        [calc_display setText:@""];
+    }
+    if ([[calc_display text] rangeOfString:@"."].location == NSNotFound) {
+        [calc_display setText:[[calc_display text] stringByAppendingString:@"."]];
+    }
 }
 
 - (IBAction)push_equal:(id)sender {
