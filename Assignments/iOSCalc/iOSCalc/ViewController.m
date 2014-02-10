@@ -31,6 +31,8 @@
         [calc_display setText:@""];
     }
     
+    self->sign_pushed = NO;
+    
     if ([[calc_display text] compare:@"0"] && !calc_model.first_call) {
         [calc_display setText:[[calc_display text] stringByAppendingString:[sender currentTitle]]];
     } else {
@@ -78,7 +80,7 @@
 }
 
 - (IBAction)push_decimal:(id)sender {
-    if ([self->sign_pushed]) {
+    if (self->sign_pushed) {
         [calc_display setText:@""];
     }
     if ([[calc_display text] rangeOfString:@"."].location == NSNotFound) {
@@ -87,6 +89,10 @@
 }
 
 - (IBAction)push_equal:(id)sender {
+    [self check_calc_model];
+    [calc_model computeNewDisplayVal:[NSDecimalNumber decimalNumberWithString: [calc_display text]]];
+    [calc_display setText: [NSString stringWithFormat: @"%@", [calc_model running_total]]];
+    calc_model.first_call = YES;
 }
 
 - (IBAction)push_plusMinus:(id)sender {

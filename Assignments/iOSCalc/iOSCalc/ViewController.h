@@ -26,7 +26,6 @@
 //used for all of the numeric button events
 -(IBAction)push_number:(id)sender;
 
-
 //other button events
 - (IBAction)push_clear:(id)sender;
 - (IBAction)push_decimal:(id)sender;
