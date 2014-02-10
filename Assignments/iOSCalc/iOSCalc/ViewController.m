@@ -32,9 +32,9 @@
     }
     
     if ([[calc_display text] compare:@"0"] && !calc_model.first_call) {
-        [calc_display setText:[[calc_display text] stringByAppendingString:[sender title]]];
+        [calc_display setText:[[calc_display text] stringByAppendingString:[sender currentTitle]]];
     } else {
-        [calc_display setText:[sender title]];
+        [calc_display setText:[sender currentTitle]];
         calc_model.first_call = NO;
     }
 
@@ -47,19 +47,19 @@
         [self push_equal:0];
     }
     
-    if ([[sender title] isEqualToString: @"+"]) {
+    if ([[sender title] compare: @"+"]) {
        calc_model.sign_state = 'a';
-    } else  if ([[sender title]  isEqualToString: @"-"]) {
+    } else  if ([[sender title]  compare: @"-"]) {
        calc_model.sign_state = 's';
-    } else  if ([[sender title]  isEqualToString: @"*"]) {
+    } else  if ([[sender title]  compare: @"*"]) {
        calc_model.sign_state = 'm';
-    } else  if ([[sender title]  isEqualToString: @"+"]) {
+    } else  if ([[sender title]  compare: @"+"]) {
        calc_model.sign_state = 'd';
     }
     
     [calc_model computeNewDisplayVal: [NSDecimalNumber decimalNumberWithString: [calc_display text]]];
     [calc_display setText: [NSString stringWithFormat: @"%@", [calc_model running_total]]];
-    [sign_display setText: [sender title]];
+    [sign_display setText: [sender currentTitle]];
     
     self->sign_pushed = YES;
     
