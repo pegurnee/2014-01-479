@@ -29,7 +29,7 @@
                                     <action selector="push_clear:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="qKE-dB-vdk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Oz-dg-5y1">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Oz-dg-5y1">
                                 <rect key="frame" x="246" y="153" width="74" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.17289778916179721" green="0.70274286684782616" blue="0.18330663332149033" alpha="1" colorSpace="calibratedRGB"/>
@@ -159,7 +159,7 @@
                                     <action selector="push_number:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="B0g-pI-jhg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZj-L4-LID">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZj-L4-LID">
                                 <rect key="frame" x="246" y="236" width="74" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.17289778916179721" green="0.70274286684782616" blue="0.18330663332149033" alpha="1" colorSpace="calibratedRGB"/>
@@ -211,7 +211,7 @@
                                     <action selector="push_number:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="AKu-Vq-110"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z6z-Pj-zvQ">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z6z-Pj-zvQ">
                                 <rect key="frame" x="246" y="319" width="74" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.17289778916179721" green="0.70274286684782616" blue="0.18330663332149033" alpha="1" colorSpace="calibratedRGB"/>

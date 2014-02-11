@@ -49,13 +49,13 @@
         [self push_equal:0];
     }
     
-    if ([[sender currentTitle] compare: @"+"]) {
+    if ([sender tag] == 0) {
        calc_model.sign_state = 'a';
-    } else  if ([[sender currentTitle] compare: @"−"]) {
+    } else  if ([sender tag] == 1) {
        calc_model.sign_state = 's';
-    } else  if ([[sender currentTitle] compare: @"×"]) {
+    } else  if ([sender tag] == 2) {
        calc_model.sign_state = 'm';
-    } else  if ([[sender currentTitle] compare: @"÷"]) {
+    } else  if ([sender tag] == 3) {
        calc_model.sign_state = 'd';
     }
     
