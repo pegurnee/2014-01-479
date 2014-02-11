@@ -45,10 +45,16 @@
 - (IBAction)push_action:(id)sender {
     [self check_calc_model];
     
+    /*
     if (!calc_model.first_call) {
         [self push_equal:0];
     }
-    
+     */
+    if (!self->sign_pushed) {
+        [calc_model computeNewDisplayVal: [NSDecimalNumber decimalNumberWithString: [calc_display text]]];
+        [calc_display setText: [NSString stringWithFormat: @"%@", [calc_model running_total]]];
+    }
+
     if ([sender tag] == 0) {
        calc_model.sign_state = 'a';
     } else  if ([sender tag] == 1) {
@@ -57,10 +63,8 @@
        calc_model.sign_state = 'm';
     } else  if ([sender tag] == 3) {
        calc_model.sign_state = 'd';
-    }
+    }    
     
-    [calc_model computeNewDisplayVal: [NSDecimalNumber decimalNumberWithString: [calc_display text]]];
-    [calc_display setText: [NSString stringWithFormat: @"%@", [calc_model running_total]]];
     [sign_display setText: [sender currentTitle]];
     
     self->sign_pushed = YES;
