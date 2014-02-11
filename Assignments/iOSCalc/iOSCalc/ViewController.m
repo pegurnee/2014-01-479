@@ -73,6 +73,7 @@
     }
     
     [calc_display setText: @"0"];
+    [sign_display setText: @""];
     
     if (self->sign_pushed) {
         calc_model.sign_state = '0';
@@ -81,7 +82,7 @@
 
 - (IBAction)push_decimal:(id)sender {
     if (self->sign_pushed) {
-        [calc_display setText:@""];
+        [calc_display setText:@"0"];
     }
     if ([[calc_display text] rangeOfString:@"."].location == NSNotFound) {
         [calc_display setText:[[calc_display text] stringByAppendingString:@"."]];
@@ -93,6 +94,7 @@
     [calc_model computeNewDisplayVal:[NSDecimalNumber decimalNumberWithString: [calc_display text]]];
     [calc_display setText: [NSString stringWithFormat: @"%@", [calc_model running_total]]];
     calc_model.first_call = YES;
+    [sign_display setText: @""];
 }
 
 - (IBAction)push_plusMinus:(id)sender {
