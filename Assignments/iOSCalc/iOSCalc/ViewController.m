@@ -39,20 +39,19 @@
         [calc_display setText:[sender currentTitle]];
         calc_model.first_call = NO;
     }
-
 }
 
 - (IBAction)push_action:(id)sender {
     [self check_calc_model];
     
-    /*
-    if (!calc_model.first_call) {
-        [self push_equal:0];
-    }
-     */
     if (!self->sign_pushed) {
-        [calc_model computeNewDisplayVal: [NSDecimalNumber decimalNumberWithString: [calc_display text]]];
-        [calc_display setText: [NSString stringWithFormat: @"%@", [calc_model running_total]]];
+        if (([calc_model sign_state] == 'd' && [[calc_display text] floatValue] == 0) || [[calc_display text] isEqualToString: @"Not a number"]) {
+            [calc_display setText: @"Not a number"];
+            calc_model = nil;
+        } else {
+            [calc_model computeNewDisplayVal: [NSDecimalNumber decimalNumberWithString: [calc_display text]]];
+            [calc_display setText: [NSString stringWithFormat: @"%@", [calc_model running_total]]];
+        }
     }
 
     if ([sender tag] == 0) {

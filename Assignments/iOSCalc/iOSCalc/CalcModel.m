@@ -25,7 +25,11 @@
                 self.running_total = [self.running_total decimalNumberByAdding: currDisplayVal];
                 break;
             case 'd':
-                self.running_total = [self.running_total decimalNumberByDividingBy: currDisplayVal];
+                if (![currDisplayVal isEqualToNumber: 0]) {
+                    self.running_total = [self.running_total decimalNumberByDividingBy: currDisplayVal];
+                } else {
+                    self.running_total = @"NaN";
+                }
                 break;
             case 'm':
                 self.running_total = [self.running_total decimalNumberByMultiplyingBy: currDisplayVal];
