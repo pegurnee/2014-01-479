@@ -45,9 +45,10 @@
     [self check_calc_model];
     
     if (!self->sign_pushed) {
-        if (([calc_model sign_state] == 'd' && [[calc_display text] floatValue] == 0) || [[calc_display text] isEqualToString: @"Not a number"]) {
+        if ([calc_model sign_state] == 'd' && [[calc_display text] floatValue] == 0) {
             [calc_display setText: @"Not a number"];
             calc_model = nil;
+            [sign_display setText: @""];
         } else {
             [calc_model computeNewDisplayVal: [NSDecimalNumber decimalNumberWithString: [calc_display text]]];
             [calc_display setText: [NSString stringWithFormat: @"%@", [calc_model running_total]]];
@@ -94,9 +95,14 @@
 
 - (IBAction)push_equal:(id)sender {
     [self check_calc_model];
-    [calc_model computeNewDisplayVal:[NSDecimalNumber decimalNumberWithString: [calc_display text]]];
-    [calc_display setText: [NSString stringWithFormat: @"%@", [calc_model running_total]]];
-    calc_model.first_call = YES;
+    if ([calc_model sign_state] == 'd' && [[calc_display text] floatValue] == 0) {
+        [calc_display setText: @"Not a number"];
+        calc_model = nil;
+    } else {
+        [calc_model computeNewDisplayVal:[NSDecimalNumber decimalNumberWithString: [calc_display text]]];
+        [calc_display setText: [NSString stringWithFormat: @"%@", [calc_model running_total]]];
+        calc_model.first_call = YES;
+    }
     [sign_display setText: @""];
 }
 
