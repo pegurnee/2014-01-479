@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C5E985F318AAFD9200B95AD8 /* MySegue.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E985F218AAFD9200B95AD8 /* MySegue.m */; };
 		C5FC5DAB18A460DA002BD462 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5FC5DAA18A460DA002BD462 /* Foundation.framework */; };
 		C5FC5DAD18A460DA002BD462 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5FC5DAC18A460DA002BD462 /* CoreGraphics.framework */; };
 		C5FC5DAF18A460DA002BD462 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5FC5DAE18A460DA002BD462 /* UIKit.framework */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C5E985F118AAFD9200B95AD8 /* MySegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySegue.h; sourceTree = "<group>"; };
+		C5E985F218AAFD9200B95AD8 /* MySegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySegue.m; sourceTree = "<group>"; };
 		C5FC5DA718A460DA002BD462 /* ByTheWay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ByTheWay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5FC5DAA18A460DA002BD462 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C5FC5DAC18A460DA002BD462 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -119,6 +122,8 @@
 				C5FC5DC018A460DA002BD462 /* ViewController.m */,
 				C5FC5DC218A460DA002BD462 /* Images.xcassets */,
 				C5FC5DB118A460DA002BD462 /* Supporting Files */,
+				C5E985F118AAFD9200B95AD8 /* MySegue.h */,
+				C5E985F218AAFD9200B95AD8 /* MySegue.m */,
 			);
 			path = ByTheWay;
 			sourceTree = "<group>";
@@ -252,6 +257,7 @@
 				C5FC5DC118A460DA002BD462 /* ViewController.m in Sources */,
 				C5FC5DBB18A460DA002BD462 /* AppDelegate.m in Sources */,
 				C5FC5DB718A460DA002BD462 /* main.m in Sources */,
+				C5E985F318AAFD9200B95AD8 /* MySegue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +466,7 @@
 				C5FC5DDB18A460DA002BD462 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C5FC5DDC18A460DA002BD462 /* Build configuration list for PBXNativeTarget "ByTheWayTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +475,7 @@
 				C5FC5DDE18A460DA002BD462 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

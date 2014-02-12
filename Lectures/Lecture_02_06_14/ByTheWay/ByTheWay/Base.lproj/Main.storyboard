@@ -23,7 +23,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="t4F-r5-tqh" kind="modal" modalTransitionStyle="partialCurl" id="rzX-Xw-52T"/>
+                                    <segue destination="t4F-r5-tqh" kind="modal" modalTransitionStyle="flipHorizontal" id="rzX-Xw-52T"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -79,7 +79,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jbX-eW-7a6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="956" y="-394"/>
+            <point key="canvasLocation" x="1038" y="-386"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="n29-Wp-bqY">
@@ -100,7 +100,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="modal" id="xLa-Ls-3hF"/>
+                                    <segue destination="vXZ-lx-hvc" kind="modal" modalTransitionStyle="crossDissolve" id="xLa-Ls-3hF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uNT-Im-2OZ">
@@ -110,7 +110,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="t4F-r5-tqh" kind="modal" id="T1f-1d-Adh"/>
+                                    <segue destination="t4F-r5-tqh" kind="custom" customClass="MySegue" id="T1f-1d-Adh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -119,7 +119,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jZp-Om-rR0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1447" y="535"/>
+            <point key="canvasLocation" x="1321" y="597"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
