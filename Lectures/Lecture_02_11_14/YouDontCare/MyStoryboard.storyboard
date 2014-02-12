@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="8AT-lE-1c8">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller - Spring-->
+        <scene sceneID="wzo-er-MQB">
+            <objects>
+                <viewController id="TTn-b5-RKh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AZ8-48-FFH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Spring.jpg" id="Nko-5a-diz">
+                                <rect key="frame" x="0.0" y="-20" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Spring" image="198-card-spades.png" id="Lwb-F1-zDL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U77-Cp-SEa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="409" y="-162"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="pt8-VZ-CqG">
+            <objects>
+                <tabBarController definesPresentationContext="YES" id="8AT-lE-1c8" sceneMemberID="viewController">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="s95-OJ-Vb1">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="TTn-b5-RKh" kind="relationship" relationship="viewControllers" id="v5I-Hx-4uP"/>
+                        <segue destination="IJP-tm-aDz" kind="relationship" relationship="viewControllers" id="osG-hU-t9E"/>
+                        <segue destination="u4r-nc-DDa" kind="relationship" relationship="viewControllers" id="AW0-Sh-0Dm"/>
+                        <segue destination="AUS-3h-dPp" kind="relationship" relationship="viewControllers" id="5Lf-3Y-gBg"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YBP-Dz-Gk8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-116" y="158"/>
+        </scene>
+        <!--View Controller - Winter-->
+        <scene sceneID="mic-uW-1JA">
+            <objects>
+                <viewController id="u4r-nc-DDa" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iSF-fk-IxC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Winter.jpg" id="FjN-Z4-rfJ">
+                                <rect key="frame" x="0.0" y="-20" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Winter" image="197-card-diamonds.png" id="XET-Sn-mhB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Sq-xe-bxm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="409" y="545"/>
+        </scene>
+        <!--View Controller - Fall-->
+        <scene sceneID="Q0P-Lw-N22">
+            <objects>
+                <viewController id="AUS-3h-dPp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="asE-7Y-qaB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fall.jpg" highlightedImage="Fall.jpg" id="Qfo-af-cnV">
+                                <rect key="frame" x="0.0" y="-20" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Fall" image="200-card-clubs.png" id="n8h-rG-2Es"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aP4-J9-U5e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="778" y="545"/>
+        </scene>
+        <!--View Controller - Summer-->
+        <scene sceneID="s5M-mU-UWj">
+            <objects>
+                <viewController id="IJP-tm-aDz" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S6F-Bs-Cle">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Summer.jpg" id="m8y-T2-OLo">
+                                <rect key="frame" x="0.0" y="-20" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Summer" image="199-card-hearts.png" id="Wzk-Ww-Ptr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pv7-ql-aeT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="778" y="-162"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="197-card-diamonds.png" width="16" height="24"/>
+        <image name="198-card-spades.png" width="16" height="24"/>
+        <image name="199-card-hearts.png" width="16" height="24"/>
+        <image name="200-card-clubs.png" width="16" height="24"/>
+        <image name="Fall.jpg" width="353" height="530"/>
+        <image name="Spring.jpg" width="355" height="530"/>
+        <image name="Summer.jpg" width="353" height="530"/>
+        <image name="Winter.jpg" width="353" height="530"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
