@@ -44,12 +44,12 @@
 }
 
 - (IBAction)push_action:(id)sender {
-    [self check_calc_model];
     if ([[calc_display text] isEqualToString: @"Not a number"]) {
         calc_model = nil;
         [calc_display setText: @"0"];
         [sign_display setText: @""];
     }
+    [self check_calc_model];
     if (!self->sign_pushed) {
         if ([calc_model sign_state] == 'd' && [[calc_display text] floatValue] == 0) {
             [calc_display setText: @"Not a number"];
