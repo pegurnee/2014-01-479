@@ -29,25 +29,29 @@
 }
 
 - (IBAction)push_number:(id)sender {
-    if (self->sign_pushed || [[calc_display text] isEqualToString: @"NaN"]) {
+    if ([[calc_display text] isEqualToString: @"NaN"]) {
+        [calc_display setText:@""];
+        calc_model.first_call = YES;
+    }
+    if (self->sign_pushed) {
         [calc_display setText:@""];
     }
     
-    self->sign_pushed = NO;
     
-    if ([[calc_display text] compare:@"0"] && !calc_model.first_call) {
-        [calc_display setText:[[calc_display text] stringByAppendingString:[sender currentTitle]]];
-    } else {
+    if ([[calc_display text] isEqualToString:@"0"] || self->sign_pushed) {
         [calc_display setText:[sender currentTitle]];
-        calc_model.first_call = NO;
+    } else {
+        [calc_display setText:[[calc_display text] stringByAppendingString:[sender currentTitle]]];
     }
+    
+    self->sign_pushed = NO;
 }
 
 - (IBAction)push_action:(id)sender {
+    
     if ([[calc_display text] isEqualToString: @"NaN"]) {
-        calc_model = nil;
+        calc_model.first_call = YES;
         [calc_display setText: @"0"];
-        [sign_display setText: @""];
     }
     [self check_calc_model];
     if (!self->sign_pushed) {
@@ -92,9 +96,9 @@
 
 - (IBAction)push_decimal:(id)sender {
     if ([[calc_display text] isEqualToString: @"NaN"]) {
-        calc_model = nil;
         [calc_display setText: @"0"];
         [sign_display setText: @""];
+        calc_model.first_call = YES;
     }
     [self check_calc_model];
     if (self->sign_pushed) {
@@ -109,9 +113,9 @@
 
 - (IBAction)push_equal:(id)sender {
     if ([[calc_display text] isEqualToString: @"NaN"]) {
-        calc_model = nil;
         [calc_display setText: @"0"];
         [sign_display setText: @""];
+        calc_model.first_call = YES;
     }
     [self check_calc_model];
     if ([calc_model sign_state] == 'd' && [[calc_display text] floatValue] == 0) {
