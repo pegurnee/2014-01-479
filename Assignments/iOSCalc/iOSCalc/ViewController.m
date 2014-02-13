@@ -17,7 +17,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    calc_display.numberOfLines = 1;
+    calc_display.minimumScaleFactor = 8. / calc_display.font.pointSize;
+    calc_display.adjustsFontSizeToFitWidth = YES;
 }
 
 - (void)didReceiveMemoryWarning
