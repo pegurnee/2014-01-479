@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C51CD31E18AC6E57002B4D8B /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C51CD31B18AC6E57002B4D8B /* Icon-60@2x.png */; };
+		C51CD31F18AC6E57002B4D8B /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C51CD31C18AC6E57002B4D8B /* Icon-40@2x.png */; };
+		C51CD32018AC6E57002B4D8B /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C51CD31D18AC6E57002B4D8B /* Icon-Small@2x.png */; };
 		C5BF5AC718A41B93008287D1 /* CalcModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5BF5AC618A41B93008287D1 /* CalcModel.m */; };
 		C5FCAA8318A1BBE000AFAC5F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5FCAA8218A1BBE000AFAC5F /* Foundation.framework */; };
 		C5FCAA8518A1BBE000AFAC5F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5FCAA8418A1BBE000AFAC5F /* CoreGraphics.framework */; };
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C51CD31B18AC6E57002B4D8B /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
+		C51CD31C18AC6E57002B4D8B /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
+		C51CD31D18AC6E57002B4D8B /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
 		C5BF5AC518A41B93008287D1 /* CalcModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalcModel.h; sourceTree = "<group>"; };
 		C5BF5AC618A41B93008287D1 /* CalcModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalcModel.m; sourceTree = "<group>"; };
 		C5FCAA7F18A1BBE000AFAC5F /* iOSCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,6 +121,9 @@
 		C5FCAA8818A1BBE000AFAC5F /* iOSCalc */ = {
 			isa = PBXGroup;
 			children = (
+				C51CD31B18AC6E57002B4D8B /* Icon-60@2x.png */,
+				C51CD31C18AC6E57002B4D8B /* Icon-40@2x.png */,
+				C51CD31D18AC6E57002B4D8B /* Icon-Small@2x.png */,
 				C5BF5AC518A41B93008287D1 /* CalcModel.h */,
 				C5BF5AC618A41B93008287D1 /* CalcModel.m */,
 				C5FCAA9118A1BBE000AFAC5F /* AppDelegate.h */,
@@ -236,6 +245,9 @@
 				C5FCAA9B18A1BBE000AFAC5F /* Images.xcassets in Resources */,
 				C5FCAA8D18A1BBE000AFAC5F /* InfoPlist.strings in Resources */,
 				C5FCAA9618A1BBE000AFAC5F /* Main.storyboard in Resources */,
+				C51CD32018AC6E57002B4D8B /* Icon-Small@2x.png in Resources */,
+				C51CD31E18AC6E57002B4D8B /* Icon-60@2x.png in Resources */,
+				C51CD31F18AC6E57002B4D8B /* Icon-40@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
