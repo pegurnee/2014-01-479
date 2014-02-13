@@ -27,7 +27,7 @@
 }
 
 - (IBAction)push_number:(id)sender {
-    if (self->sign_pushed) {
+    if (self->sign_pushed || [[calc_display text] isEqualToString: @"Not a number"]) {
         [calc_display setText:@""];
     }
     
@@ -44,7 +44,9 @@
 - (IBAction)push_action:(id)sender {
     [self check_calc_model];
     if ([[calc_display text] isEqualToString: @"Not a number"]) {
-        [self push_clear: nil];
+        calc_model = nil;
+        [calc_display setText: @"0"];
+        [sign_display setText: @""];
     }
     if (!self->sign_pushed) {
         if ([calc_model sign_state] == 'd' && [[calc_display text] floatValue] == 0) {
@@ -84,7 +86,6 @@
     if (self->sign_pushed) {
         calc_model.sign_state = '0';
     }
-    [sign_display setText: @""];
 }
 
 - (IBAction)push_decimal:(id)sender {
@@ -95,9 +96,15 @@
         [calc_display setText:[[calc_display text] stringByAppendingString:@"."]];
         calc_model.first_call = NO;
     }
+    self->sign_pushed = NO;
 }
 
 - (IBAction)push_equal:(id)sender {
+    if ([[calc_display text] isEqualToString: @"Not a number"]) {
+        calc_model = nil;
+        [calc_display setText: @"0"];
+        [sign_display setText: @""];
+    }
     [self check_calc_model];
     if ([calc_model sign_state] == 'd' && [[calc_display text] floatValue] == 0) {
         [calc_display setText: @"Not a number"];
