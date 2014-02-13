@@ -28,7 +28,7 @@
                 if (![currDisplayVal isEqualToNumber: 0]) {
                     self.running_total = [self.running_total decimalNumberByDividingBy: currDisplayVal];
                 } else {
-                    self.running_total = @"NaN";
+                    self.running_total = 0;
                 }
                 break;
             case 'm':
