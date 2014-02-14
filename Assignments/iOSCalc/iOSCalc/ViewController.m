@@ -47,8 +47,7 @@
     self->sign_pushed = NO;
 }
 
-- (IBAction)push_action:(id)sender {
-    
+- (IBAction)push_action:(id)sender {    
     if ([[calc_display text] isEqualToString: @"NaN"]) {
         calc_model.first_call = YES;
         [calc_display setText: @"0"];
@@ -57,7 +56,6 @@
     if (!self->sign_pushed) {
         if ([calc_model sign_state] == 'd' && [[calc_display text] floatValue] == 0) {
             [calc_display setText: @"NaN"];
-            calc_model = nil;
             [sign_display setText: @""];
         } else {
             [calc_model computeNewDisplayVal: [NSDecimalNumber decimalNumberWithString: [calc_display text]]];
@@ -130,11 +128,13 @@
 }
 
 - (IBAction)push_plusMinus:(id)sender {
-    if (self->sign_pushed) {
-        self->sign_pushed = NO;
-    }
-    
     if ([[calc_display text] floatValue] != 0) {
+        if (self->sign_pushed) {
+            /*
+            
+             */
+            calc_model.running_total = [calc_model.running_total decimalNumberByMultiplyingBy: [NSDecimalNumber decimalNumberWithString: @"-1"]];
+        }
         if ([[calc_display text] characterAtIndex:0] == '-' ) {
             [calc_display setText: [[calc_display text] substringFromIndex:1]];
         } else {
@@ -142,6 +142,7 @@
         }
     }
 }
+
 - (void) check_calc_model {
     @try {
         if (calc_model == nil) {
