@@ -115,6 +115,8 @@
 		C500CCCB18B2D77600B496C6 /* Customized Drawimg */ = {
 			isa = PBXGroup;
 			children = (
+				C500CCFA18B2D79400B496C6 /* Draw 2D.h */,
+				C500CCFB18B2D79400B496C6 /* Draw 2D.m */,
 				C500CCD418B2D77600B496C6 /* AppDelegate.h */,
 				C500CCD518B2D77600B496C6 /* AppDelegate.m */,
 				C500CCD718B2D77600B496C6 /* Main.storyboard */,
@@ -122,8 +124,6 @@
 				C500CCDB18B2D77600B496C6 /* ViewController.m */,
 				C500CCDD18B2D77600B496C6 /* Images.xcassets */,
 				C500CCCC18B2D77600B496C6 /* Supporting Files */,
-				C500CCFA18B2D79400B496C6 /* Draw 2D.h */,
-				C500CCFB18B2D79400B496C6 /* Draw 2D.m */,
 			);
 			path = "Customized Drawimg";
 			sourceTree = "<group>";
@@ -466,6 +466,7 @@
 				C500CCF618B2D77600B496C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C500CCF718B2D77600B496C6 /* Build configuration list for PBXNativeTarget "Customized DrawimgTests" */ = {
 			isa = XCConfigurationList;
@@ -474,6 +475,7 @@
 				C500CCF918B2D77600B496C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

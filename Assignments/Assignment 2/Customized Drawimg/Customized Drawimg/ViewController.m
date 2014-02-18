@@ -27,5 +27,12 @@
 }
 
 - (IBAction)red_slider:(id)sender {
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetLineWidth(context, 4.0);
+    UIColor color = [UIColor alloc] initWithRed: red_slider.value
+green: context   blue:<#(CGFloat)#> alpha:<#(CGFloat)#>
+    CGContextSetStrokeColorWithColor(context,
+                                     [UIColor blueColor].CGColor);
+    
 }
 @end
