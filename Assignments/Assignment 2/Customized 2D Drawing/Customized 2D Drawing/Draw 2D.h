@@ -9,6 +9,17 @@
 #import <UIKit/UIKit.h>
 
 @interface Draw_2D : UIView
--(void) drawRect:(CGRect)rect withColor: (CGColorRef) color;
+
+@property int size;
+@property float red_value;
+@property float green_value;
+@property float blue_value;
+
+@property (nonatomic) CGPoint firstTouch;
+@property (nonatomic) CGPoint lastTouch;
+@property (strong, nonatomic) UIColor *currentColor;
+@property (nonatomic) int shapeType;
+@property (readonly) CGRect currentRect;
+@property CGRect redrawRect;
 
 @end

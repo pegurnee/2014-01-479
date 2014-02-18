@@ -10,12 +10,8 @@
 #import "Draw 2D.h"
 
 @interface ViewController : UIViewController {
-    Draw_2D *theView;
-    float red_value;
-    float green_value;
-    float blue_value;
-    __weak IBOutlet UISlider *r_slider;
+    __weak IBOutlet UISlider *s_slider;
 }
-- (IBAction)red_slider:(id)sender;
+- (IBAction)size_slider:(id)sender;
 
 @end
