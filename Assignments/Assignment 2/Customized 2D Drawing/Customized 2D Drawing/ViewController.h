@@ -10,8 +10,13 @@
 #import "Draw 2D.h"
 
 @interface ViewController : UIViewController {
+    __weak IBOutlet UISlider *r_slider;
+    __weak IBOutlet UISlider *b_slider;
+    __weak IBOutlet UISlider *g_slider;
     __weak IBOutlet UISlider *s_slider;
 }
 - (IBAction)size_slider:(id)sender;
+- (IBAction)changeShape:(id)sender;
+- (IBAction)changeColor:(id)sender;
 
 @end

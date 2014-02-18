@@ -25,34 +25,39 @@
     // Dispose of any resources that can be recreated.
     
 }
-/*
-- (IBAction)red_slider:(id)sender {
- 
-    CGRect rect = CGRectMake(0.0f, 0.0f, self->theView.size.width, self->theView.size.height);
- 
-    Draw_2D *currentView = (Draw_2D*)self.view;
-    
-   // red_value = [[NSString stringWithFormat:@"%.0f", r_slider.value] floatValue];
-    UIColor *color=[UIColor colorWithRed:(red_value/255.0f) green:(green_value/255.0f) blue:(blue_value/255.0f) alpha:1];
-    
-    [currentView drawRect: currentView.bounds withColor: color.CGColor];
- 
-    red_value = [[NSString stringWithFormat:@"%.0f", r_slider.value] floatValue];
-    UIColor *color=[UIColor colorWithRed:(red_value/255.0f) green:(green_value/255.0f) blue:(blue_value/255.0f) alpha:1];
 
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetLineWidth(context, 2.0);
-    CGContextSetStrokeColorWithColor(context, color.CGColor);
-    CGContextMoveToPoint(context, 50, 50);
-    CGContextAddLineToPoint(context, 250, 250);
-    CGContextStrokePath(context);  
-     
-}
-*/
 - (IBAction)size_slider:(id)sender {
     Draw_2D *theView = (Draw_2D*)self.view;
-    int new_size = [[NSString stringWithFormat:@"%.0f", s_slider.value] floatValue];
+    float new_size = [[NSString stringWithFormat:@"%.0f", s_slider.value] floatValue];
     theView.size = new_size / 8.0f;
-    //[theView setNeedsDisplay: ];
+}
+
+- (IBAction)changeShape:(id)sender {
+    UISegmentedControl *control = sender;
+    [(Draw_2D *)self.view setShapeType:[control selectedSegmentIndex]];
+}
+
+- (IBAction)changeColor:(id)sender {
+    Draw_2D *theView = (Draw_2D*)self.view;
+    
+    float red_value = theView.red_value;
+    float green_value = theView.green_value;
+    float blue_value = theView.blue_value;
+    
+    switch ([sender tag]) {
+        case 0:
+            red_value = [[NSString stringWithFormat:@"%.0f", r_slider.value] floatValue];
+            break;
+        case 1:
+            green_value = [[NSString stringWithFormat:@"%.0f", g_slider.value] floatValue];
+            break;
+        case 2:
+            blue_value = [[NSString stringWithFormat:@"%.0f", b_slider.value] floatValue];
+            break;
+        default:
+            break;
+    }
+    
+     theView.currentColor = [UIColor colorWithRed:(red_value) green:(green_value) blue:(blue_value) alpha:1];
 }
 @end

@@ -10,7 +10,7 @@
 
 @interface Draw_2D : UIView
 
-@property int size;
+@property float size;
 @property float red_value;
 @property float green_value;
 @property float blue_value;
@@ -19,6 +19,7 @@
 @property (nonatomic) CGPoint lastTouch;
 @property (strong, nonatomic) UIColor *currentColor;
 @property (nonatomic) int shapeType;
+@property (nonatomic, strong) UIImage *drawImage;
 @property (readonly) CGRect currentRect;
 @property CGRect redrawRect;
 
