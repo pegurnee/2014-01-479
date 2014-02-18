@@ -115,6 +115,8 @@
 		C5B5C9F918B2E11E009E93FD /* Customized 2D Drawing */ = {
 			isa = PBXGroup;
 			children = (
+				C5B5CA2818B2E15C009E93FD /* Draw 2D.h */,
+				C5B5CA2918B2E15C009E93FD /* Draw 2D.m */,
 				C5B5CA0218B2E11E009E93FD /* AppDelegate.h */,
 				C5B5CA0318B2E11E009E93FD /* AppDelegate.m */,
 				C5B5CA0518B2E11E009E93FD /* Main.storyboard */,
@@ -122,8 +124,6 @@
 				C5B5CA0918B2E11E009E93FD /* ViewController.m */,
 				C5B5CA0B18B2E11E009E93FD /* Images.xcassets */,
 				C5B5C9FA18B2E11E009E93FD /* Supporting Files */,
-				C5B5CA2818B2E15C009E93FD /* Draw 2D.h */,
-				C5B5CA2918B2E15C009E93FD /* Draw 2D.m */,
 			);
 			path = "Customized 2D Drawing";
 			sourceTree = "<group>";
@@ -466,6 +466,7 @@
 				C5B5CA2418B2E11E009E93FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C5B5CA2518B2E11E009E93FD /* Build configuration list for PBXNativeTarget "Customized 2D DrawingTests" */ = {
 			isa = XCConfigurationList;
@@ -474,6 +475,7 @@
 				C5B5CA2718B2E11E009E93FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
