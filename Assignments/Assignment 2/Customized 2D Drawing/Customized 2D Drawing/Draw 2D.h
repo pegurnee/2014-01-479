@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface Draw_2D : UIView
+-(void) drawRect:(CGRect)rect withColor: (CGColorRef) color;
 
 @end
