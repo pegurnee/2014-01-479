@@ -12,8 +12,8 @@
 
 @synthesize size;
 @synthesize red_value;
-@synthesize blue_value;
 @synthesize green_value;
+@synthesize blue_value;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -33,7 +33,11 @@
 
 - (id)initWithCoder:(NSCoder*)coder {
     if (self = [super initWithCoder:coder]) {
-        _currentColor = [UIColor redColor];
+        red_value = 127.5 / 255.0f;
+        green_value = 127.5/ 255.0f;
+        blue_value = 127.5/ 255.0f;
+        size = 10.0;
+        _currentColor = [UIColor colorWithRed:(red_value) green:(green_value) blue:(blue_value) alpha:1];
     }
     return self;
 }
@@ -84,11 +88,42 @@
     CGContextRef context = UIGraphicsGetCurrentContext();
         
     CGContextSetLineWidth(context, size);
-    CGContextSetStrokeColorWithColor(context, [UIColor
-                                               redColor].CGColor);
-    CGContextMoveToPoint(context, 50, 50);
-    CGContextAddLineToPoint(context, 250, 250);
-    CGContextStrokePath(context);     
+    CGContextSetStrokeColorWithColor(context, _currentColor.CGColor);
+    CGContextSetFillColorWithColor(context, _currentColor.CGColor);
+    
+    switch (_shapeType) {
+            /*
+        case lline:
+            
+            CGContextMoveToPoint(context, _firstTouch.x, _firstTouch.y);
+            CGContextAddLineToPoint(context, _lastTouch.x, _lastTouch.y);
+            CGContextStrokePath(context);
+            break;
+             */
+        case 0:
+            CGContextAddRect(context, self.currentRect);
+            CGContextDrawPath(context, kCGPathFillStroke);
+            break;
+        case 1:
+            CGPoint *topLeft;
+            CGPoint *botRight;
+            if (_firstTouch.x > _lastTouch.x) {
+                
+            }
+            CGContextMoveToPoint(context, (_firstTouch.x + _lastTouch.x) / 2, _firstTouch.y);
+            CGContextAddLineToPoint(context, _lastTouch.x, (_lastTouch.x _lastTouch.y));
+            
+            break;
+        case 2:
+            break;
+        case 3: {
+            CGContextAddEllipseInRect(context, self.currentRect);
+            CGContextDrawPath(context, kCGPathFillStroke);
+            break;
+        }
+        default:
+            break;
+    }
 }
 
 
