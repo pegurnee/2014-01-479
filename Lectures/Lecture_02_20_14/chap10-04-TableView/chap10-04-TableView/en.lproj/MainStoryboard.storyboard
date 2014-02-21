@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" initialViewController="beO-q4-71z">
+    <dependencies>
+        <deployment defaultVersion="1552" identifier="iOS"/>
+        <development version="4600" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller - Oscar 2014-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="LZViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="gKs-du-ErM">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SimpleTableID" textLabel="K25-r8-cea" detailTextLabel="U2M-AM-TI7" style="IBUITableViewCellStyleSubtitle" id="sBF-wa-DwL">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="K25-r8-cea">
+                                                    <rect key="frame" x="10" y="2" width="36" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="U2M-AM-TI7">
+                                                    <rect key="frame" x="10" y="24" width="47" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                                    <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <segue destination="JvS-Kx-hXJ" kind="push" identifier="myMovieSegue" id="ogx-uM-c8D"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="2" id="KsR-vJ-5F6"/>
+                                    <outlet property="delegate" destination="2" id="cPg-KV-5Vr"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Oscar 2014" id="KcA-LA-bTW">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="CC4-zp-AzA"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="abl-oI-FY1">
+                            <connections>
+                                <segue destination="cDl-cP-4TM" kind="modal" modalTransitionStyle="coverVertical" id="h3V-g5-wRX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="myTableView" destination="gKs-du-ErM" id="g8M-l4-rEG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="566" y="164"/>
+        </scene>
+        <!--View Controller - Add a Movie-->
+        <scene sceneID="hBm-S6-VZx">
+            <objects>
+                <viewController id="8AL-nl-MAn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yzd-m4-lK1">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add a Movie" id="v0n-WI-Fjj">
+                        <barButtonItem key="leftBarButtonItem" title="Item" systemItem="cancel" id="wcR-is-E3s">
+                            <connections>
+                                <segue destination="beO-q4-71z" kind="modal" modalTransitionStyle="coverVertical" id="jJh-BS-TG0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O40-zy-lyl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="566" y="748"/>
+        </scene>
+        <!--Rating View Controller - Rating the Movie-->
+        <scene sceneID="86o-Mb-PYO">
+            <objects>
+                <viewController id="JvS-Kx-hXJ" customClass="LZRatingViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tYs-Al-p2m">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2i3-Sw-yeH">
+                                <rect key="frame" x="20" y="197" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Rating the Movie" id="cZC-OQ-Xxa"/>
+                    <connections>
+                        <outlet property="myTitleLabel" destination="2i3-Sw-yeH" id="pPu-mo-tnS"/>
+                        <segue destination="SBp-wj-hiM" kind="unwind" identifier="myReturnSegue" unwindAction="myUnwindFromRatingView:" id="Y88-5R-feQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xlg-TF-ux5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="SBp-wj-hiM" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1004" y="164"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="s5i-1y-HqP">
+            <objects>
+                <navigationController id="beO-q4-71z" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ebb-GA-UAx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="urZ-t9-Zed"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vVq-Yo-Mp8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="151" y="164"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mEz-WV-IsN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cDl-cP-4TM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="X6I-9V-tl3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8AL-nl-MAn" kind="relationship" relationship="rootViewController" id="I7M-P0-ZhI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ndW-PF-Z7h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="151" y="748"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
