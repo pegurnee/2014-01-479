@@ -14,6 +14,7 @@
 @synthesize red_value;
 @synthesize green_value;
 @synthesize blue_value;
+@synthesize fill_it;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -37,6 +38,7 @@
         green_value = 127.5/ 255.0f;
         blue_value = 127.5/ 255.0f;
         size = 10.0;
+        fill_it = YES;
         _currentColor = [UIColor colorWithRed:(red_value) green:(green_value) blue:(blue_value) alpha:1];
     }
     return self;
@@ -89,8 +91,9 @@
         
     CGContextSetLineWidth(context, size);
     CGContextSetStrokeColorWithColor(context, _currentColor.CGColor);
-    CGContextSetFillColorWithColor(context, _currentColor.CGColor);
-    
+    if (fill_it) {
+        CGContextSetFillColorWithColor(context, _currentColor.CGColor);
+    }
     switch (_shapeType) {
         case 0:
             CGContextAddRect(context, self.currentRect);
@@ -112,7 +115,7 @@
                             sqrt(
                                  pow(_lastTouch.x - _firstTouch.x, 2) +
                                  pow(_lastTouch.y - _firstTouch.y, 2)
-                                ),
+                                ) / 2,
                             0,
                             2 * M_PI,
                             0);

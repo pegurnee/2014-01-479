@@ -70,4 +70,10 @@
     
     [theView setNeedsDisplayInRect: theView.redrawRect];
 }
+
+- (IBAction)fillSwitch:(id)sender {
+    Draw_2D *theView = (Draw_2D*)self.view;
+    theView.fill_it = f_switch.isOn;
+    [theView setNeedsDisplayInRect: theView.redrawRect];
+}
 @end
