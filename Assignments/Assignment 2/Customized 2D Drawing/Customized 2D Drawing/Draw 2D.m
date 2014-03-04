@@ -92,25 +92,11 @@
     CGContextSetFillColorWithColor(context, _currentColor.CGColor);
     
     switch (_shapeType) {
-            /*
-        case lline:
-            
-            CGContextMoveToPoint(context, _firstTouch.x, _firstTouch.y);
-            CGContextAddLineToPoint(context, _lastTouch.x, _lastTouch.y);
-            CGContextStrokePath(context);
-            break;
-             */
         case 0:
             CGContextAddRect(context, self.currentRect);
             CGContextDrawPath(context, kCGPathFillStroke);
             break;
-        case 1:/*
-            CGPoint *topLeft;
-            CGPoint *botRight;
-            if (_firstTouch.x > _lastTouch.x) {
-                
-            }
-                */
+        case 1:
             CGContextMoveToPoint(context, (_firstTouch.x + _lastTouch.x) / 2, _firstTouch.y);
             CGContextAddLineToPoint(context, _lastTouch.x, (_firstTouch.y + _lastTouch.y) / 2);
             CGContextAddLineToPoint(context, (_firstTouch.x + _lastTouch.x) / 2, _lastTouch.y);
@@ -120,12 +106,22 @@
             CGContextDrawPath(context, kCGPathFillStroke);
             break;
         case 2:
+            CGContextAddArc(context,
+                            (_firstTouch.x + _lastTouch.x) / 2,
+                            (_firstTouch.y + _lastTouch.y) / 2,
+                            sqrt(
+                                 pow(_lastTouch.x - _firstTouch.x, 2) +
+                                 pow(_lastTouch.y - _firstTouch.y, 2)
+                                ),
+                            0,
+                            2 * M_PI,
+                            0);
+            CGContextDrawPath(context, kCGPathFillStroke);
             break;
-        case 3: {
+        case 3:
             CGContextAddEllipseInRect(context, self.currentRect);
             CGContextDrawPath(context, kCGPathFillStroke);
             break;
-        }
         default:
             break;
     }
