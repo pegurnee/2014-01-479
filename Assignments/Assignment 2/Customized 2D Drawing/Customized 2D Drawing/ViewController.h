@@ -15,6 +15,9 @@
     __weak IBOutlet UISlider *g_slider;
     __weak IBOutlet UISlider *s_slider;
     __weak IBOutlet UISwitch *f_switch;
+    __weak IBOutlet UILabel *b_label;
+    __weak IBOutlet UILabel *g_label;
+    __weak IBOutlet UILabel *r_label;
 }
 - (IBAction)size_slider:(id)sender;
 - (IBAction)changeShape:(id)sender;

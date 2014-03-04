@@ -71,13 +71,37 @@
                                     <action selector="fillSwitch:" destination="vXZ-lx-hvc" eventType="valueChanged" id="tkv-hg-med"/>
                                 </connections>
                             </switch>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="127" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ief-be-kY4">
+                                <rect key="frame" x="253" y="480" width="29" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="127" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UN6-1J-pWc">
+                                <rect key="frame" x="253" y="398" width="29" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="127" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ohe-Mf-muh">
+                                <rect key="frame" x="253" y="439" width="29" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="b_label" destination="UN6-1J-pWc" id="j5N-x6-PqU"/>
                         <outlet property="b_slider" destination="heU-CB-yZO" id="iOB-qt-sJc"/>
                         <outlet property="f_switch" destination="ESS-fs-tNh" id="g5U-WB-VAZ"/>
+                        <outlet property="g_label" destination="ohe-Mf-muh" id="kbE-DC-0Xh"/>
                         <outlet property="g_slider" destination="ssE-yX-YyO" id="U5P-vm-wbA"/>
+                        <outlet property="r_label" destination="ief-be-kY4" id="jIz-jd-S8O"/>
                         <outlet property="r_slider" destination="9Qd-RY-Zy6" id="qwu-Mh-D7f"/>
                         <outlet property="s_slider" destination="5tH-vh-qsx" id="G4z-9Q-25D"/>
                     </connections>

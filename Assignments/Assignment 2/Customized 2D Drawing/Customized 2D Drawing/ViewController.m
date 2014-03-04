@@ -53,14 +53,17 @@
         case 0:
             red_value = [[NSString stringWithFormat:@"%.0f", r_slider.value] floatValue] / 255.0f;
             theView.red_value = red_value;
+            r_label.text = [NSString stringWithFormat: @"%d", (int)(red_value * 255.0)];
             break;
         case 1:
             green_value = [[NSString stringWithFormat:@"%.0f", g_slider.value] floatValue] / 255.0f;
             theView.green_value = green_value;
+            g_label.text = [NSString stringWithFormat: @"%d", (int)(green_value * 255.0)];
             break;
         case 2:
             blue_value = [[NSString stringWithFormat:@"%.0f", b_slider.value] floatValue] / 255.0f;
             theView.blue_value = blue_value;
+            b_label.text = [NSString stringWithFormat: @"%d", (int)(blue_value * 255.0)];
             break;
         default:
             break;
