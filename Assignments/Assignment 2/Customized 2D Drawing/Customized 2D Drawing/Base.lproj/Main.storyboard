@@ -64,12 +64,8 @@
                                     <action selector="changeColor:" destination="vXZ-lx-hvc" eventType="valueChanged" id="Ym0-7r-HBF"/>
                                 </connections>
                             </slider>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ueD-Xw-b8o">
-                                <rect key="frame" x="251" y="515" width="51" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ESS-fs-tNh">
-                                <rect key="frame" x="251" y="516" width="51" height="31"/>
+                                <rect key="frame" x="250" y="515" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="fillSwitch:" destination="vXZ-lx-hvc" eventType="valueChanged" id="tkv-hg-med"/>

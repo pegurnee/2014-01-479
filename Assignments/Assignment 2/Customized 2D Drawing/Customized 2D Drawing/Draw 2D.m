@@ -93,6 +93,8 @@
     CGContextSetStrokeColorWithColor(context, _currentColor.CGColor);
     if (fill_it) {
         CGContextSetFillColorWithColor(context, _currentColor.CGColor);
+    } else {
+        CGContextSetFillColorWithColor(context, [UIColor whiteColor].CGColor);
     }
     switch (_shapeType) {
         case 0:
