@@ -31,7 +31,7 @@
     float new_size = [[NSString stringWithFormat:@"%.0f", s_slider.value] floatValue];
     theView.size = new_size ;// 20.0f;
     
-    [theView setNeedsDisplayInRect: theView.redrawRect];
+    [theView setNeedsDisplay];
 }
 
 - (IBAction)changeShape:(id)sender {
@@ -39,7 +39,7 @@
      Draw_2D *theView = (Draw_2D*)self.view;
     [theView setShapeType:[control selectedSegmentIndex]];
     
-    [theView setNeedsDisplayInRect: theView.redrawRect];
+    [theView setNeedsDisplay];
 }
 
 - (IBAction)changeColor:(id)sender {
@@ -71,7 +71,6 @@
     
      theView.currentColor = [UIColor colorWithRed:(red_value) green:(green_value) blue:(blue_value) alpha:1];
     
-//    [theView setNeedsDisplayInRect: theView.redrawRect];
     [theView setNeedsDisplay];
 }
 

@@ -65,7 +65,7 @@
                                              _drawImage.size.height));
     
     _redrawRect = CGRectInset(_redrawRect, -2.0, -2.0);
-    [self setNeedsDisplayInRect:_redrawRect];
+    [self setNeedsDisplay];
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
