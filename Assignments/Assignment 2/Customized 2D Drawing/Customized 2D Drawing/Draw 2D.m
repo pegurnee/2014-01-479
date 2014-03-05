@@ -15,6 +15,7 @@
 @synthesize green_value;
 @synthesize blue_value;
 @synthesize fill_it;
+@synthesize clear_only;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -79,7 +80,7 @@
                                              _drawImage.size.height));
     
     _redrawRect = CGRectUnion(_redrawRect, self.currentRect);
-    [self setNeedsDisplayInRect:_redrawRect];
+    [self setNeedsDisplay];
 }
 
 

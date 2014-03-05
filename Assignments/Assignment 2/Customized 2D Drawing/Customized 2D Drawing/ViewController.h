@@ -23,5 +23,6 @@
 - (IBAction)changeShape:(id)sender;
 - (IBAction)changeColor:(id)sender;
 - (IBAction)fillSwitch:(id)sender;
+- (IBAction)clear:(id)sender;
 
 @end

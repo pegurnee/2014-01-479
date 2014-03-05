@@ -15,6 +15,7 @@
 @property float green_value;
 @property float blue_value;
 @property BOOL fill_it;
+@property BOOL clear_only;
 
 @property (nonatomic) CGPoint firstTouch;
 @property (nonatomic) CGPoint lastTouch;

@@ -71,12 +71,27 @@
     
      theView.currentColor = [UIColor colorWithRed:(red_value) green:(green_value) blue:(blue_value) alpha:1];
     
-    [theView setNeedsDisplayInRect: theView.redrawRect];
+//    [theView setNeedsDisplayInRect: theView.redrawRect];
+    [theView setNeedsDisplay];
 }
 
 - (IBAction)fillSwitch:(id)sender {
     Draw_2D *theView = (Draw_2D*)self.view;
     theView.fill_it = f_switch.isOn;
     [theView setNeedsDisplayInRect: theView.redrawRect];
+}
+
+- (IBAction)clear:(id)sender {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Screen Cleared"
+                                                    message:@""
+                                                   delegate:self
+                                          cancelButtonTitle:@"Ok"
+                                          otherButtonTitles:nil];
+    [alert show];
+    Draw_2D *theView = (Draw_2D*) self.view;
+    theView.firstTouch = CGPointMake(0, 0);
+    theView.lastTouch = CGPointMake(0, 0);
+    
+    [theView setNeedsDisplay];
 }
 @end
