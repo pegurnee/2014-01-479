@@ -28,10 +28,19 @@
 
 - (IBAction)size_slider:(id)sender {
     Draw_2D *theView = (Draw_2D*)self.view;
-    float new_size = [[NSString stringWithFormat:@"%.0f", s_slider.value] floatValue];
-    theView.size = new_size ;// 20.0f;
-    
-    [theView setNeedsDisplay];
+    if (!theView.clear_only) {
+        float new_size = [[NSString stringWithFormat:@"%.0f", s_slider.value] floatValue];
+        theView.size = new_size ;// 20.0f;
+        
+        [theView setNeedsDisplay];
+    } else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@""
+                                                        message:@"Draw before attempting to adjust"
+                                                       delegate:self
+                                              cancelButtonTitle:@"Ok"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
 }
 
 - (IBAction)changeShape:(id)sender {
@@ -45,39 +54,58 @@
 - (IBAction)changeColor:(id)sender {
     Draw_2D *theView = (Draw_2D*)self.view;
     
-    float red_value = theView.red_value;
-    float green_value = theView.green_value;
-    float blue_value = theView.blue_value;
-    
-    switch ([sender tag]) {
-        case 0:
-            red_value = [[NSString stringWithFormat:@"%.0f", r_slider.value] floatValue] / 255.0f;
-            theView.red_value = red_value;
-            r_label.text = [NSString stringWithFormat: @"%d", (int)(red_value * 255.0)];
-            break;
-        case 1:
-            green_value = [[NSString stringWithFormat:@"%.0f", g_slider.value] floatValue] / 255.0f;
-            theView.green_value = green_value;
-            g_label.text = [NSString stringWithFormat: @"%d", (int)(green_value * 255.0)];
-            break;
-        case 2:
-            blue_value = [[NSString stringWithFormat:@"%.0f", b_slider.value] floatValue] / 255.0f;
-            theView.blue_value = blue_value;
-            b_label.text = [NSString stringWithFormat: @"%d", (int)(blue_value * 255.0)];
-            break;
-        default:
-            break;
+    if (!theView.clear_only) {
+        float red_value = theView.red_value;
+        float green_value = theView.green_value;
+        float blue_value = theView.blue_value;
+        
+        switch ([sender tag]) {
+            case 0:
+                red_value = [[NSString stringWithFormat:@"%.0f", r_slider.value] floatValue] / 255.0f;
+                theView.red_value = red_value;
+                r_label.text = [NSString stringWithFormat: @"%d", (int)(red_value * 255.0)];
+                break;
+            case 1:
+                green_value = [[NSString stringWithFormat:@"%.0f", g_slider.value] floatValue] / 255.0f;
+                theView.green_value = green_value;
+                g_label.text = [NSString stringWithFormat: @"%d", (int)(green_value * 255.0)];
+                break;
+            case 2:
+                blue_value = [[NSString stringWithFormat:@"%.0f", b_slider.value] floatValue] / 255.0f;
+                theView.blue_value = blue_value;
+                b_label.text = [NSString stringWithFormat: @"%d", (int)(blue_value * 255.0)];
+                break;
+            default:
+                break;
+        }
+        
+         theView.currentColor = [UIColor colorWithRed:(red_value) green:(green_value) blue:(blue_value) alpha:1];
+        
+        [theView setNeedsDisplay];
+    } else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@""
+                                                        message:@"Draw before attempting to adjust"
+                                                       delegate:self
+                                              cancelButtonTitle:@"Ok"
+                                              otherButtonTitles:nil];
+        [alert show];
     }
-    
-     theView.currentColor = [UIColor colorWithRed:(red_value) green:(green_value) blue:(blue_value) alpha:1];
-    
-    [theView setNeedsDisplay];
 }
 
 - (IBAction)fillSwitch:(id)sender {
     Draw_2D *theView = (Draw_2D*)self.view;
-    theView.fill_it = f_switch.isOn;
-    [theView setNeedsDisplayInRect: theView.redrawRect];
+    if (!theView.clear_only) {
+        theView.fill_it = f_switch.isOn;
+        [theView setNeedsDisplayInRect: theView.redrawRect];
+    } else {
+        [f_switch setOn: !(f_switch.isOn) animated: NO];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@""
+                                                        message:@"Draw before attempting to adjust"
+                                                       delegate:self
+                                              cancelButtonTitle:@"Ok"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
 }
 
 - (IBAction)clear:(id)sender {
@@ -90,7 +118,8 @@
     Draw_2D *theView = (Draw_2D*) self.view;
     theView.firstTouch = CGPointMake(0, 0);
     theView.lastTouch = CGPointMake(0, 0);
-    
     [theView setNeedsDisplay];
+    
+    theView.clear_only = YES;
 }
 @end

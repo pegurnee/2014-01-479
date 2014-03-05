@@ -65,6 +65,7 @@
                                              _drawImage.size.height));
     
     _redrawRect = CGRectInset(_redrawRect, -2.0, -2.0);
+    clear_only = NO;
     [self setNeedsDisplay];
 }
 
