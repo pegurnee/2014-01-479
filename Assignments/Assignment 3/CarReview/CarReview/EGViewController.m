@@ -14,10 +14,18 @@
 
 @implementation EGViewController
 
+@synthesize myTableData, myImageData, myDetailData, myTableView;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"CarList" ofType:@"plist"];
+    
+    // Load the file content and read the data into arrays
+    NSDictionary *myDict = [[NSDictionary alloc] initWithContentsOfFile:path];
+    myTableData = [myDict objectForKey:@"MovieTitle"];
+    myDetailData = [myDict objectForKey:@"MovieRating"];
 }
 
 - (void)didReceiveMemoryWarning

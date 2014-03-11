@@ -10,4 +10,9 @@
 
 @interface EGViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITableView *myTableView;
+@property (strong, nonatomic) NSArray *myTableData;
+@property (strong, nonatomic) NSArray *myImageData;
+@property (strong, nonatomic) NSArray *myDetailData;
+
 @end
