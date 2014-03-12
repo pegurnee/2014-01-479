@@ -10,4 +10,13 @@
 
 @interface EGViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *textField1;
+@property (weak, nonatomic) IBOutlet UITableView *tableView1;
+
+@property (strong, nonatomic) NSMutableArray *tableValues;
+
+- (IBAction)addToArray:(id)sender;
+- (IBAction)backgroundTap:(id)sender;
+- (IBAction)deleteFromArray:(id)sender;
+
 @end
