@@ -16,7 +16,9 @@
 
 -(Div*) initWithBorder:(Border *)b1 andOtherBorder:(Border *)b2 {
     self = [super init];
-    border = [[NSArray alloc] initWithObjects:b1, b2, b1, b2, nil];
+    if (self) {
+        border = [[NSArray alloc] initWithObjects:b1, b2, b1, b2, nil];
+    }
     return self;
 }
 

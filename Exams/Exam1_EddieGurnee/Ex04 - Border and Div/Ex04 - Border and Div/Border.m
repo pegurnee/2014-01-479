@@ -19,9 +19,11 @@
                 andStyle:(NSString *)newStyle
                 andColor:(NSString *)newColor {
     self = [super init];
-    self->width = newWidth;
-    self->style = newStyle;
-    self->color = newColor;
+    if (self) {
+        self->width = newWidth;
+        self->style = newStyle;
+        self->color = newColor;
+    }
     return self;
 }
 -(void) borderColor:(NSString *)newColor {
