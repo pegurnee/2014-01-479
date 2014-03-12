@@ -15,4 +15,7 @@
 @property (strong, nonatomic) NSMutableArray *myImageData;
 @property (strong, nonatomic) NSMutableArray *myDetailData;
 
+-(NSMutableDictionary*)dictionaryFromPlist;
+-(BOOL)writeDictionaryToPlist:(NSDictionary*)plistDict;
+
 @end

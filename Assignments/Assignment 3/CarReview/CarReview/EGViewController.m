@@ -49,4 +49,16 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (NSMutableDictionary*)dictionaryFromPlist {
+    NSString *filePath = @"myPlist.plist";
+    NSMutableDictionary* propertyListValues = [[NSMutableDictionary alloc] initWithContentsOfFile:filePath];
+    return propertyListValues;
+}
+
+- (BOOL)writeDictionaryToPlist:(NSDictionary*)plistDict{
+    NSString *filePath = @"myPlist.plist";
+    BOOL result = [plistDict writeToFile:filePath atomically:YES];
+    return result;
+}
+
 @end
