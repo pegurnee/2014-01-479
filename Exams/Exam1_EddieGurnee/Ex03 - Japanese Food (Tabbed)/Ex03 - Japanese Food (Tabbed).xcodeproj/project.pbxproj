@@ -22,6 +22,10 @@
 		2C66163D18CFC335003362EE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C66161C18CFC335003362EE /* UIKit.framework */; };
 		2C66164518CFC335003362EE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C66164318CFC335003362EE /* InfoPlist.strings */; };
 		2C66164718CFC335003362EE /* Ex03___Japanese_Food__Tabbed_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C66164618CFC335003362EE /* Ex03___Japanese_Food__Tabbed_Tests.m */; };
+		2C66165518CFDA8C003362EE /* EGThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C66165418CFDA8C003362EE /* EGThirdViewController.m */; };
+		2C66167918CFEB44003362EE /* Miso Soup.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C66167618CFEB44003362EE /* Miso Soup.png */; };
+		2C66167A18CFEB44003362EE /* Mochi.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C66167718CFEB44003362EE /* Mochi.png */; };
+		2C66167B18CFEB44003362EE /* Salmon Teriyaki.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C66167818CFEB44003362EE /* Salmon Teriyaki.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +60,11 @@
 		2C66164218CFC335003362EE /* Ex03 - Japanese Food (Tabbed)Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Ex03 - Japanese Food (Tabbed)Tests-Info.plist"; sourceTree = "<group>"; };
 		2C66164418CFC335003362EE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2C66164618CFC335003362EE /* Ex03___Japanese_Food__Tabbed_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Ex03___Japanese_Food__Tabbed_Tests.m"; sourceTree = "<group>"; };
+		2C66165318CFDA8C003362EE /* EGThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGThirdViewController.h; sourceTree = "<group>"; };
+		2C66165418CFDA8C003362EE /* EGThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGThirdViewController.m; sourceTree = "<group>"; };
+		2C66167618CFEB44003362EE /* Miso Soup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Miso Soup.png"; sourceTree = "<group>"; };
+		2C66167718CFEB44003362EE /* Mochi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mochi.png; sourceTree = "<group>"; };
+		2C66167818CFEB44003362EE /* Salmon Teriyaki.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Salmon Teriyaki.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,13 +124,15 @@
 		2C66161E18CFC335003362EE /* Ex03 - Japanese Food (Tabbed) */ = {
 			isa = PBXGroup;
 			children = (
+				2C66162A18CFC335003362EE /* Main.storyboard */,
 				2C66162718CFC335003362EE /* EGAppDelegate.h */,
 				2C66162818CFC335003362EE /* EGAppDelegate.m */,
-				2C66162A18CFC335003362EE /* Main.storyboard */,
 				2C66162D18CFC335003362EE /* EGFirstViewController.h */,
 				2C66162E18CFC335003362EE /* EGFirstViewController.m */,
 				2C66163018CFC335003362EE /* EGSecondViewController.h */,
 				2C66163118CFC335003362EE /* EGSecondViewController.m */,
+				2C66165318CFDA8C003362EE /* EGThirdViewController.h */,
+				2C66165418CFDA8C003362EE /* EGThirdViewController.m */,
 				2C66163318CFC335003362EE /* Images.xcassets */,
 				2C66161F18CFC335003362EE /* Supporting Files */,
 			);
@@ -131,6 +142,9 @@
 		2C66161F18CFC335003362EE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2C66167618CFEB44003362EE /* Miso Soup.png */,
+				2C66167718CFEB44003362EE /* Mochi.png */,
+				2C66167818CFEB44003362EE /* Salmon Teriyaki.png */,
 				2C66162018CFC335003362EE /* Ex03 - Japanese Food (Tabbed)-Info.plist */,
 				2C66162118CFC335003362EE /* InfoPlist.strings */,
 				2C66162418CFC335003362EE /* main.m */,
@@ -234,9 +248,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C66167B18CFEB44003362EE /* Salmon Teriyaki.png in Resources */,
+				2C66167A18CFEB44003362EE /* Mochi.png in Resources */,
 				2C66163418CFC335003362EE /* Images.xcassets in Resources */,
 				2C66162318CFC335003362EE /* InfoPlist.strings in Resources */,
 				2C66162C18CFC335003362EE /* Main.storyboard in Resources */,
+				2C66167918CFEB44003362EE /* Miso Soup.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +276,7 @@
 				2C66162F18CFC335003362EE /* EGFirstViewController.m in Sources */,
 				2C66163218CFC335003362EE /* EGSecondViewController.m in Sources */,
 				2C66162518CFC335003362EE /* main.m in Sources */,
+				2C66165518CFDA8C003362EE /* EGThirdViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
