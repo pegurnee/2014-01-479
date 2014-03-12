@@ -19,8 +19,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self->filePath = @"CarList.plist";
-    
+    filePath = [[NSBundle mainBundle] pathForResource:@"CarList" ofType:@"plist"];
     // Load the file content and read the data into arrays
     
     theDict = [self dictionaryFromPlist];
@@ -29,7 +28,7 @@
     fdTableData = [theDict objectForKey:@"Ford"];
     
     imageData = [[NSArray alloc] initWithObjects:
-                                    @"gm_0_logo", @"fd_0_logo",
+                                    @"gm_0_logo.", @"fd_0_logo",
                                     @"gm_1_cruze", @"fd_1_fiesta",
                                     @"gm_2_malibu", @"fd_2_fusion",
                                     @"gm_3_spark", @"fd_3_focus",
@@ -67,7 +66,6 @@
 - (BOOL)writeDictionaryToPlist:(NSDictionary*)plistDict{
     [theDict setObject:gmTableData forKey:@"GM"];
     [theDict setObject:fdTableData forKey:@"Ford"];
-    
     BOOL result = [plistDict writeToFile:filePath atomically:YES];
     return result;
 }
