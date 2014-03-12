@@ -23,8 +23,8 @@
     NSString *path = [[NSBundle mainBundle] pathForResource:@"CarList" ofType:@"plist"];
     
     // Load the file content and read the data into arrays
-    NSDictionary *myDict = [[NSDictionary alloc] initWithContentsOfFile:path];
-    myTableData = [myDict objectForKey:@"GM"];
+    NSDictionary *fullDictionary = [[NSDictionary alloc] initWithContentsOfFile:path];
+    myTableData = [fullDictionary objectForKey:@"GM"];
     NSLog(@"hi");
     for (int i = 0; i < 3; i++) {
         /*
@@ -40,7 +40,7 @@
     }
 
     
-    myDetailData = [myDict objectForKey:@"MovieRating"];
+    myDetailData = [fullDictionary objectForKey:@"MovieRating"];
 }
 
 - (void)didReceiveMemoryWarning
