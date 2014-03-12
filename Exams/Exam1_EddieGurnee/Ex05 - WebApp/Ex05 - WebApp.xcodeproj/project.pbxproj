@@ -21,6 +21,8 @@
 		2C66172C18D00D28003362EE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C66170E18D00D28003362EE /* UIKit.framework */; };
 		2C66173418D00D28003362EE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C66173218D00D28003362EE /* InfoPlist.strings */; };
 		2C66173618D00D28003362EE /* Ex05___WebAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C66173518D00D28003362EE /* Ex05___WebAppTests.m */; };
+		2C66174118D00F59003362EE /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 2C66173F18D00F59003362EE /* index.html */; };
+		2C66174218D00F59003362EE /* processing.js in Resources */ = {isa = PBXBuildFile; fileRef = 2C66174018D00F59003362EE /* processing.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		2C66173118D00D28003362EE /* Ex05 - WebAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Ex05 - WebAppTests-Info.plist"; sourceTree = "<group>"; };
 		2C66173318D00D28003362EE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2C66173518D00D28003362EE /* Ex05___WebAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Ex05___WebAppTests.m"; sourceTree = "<group>"; };
+		2C66173F18D00F59003362EE /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		2C66174018D00F59003362EE /* processing.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = processing.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,8 @@
 		2C6616FE18D00D28003362EE = {
 			isa = PBXGroup;
 			children = (
+				2C66173F18D00F59003362EE /* index.html */,
+				2C66174018D00F59003362EE /* processing.js */,
 				2C66171018D00D28003362EE /* Ex05 - WebApp */,
 				2C66172F18D00D28003362EE /* Ex05 - WebAppTests */,
 				2C66170918D00D28003362EE /* Frameworks */,
@@ -231,6 +237,8 @@
 			files = (
 				2C66172318D00D28003362EE /* Images.xcassets in Resources */,
 				2C66171518D00D28003362EE /* InfoPlist.strings in Resources */,
+				2C66174118D00F59003362EE /* index.html in Resources */,
+				2C66174218D00F59003362EE /* processing.js in Resources */,
 				2C66171E18D00D28003362EE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

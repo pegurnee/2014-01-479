@@ -13,11 +13,16 @@
 @end
 
 @implementation EGViewController
+@synthesize myWebView;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"index"
+                                                     ofType:@"html"];
+    [myWebView loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath: path
+                                                                   isDirectory:NO]]];
 }
 
 - (void)didReceiveMemoryWarning

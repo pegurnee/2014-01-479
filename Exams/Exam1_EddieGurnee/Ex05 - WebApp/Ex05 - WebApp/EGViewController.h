@@ -10,4 +10,6 @@
 
 @interface EGViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIWebView *myWebView;
+
 @end
