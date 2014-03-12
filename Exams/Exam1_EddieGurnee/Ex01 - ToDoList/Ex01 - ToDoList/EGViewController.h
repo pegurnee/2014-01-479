@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EGViewController : UIViewController
+@interface EGViewController : UIViewController <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *textField1;
 @property (weak, nonatomic) IBOutlet UITableView *tableView1;

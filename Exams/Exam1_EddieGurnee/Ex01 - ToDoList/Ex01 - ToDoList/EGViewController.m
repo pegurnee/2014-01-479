@@ -8,12 +8,6 @@
 
 #import "EGViewController.h"
 
-/*
-@interface EGViewController ()
-
-@end
- */
-
 @implementation EGViewController
 
 @synthesize textField1, tableView1, tableValues;
