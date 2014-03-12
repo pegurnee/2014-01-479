@@ -19,21 +19,25 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    filePath = [[NSBundle mainBundle] pathForResource:@"CarList" ofType:@"plist"];
-    // Load the file content and read the data into arrays
     
+    //establish the filePath at the correct location of CarList.plist
+    filePath = [[NSBundle mainBundle] pathForResource:@"CarList" ofType:@"plist"];
+    
+    //loads the dictionary from the plist
     theDict = [self dictionaryFromPlist];
     
+    //loads the maker arrays from the dictionary
     gmTableData = [theDict objectForKey:@"GM"];
     fdTableData = [theDict objectForKey:@"Ford"];
     
+    //all the images to be used
     imageData = [[NSArray alloc] initWithObjects:
                                     @"gm_0_logo.", @"fd_0_logo",
                                     @"gm_1_cruze", @"fd_1_fiesta",
                                     @"gm_2_malibu", @"fd_2_fusion",
                                     @"gm_3_spark", @"fd_3_focus",
                  nil];
-    NSLog(@"hi");
+    
     for (int i = 0; i < [gmTableData count]; i++) {
         /*
         NSString *msg = [[NSString alloc] initWithFormat:@"You've selected %@", [myTableData objectAtIndex: i]];
@@ -54,15 +58,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+//reads a plist dictionary and returns it as a mutableDictionary
 - (NSMutableDictionary*)dictionaryFromPlist {
-    /*
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"CarList" ofType:@"plist"];
-    */
-    
     NSMutableDictionary* propertyListValues = [[NSMutableDictionary alloc] initWithContentsOfFile:filePath];
     return propertyListValues;
 }
 
+//writes to the plist a user definted dictionary
 - (BOOL)writeDictionaryToPlist:(NSDictionary*)plistDict{
     [theDict setObject:gmTableData forKey:@"GM"];
     [theDict setObject:fdTableData forKey:@"Ford"];
