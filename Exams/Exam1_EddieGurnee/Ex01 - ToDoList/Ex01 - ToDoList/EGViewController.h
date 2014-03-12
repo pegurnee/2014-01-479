@@ -16,7 +16,7 @@
 @property (strong, nonatomic) NSMutableArray *tableValues;
 
 - (IBAction)addToArray:(id)sender;
-- (IBAction)backgroundTap:(id)sender;
+- (IBAction)backgroundTap:(UIControl*)sender;
 - (IBAction)deleteFromArray:(id)sender;
 
 @end

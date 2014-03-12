@@ -71,7 +71,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <connections>
-                            <action selector="backgroundTap:" destination="vXZ-lx-hvc" eventType="valueChanged" id="vr7-6P-Gnc"/>
+                            <action selector="backgroundTap:" destination="vXZ-lx-hvc" eventType="touchDown" id="Xms-lp-GCG"/>
                         </connections>
                     </view>
                     <connections>

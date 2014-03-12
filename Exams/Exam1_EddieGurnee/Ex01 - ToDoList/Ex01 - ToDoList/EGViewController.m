@@ -57,16 +57,31 @@
 }
 
 - (IBAction)addToArray:(id)sender {
-	[tableValues addObject: [textField1 text]];
-	[tableView1 reloadData];
+    if ([[textField1 text] length] > 0) {
+        [tableValues addObject: [textField1 text]];
+        [tableView1 reloadData];
+    }
 }
 
-- (IBAction)backgroundTap:(id)sender {
+- (IBAction)backgroundTap:(UIControl*)sender {
     [textField1 resignFirstResponder];
 }
 
 - (IBAction)deleteFromArray:(id)sender{
+    if ([tableValues count] > 0) {
+        [tableValues removeObjectAtIndex: 0];
+        [tableView1 reloadData];
+    }
+}
+
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    NSString *msg = [[NSString alloc] initWithFormat:@"%@", [tableValues objectAtIndex:indexPath.row]];
+    UIAlertView *myAlert = [[UIAlertView alloc] initWithTitle:@"You Just Select"
+                                                      message:msg delegate:nil
+                                            cancelButtonTitle:@"Done" otherButtonTitles:nil];
+    
+    [myAlert show];
 }
 
 @end
