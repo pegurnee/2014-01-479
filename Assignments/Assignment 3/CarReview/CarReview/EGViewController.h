@@ -11,9 +11,12 @@
 @interface EGViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
-@property (strong, nonatomic) NSMutableArray *myTableData;
-@property (strong, nonatomic) NSMutableArray *myImageData;
-@property (strong, nonatomic) NSMutableArray *myDetailData;
+
+@property (strong, nonatomic) NSArray *imageData;
+@property (strong, nonatomic) NSMutableArray *gmTableData;
+@property (strong, nonatomic) NSMutableArray *fdTableData;
+@property (strong, nonatomic) NSMutableDictionary *theDict;
+@property (strong, nonatomic) NSString *filePath;
 
 -(NSMutableDictionary*)dictionaryFromPlist;
 -(BOOL)writeDictionaryToPlist:(NSDictionary*)plistDict;

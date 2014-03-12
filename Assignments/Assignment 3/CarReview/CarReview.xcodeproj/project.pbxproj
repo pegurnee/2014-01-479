@@ -22,6 +22,14 @@
 		2C4BFF5A18CE5554007CDFCA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C4BFF5818CE5554007CDFCA /* InfoPlist.strings */; };
 		2C4BFF5C18CE5554007CDFCA /* CarReviewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4BFF5B18CE5554007CDFCA /* CarReviewTests.m */; };
 		2C4BFF6618CE561A007CDFCA /* CarList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C4BFF6518CE561A007CDFCA /* CarList.plist */; };
+		2C76B70A18D11F2F0043171D /* fd_0_logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C76B70218D11F2F0043171D /* fd_0_logo.jpg */; };
+		2C76B70B18D11F2F0043171D /* fd_1_fiesta.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2C76B70318D11F2F0043171D /* fd_1_fiesta.jpeg */; };
+		2C76B70C18D11F2F0043171D /* fd_2_fusion.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C76B70418D11F2F0043171D /* fd_2_fusion.jpg */; };
+		2C76B70D18D11F2F0043171D /* fd_3_focus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C76B70518D11F2F0043171D /* fd_3_focus.jpg */; };
+		2C76B70E18D11F2F0043171D /* gm_0_logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C76B70618D11F2F0043171D /* gm_0_logo.jpg */; };
+		2C76B70F18D11F2F0043171D /* gm_1_cruze.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C76B70718D11F2F0043171D /* gm_1_cruze.jpg */; };
+		2C76B71018D11F2F0043171D /* gm_2_malibu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C76B70818D11F2F0043171D /* gm_2_malibu.jpg */; };
+		2C76B71118D11F2F0043171D /* gm_3_spark.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C76B70918D11F2F0043171D /* gm_3_spark.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +63,14 @@
 		2C4BFF5918CE5554007CDFCA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2C4BFF5B18CE5554007CDFCA /* CarReviewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarReviewTests.m; sourceTree = "<group>"; };
 		2C4BFF6518CE561A007CDFCA /* CarList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CarList.plist; sourceTree = "<group>"; };
+		2C76B70218D11F2F0043171D /* fd_0_logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fd_0_logo.jpg; sourceTree = "<group>"; };
+		2C76B70318D11F2F0043171D /* fd_1_fiesta.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fd_1_fiesta.jpeg; sourceTree = "<group>"; };
+		2C76B70418D11F2F0043171D /* fd_2_fusion.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fd_2_fusion.jpg; sourceTree = "<group>"; };
+		2C76B70518D11F2F0043171D /* fd_3_focus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fd_3_focus.jpg; sourceTree = "<group>"; };
+		2C76B70618D11F2F0043171D /* gm_0_logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gm_0_logo.jpg; sourceTree = "<group>"; };
+		2C76B70718D11F2F0043171D /* gm_1_cruze.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gm_1_cruze.jpg; sourceTree = "<group>"; };
+		2C76B70818D11F2F0043171D /* gm_2_malibu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gm_2_malibu.jpg; sourceTree = "<group>"; };
+		2C76B70918D11F2F0043171D /* gm_3_spark.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gm_3_spark.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +144,14 @@
 		2C4BFF3718CE5554007CDFCA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2C76B70218D11F2F0043171D /* fd_0_logo.jpg */,
+				2C76B70318D11F2F0043171D /* fd_1_fiesta.jpeg */,
+				2C76B70418D11F2F0043171D /* fd_2_fusion.jpg */,
+				2C76B70518D11F2F0043171D /* fd_3_focus.jpg */,
+				2C76B70618D11F2F0043171D /* gm_0_logo.jpg */,
+				2C76B70718D11F2F0043171D /* gm_1_cruze.jpg */,
+				2C76B70818D11F2F0043171D /* gm_2_malibu.jpg */,
+				2C76B70918D11F2F0043171D /* gm_3_spark.jpg */,
 				2C4BFF3818CE5554007CDFCA /* CarReview-Info.plist */,
 				2C4BFF3918CE5554007CDFCA /* InfoPlist.strings */,
 				2C4BFF3C18CE5554007CDFCA /* main.m */,
@@ -232,10 +256,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C76B71018D11F2F0043171D /* gm_2_malibu.jpg in Resources */,
+				2C76B70D18D11F2F0043171D /* fd_3_focus.jpg in Resources */,
 				2C4BFF4918CE5554007CDFCA /* Images.xcassets in Resources */,
 				2C4BFF6618CE561A007CDFCA /* CarList.plist in Resources */,
 				2C4BFF3B18CE5554007CDFCA /* InfoPlist.strings in Resources */,
+				2C76B70A18D11F2F0043171D /* fd_0_logo.jpg in Resources */,
+				2C76B70F18D11F2F0043171D /* gm_1_cruze.jpg in Resources */,
+				2C76B71118D11F2F0043171D /* gm_3_spark.jpg in Resources */,
+				2C76B70E18D11F2F0043171D /* gm_0_logo.jpg in Resources */,
 				2C4BFF4418CE5554007CDFCA /* Main.storyboard in Resources */,
+				2C76B70B18D11F2F0043171D /* fd_1_fiesta.jpeg in Resources */,
+				2C76B70C18D11F2F0043171D /* fd_2_fusion.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,6 +497,7 @@
 				2C4BFF6118CE5554007CDFCA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2C4BFF6218CE5554007CDFCA /* Build configuration list for PBXNativeTarget "CarReviewTests" */ = {
 			isa = XCConfigurationList;
@@ -473,6 +506,7 @@
 				2C4BFF6418CE5554007CDFCA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

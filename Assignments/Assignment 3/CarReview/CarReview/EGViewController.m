@@ -14,19 +14,28 @@
 
 @implementation EGViewController
 
-@synthesize myTableData, myImageData, myDetailData, myTableView;
+@synthesize gmTableData, fdTableData, theDict, myTableView, filePath, imageData;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"CarList" ofType:@"plist"];
+    self->filePath = @"CarList.plist";
     
     // Load the file content and read the data into arrays
-    NSDictionary *fullDictionary = [[NSDictionary alloc] initWithContentsOfFile:path];
-    myTableData = [fullDictionary objectForKey:@"GM"];
+    
+    theDict = [self dictionaryFromPlist];
+    
+    gmTableData = [theDict objectForKey:@"GM"];
+    fdTableData = [theDict objectForKey:@"Ford"];
+    
+    imageData = [[NSArray alloc] initWithObjects:
+                                    @"gm_0_logo", @"fd_0_logo",
+                                    @"gm_1_cruze", @"fd_1_fiesta",
+                                    @"gm_2_malibu", @"fd_2_fusion",
+                                    @"gm_3_spark", @"fd_3_focus",
+                 nil];
     NSLog(@"hi");
-    for (int i = 0; i < 3; i++) {
+    for (int i = 0; i < [gmTableData count]; i++) {
         /*
         NSString *msg = [[NSString alloc] initWithFormat:@"You've selected %@", [myTableData objectAtIndex: i]];
         UIAlertView *myAlert = [[UIAlertView alloc] initWithTitle:@"Row Select"
@@ -36,11 +45,8 @@
         
         [myAlert show];
          */
-        NSLog(@"Object %d: %@", i, [myTableData objectAtIndex: i]);
+        NSLog(@"Object %d: %@", i, [gmTableData objectAtIndex: i]);
     }
-
-    
-    myDetailData = [fullDictionary objectForKey:@"MovieRating"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -50,13 +56,18 @@
 }
 
 - (NSMutableDictionary*)dictionaryFromPlist {
-    NSString *filePath = @"myPlist.plist";
+    /*
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"CarList" ofType:@"plist"];
+    */
+    
     NSMutableDictionary* propertyListValues = [[NSMutableDictionary alloc] initWithContentsOfFile:filePath];
     return propertyListValues;
 }
 
 - (BOOL)writeDictionaryToPlist:(NSDictionary*)plistDict{
-    NSString *filePath = @"myPlist.plist";
+    [theDict setObject:gmTableData forKey:@"GM"];
+    [theDict setObject:fdTableData forKey:@"Ford"];
+    
     BOOL result = [plistDict writeToFile:filePath atomically:YES];
     return result;
 }
