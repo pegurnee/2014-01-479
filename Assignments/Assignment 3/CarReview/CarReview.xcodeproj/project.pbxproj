@@ -30,6 +30,7 @@
 		2C76B70F18D11F2F0043171D /* gm_1_cruze.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C76B70718D11F2F0043171D /* gm_1_cruze.jpg */; };
 		2C76B71018D11F2F0043171D /* gm_2_malibu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C76B70818D11F2F0043171D /* gm_2_malibu.jpg */; };
 		2C76B71118D11F2F0043171D /* gm_3_spark.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C76B70918D11F2F0043171D /* gm_3_spark.jpg */; };
+		2CAE30FA18D1FDEB00819E00 /* EGModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAE30F918D1FDEB00819E00 /* EGModelViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,8 @@
 		2C76B70718D11F2F0043171D /* gm_1_cruze.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gm_1_cruze.jpg; sourceTree = "<group>"; };
 		2C76B70818D11F2F0043171D /* gm_2_malibu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gm_2_malibu.jpg; sourceTree = "<group>"; };
 		2C76B70918D11F2F0043171D /* gm_3_spark.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gm_3_spark.jpg; sourceTree = "<group>"; };
+		2CAE30F818D1FDEB00819E00 /* EGModelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGModelViewController.h; sourceTree = "<group>"; };
+		2CAE30F918D1FDEB00819E00 /* EGModelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGModelViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +138,8 @@
 				2C4BFF4218CE5554007CDFCA /* Main.storyboard */,
 				2C4BFF4518CE5554007CDFCA /* EGViewController.h */,
 				2C4BFF4618CE5554007CDFCA /* EGViewController.m */,
+				2CAE30F818D1FDEB00819E00 /* EGModelViewController.h */,
+				2CAE30F918D1FDEB00819E00 /* EGModelViewController.m */,
 				2C4BFF4818CE5554007CDFCA /* Images.xcassets */,
 				2C4BFF3718CE5554007CDFCA /* Supporting Files */,
 			);
@@ -288,6 +293,7 @@
 			files = (
 				2C4BFF4718CE5554007CDFCA /* EGViewController.m in Sources */,
 				2C4BFF4118CE5554007CDFCA /* EGAppDelegate.m in Sources */,
+				2CAE30FA18D1FDEB00819E00 /* EGModelViewController.m in Sources */,
 				2C4BFF3D18CE5554007CDFCA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
