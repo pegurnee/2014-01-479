@@ -90,10 +90,8 @@
 //sends title and table data for the model
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString: @"toModelView"]) {
-        NSLog(@"hello");
         NSIndexPath *indexPath = [self.myTableView indexPathForSelectedRow];
         EGModelViewController *modelVC = segue.destinationViewController;
-        NSLog(@"%@", [theMake objectAtIndex: indexPath.row]);
         [modelVC setTheTitle: [theMake objectAtIndex: indexPath.row]];
         [modelVC setTableData: [theDict objectForKey: [theMake objectAtIndex: indexPath.row]]];
     }

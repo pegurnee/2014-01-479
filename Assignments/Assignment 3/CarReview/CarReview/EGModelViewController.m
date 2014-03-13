@@ -37,7 +37,6 @@
     for (int i = 0; i < [tableData count]; i++) {
 //        NSLog(@"Object %d: %@", i, [tableData objectAtIndex: i]);
     }
-
 }
 
 - (void)didReceiveMemoryWarning
@@ -76,6 +75,17 @@
 //sets the height of each cell
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 72;
+}
+
+//sends title and table data for the model
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString: @"toDetailView"]) {
+        NSIndexPath *indexPath = [self.myTableView indexPathForSelectedRow];
+        EGDetailViewController *modelVC = segue.destinationViewController;
+        NSLog(@"%@", [tableData objectAtIndex: indexPath.row]);
+        [modelVC setTheCar: [tableData objectAtIndex: indexPath.row]];
+        //[modelVC setTableData: [theDict objectForKey: [theMake objectAtIndex: indexPath.row]]];
+    }
 }
 
 @end
