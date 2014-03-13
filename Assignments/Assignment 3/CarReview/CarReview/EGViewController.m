@@ -31,11 +31,11 @@
     gmTableData = [theDict objectForKey:@"GM"];
     fdTableData = [theDict objectForKey:@"Ford"];
     
+    
     //all the images to be used
     
     NSString *imageFilePath = [[NSBundle mainBundle] pathForResource:@"Images" ofType:@"plist"];
-    NSDictionary *imageDict = [[NSDictionary alloc] initWithContentsOfFile: imageFilePath];
-    logos = [imageDict objectForKey: @"Logos"];
+    logos = [[NSArray alloc] initWithContentsOfFile: imageFilePath];
     
     for (int i = 0; i < [gmTableData count]; i++) {
         /*
@@ -77,7 +77,8 @@
     cell.imageView.image = [UIImage imageNamed: logos[indexPath.row]];
     
     cell.textLabel.text = [theMake objectAtIndex:indexPath.row];
-    cell.detailTextLabel.text = [[NSString alloc] initWithFormat: @"%d Car Models", [gmTableData count]];
+    cell.detailTextLabel.text = [[NSString alloc] initWithFormat: @"%d Car Models",
+                                 [[theDict objectForKey: theMake[indexPath.row]] count]];
     
     return cell;
 }

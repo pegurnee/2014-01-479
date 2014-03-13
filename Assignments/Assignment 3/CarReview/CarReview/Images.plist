@@ -1,23 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict>
-	<key>Logos</key>
-	<array>
-		<string>gm_0_logo.jpg</string>
-		<string>fd_0_logo.jpg</string>
-    </array>
-	<key>GM</key>
-	<array>
-		<string>gm_1_cruze.jpg</string>
-		<string>gm_2_malibu.jpg</string>
-		<string>gm_3_spark.jpg</string>
-	</array>
-	<key>Ford</key>
-	<array>
-		<string>fd_1_fiesta.jpg</string>
-		<string>fd_2_fusion.jpg</string>
-		<string>fd_3_focus.jpg</string>
-	</array>
-</dict>
+<array>
+	<string>fd_0_logo.jpg</string>
+	<string>gm_0_logo.jpg</string>
+</array>
 </plist>

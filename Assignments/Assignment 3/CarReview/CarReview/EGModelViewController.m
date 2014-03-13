@@ -10,7 +10,7 @@
 
 @implementation EGModelViewController
 
-@synthesize tableData, theTitle, theTitleBar, myTableView, ratingsFilePath, theRatings, theImages, imagesFilePath;
+@synthesize tableData, theTitle, theTitleBar, myTableView, ratingsFilePath, theRatings;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,13 +27,9 @@
 	// Do any additional setup after loading the view.
     ratingsFilePath = [[NSBundle mainBundle] pathForResource:@"Ratings" ofType:@"plist"];
     theRatings = [[NSArray alloc] initWithContentsOfFile: ratingsFilePath];
-    imagesFilePath = [[NSBundle mainBundle] pathForResource:@"Images" ofType:@"plist"];
-    NSDictionary *imagesDict = [[NSDictionary alloc] initWithContentsOfFile: imagesFilePath];
-    theImages = [imagesDict objectForKey: theTitle];
     
     [theTitleBar setTitle: [[NSString alloc] initWithFormat: @"%@ %@", [theTitleBar title], theTitle]];
     
-//    NSLog(@"%d", [tableData count]);
     for (int i = 0; i < [tableData count]; i++) {
 //        NSLog(@"Object %d: %@", i, [tableData objectAtIndex: i]);
     }
@@ -62,7 +58,7 @@
     }
     
     NSDictionary *theModel = [tableData objectAtIndex:indexPath.row];
-    cell.imageView.image = [UIImage imageNamed: theImages[indexPath.row]];
+    cell.imageView.image = [UIImage imageNamed: [theModel objectForKey: @"Image"]];
     cell.textLabel.text = [theModel objectForKey: @"Model"];
     
     NSNumber *rating = [theModel objectForKey: @"Rating"];
@@ -82,9 +78,8 @@
     if ([segue.identifier isEqualToString: @"toDetailView"]) {
         NSIndexPath *indexPath = [self.myTableView indexPathForSelectedRow];
         EGDetailViewController *modelVC = segue.destinationViewController;
-        NSLog(@"%@", [tableData objectAtIndex: indexPath.row]);
         [modelVC setTheCar: [tableData objectAtIndex: indexPath.row]];
-        //[modelVC setTableData: [theDict objectForKey: [theMake objectAtIndex: indexPath.row]]];
+        [modelVC setMaker: theTitle];
     }
 }
 

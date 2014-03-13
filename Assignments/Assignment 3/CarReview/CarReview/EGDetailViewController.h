@@ -10,6 +10,11 @@
 
 @interface EGDetailViewController : UIViewController
 
-@property (strong, nonatomic) NSDictionary* theCar;
+@property (strong, nonatomic) NSString *maker;
+@property (strong, nonatomic) NSDictionary *theCar;
+@property (strong, nonatomic) NSArray *theRatings;
+@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
+@property (weak, nonatomic) IBOutlet UINavigationItem *theTitleBar;
+@property (weak, nonatomic) IBOutlet UIImageView *theImage;
 
 @end

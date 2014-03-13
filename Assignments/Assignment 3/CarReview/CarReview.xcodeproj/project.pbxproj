@@ -33,6 +33,7 @@
 		2CAE30FA18D1FDEB00819E00 /* EGModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAE30F918D1FDEB00819E00 /* EGModelViewController.m */; };
 		2CAE30FC18D2345600819E00 /* Ratings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CAE30FB18D2345500819E00 /* Ratings.plist */; };
 		2CAE30FE18D237A900819E00 /* Images.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CAE30FD18D237A900819E00 /* Images.plist */; };
+		2CAE310118D23CA200819E00 /* EGDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAE310018D23CA200819E00 /* EGDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,8 @@
 		2CAE30F918D1FDEB00819E00 /* EGModelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGModelViewController.m; sourceTree = "<group>"; };
 		2CAE30FB18D2345500819E00 /* Ratings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Ratings.plist; sourceTree = "<group>"; };
 		2CAE30FD18D237A900819E00 /* Images.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Images.plist; sourceTree = "<group>"; };
+		2CAE30FF18D23CA200819E00 /* EGDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGDetailViewController.h; sourceTree = "<group>"; };
+		2CAE310018D23CA200819E00 /* EGDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +147,8 @@
 				2C4BFF4618CE5554007CDFCA /* EGViewController.m */,
 				2CAE30F818D1FDEB00819E00 /* EGModelViewController.h */,
 				2CAE30F918D1FDEB00819E00 /* EGModelViewController.m */,
+				2CAE30FF18D23CA200819E00 /* EGDetailViewController.h */,
+				2CAE310018D23CA200819E00 /* EGDetailViewController.m */,
 				2C4BFF4818CE5554007CDFCA /* Images.xcassets */,
 				2C4BFF3718CE5554007CDFCA /* Supporting Files */,
 			);
@@ -299,6 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CAE310118D23CA200819E00 /* EGDetailViewController.m in Sources */,
 				2C4BFF4718CE5554007CDFCA /* EGViewController.m in Sources */,
 				2C4BFF4118CE5554007CDFCA /* EGAppDelegate.m in Sources */,
 				2CAE30FA18D1FDEB00819E00 /* EGModelViewController.m in Sources */,
