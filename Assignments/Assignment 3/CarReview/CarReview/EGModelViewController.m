@@ -92,7 +92,9 @@
 - (IBAction)unwindToEGModelViewController:(UIStoryboardSegue *)segue {
     //nothing goes here
     EGDetailViewController *returnVC = segue.sourceViewController;
+    tableData = [returnVC.theDict objectForKey: theTitle];
     theDict = returnVC.theDict;
+    NSLog(@"Something");
 }
 
 @end
