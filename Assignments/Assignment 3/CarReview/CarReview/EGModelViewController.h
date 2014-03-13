@@ -10,4 +10,7 @@
 
 @interface EGModelViewController : UIViewController
 
+@property (strong, nonatomic) NSMutableArray *tableData;
+@property (strong, nonatomic) NSString *theTitle;
+
 @end

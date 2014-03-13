@@ -8,11 +8,9 @@
 
 #import "EGModelViewController.h"
 
-@interface EGModelViewController ()
-
-@end
-
 @implementation EGModelViewController
+
+@synthesize tableData, theTitle;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

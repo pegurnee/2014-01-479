@@ -66,7 +66,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *simpleTableIdentifier = @"CellPrototypeID";
+    static NSString *simpleTableIdentifier = @"MakerPrototypeID";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     
     if (cell == nil) {
@@ -76,24 +76,28 @@
     cell.imageView.image = [UIImage imageNamed: imageData[indexPath.row]];
     
     cell.textLabel.text = [theMake objectAtIndex:indexPath.row];
-    cell.detailTextLabel.text = [[NSString alloc] initWithFormat: @"%d", [gmTableData count]];
+    cell.detailTextLabel.text = [[NSString alloc] initWithFormat: @"%d Car Models", [gmTableData count]];
     
     return cell;
 }
 
+//sets the height of each cell
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 72;
 }
 
+//sends title and table data for the model
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    /*
-    if (if) {
-        <#statements#>
+    if ([segue.identifier isEqualToString: @"toModelView"]) {
+        NSLog(@"hello");
+        NSIndexPath *indexPath = [self.myTableView indexPathForSelectedRow];
+        EGModelViewController *modelVC = segue.destinationViewController;
+        NSLog(@"%@", [theMake objectAtIndex: indexPath.row]);
+        [modelVC setTheTitle: [theMake objectAtIndex: indexPath.row]];
+        [modelVC setTableData: [theDict objectForKey: [theMake objectAtIndex: indexPath.row]]];
     }
-     */
-    NSLog(@"hello");
-    
 }
+
 //reads a plist dictionary and returns it as a mutableDictionary
 - (NSMutableDictionary*)dictionaryFromPlist {
     NSMutableDictionary* propertyListValues = [[NSMutableDictionary alloc] initWithContentsOfFile:filePath];

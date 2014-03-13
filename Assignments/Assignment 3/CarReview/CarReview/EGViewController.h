@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EGModelViewController.h"
 
 @interface EGViewController : UIViewController
 
