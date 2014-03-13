@@ -85,6 +85,15 @@
     return 72;
 }
 
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    /*
+    if (if) {
+        <#statements#>
+    }
+     */
+    NSLog(@"hello");
+    
+}
 //reads a plist dictionary and returns it as a mutableDictionary
 - (NSMutableDictionary*)dictionaryFromPlist {
     NSMutableDictionary* propertyListValues = [[NSMutableDictionary alloc] initWithContentsOfFile:filePath];

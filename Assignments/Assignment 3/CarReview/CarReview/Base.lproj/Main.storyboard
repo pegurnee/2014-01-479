@@ -21,11 +21,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="CellPrototypeID" textLabel="BgC-4O-FS5" detailTextLabel="fsZ-aF-F3O" style="IBUITableViewCellStyleSubtitle" id="oUG-gD-GYM">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CellPrototypeID" textLabel="BgC-4O-FS5" detailTextLabel="fsZ-aF-F3O" style="IBUITableViewCellStyleSubtitle" id="oUG-gD-GYM">
                                         <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oUG-gD-GYM" id="KUc-lF-Nt6">
-                                            <rect key="frame" x="0.0" y="0.0" width="253" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BgC-4O-FS5">
@@ -45,7 +45,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="UH2-D7-pV6" kind="push" trigger="accessoryAction" id="pcK-5M-Ra1"/>
+                                            <segue destination="UH2-D7-pV6" kind="push" id="D66-kx-lRp"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -91,7 +91,9 @@
                             <outlet property="delegate" destination="UH2-D7-pV6" id="VZX-ui-wTF"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="XfI-Yg-3T0"/>
+                    <navigationItem key="navigationItem" id="XfI-Yg-3T0">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Gw4-Y8-Eax"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="duK-hO-Dn6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
