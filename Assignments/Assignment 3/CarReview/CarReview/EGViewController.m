@@ -14,7 +14,7 @@
 
 @implementation EGViewController
 
-@synthesize gmTableData, fdTableData, theDict, myTableView, filePath, imageData;
+@synthesize gmTableData, fdTableData, theDict, myTableView, filePath, imageData, theMake;
 
 - (void)viewDidLoad
 {
@@ -27,15 +27,16 @@
     theDict = [self dictionaryFromPlist];
     
     //loads the maker arrays from the dictionary
+    theMake = [theDict allKeys];
     gmTableData = [theDict objectForKey:@"GM"];
     fdTableData = [theDict objectForKey:@"Ford"];
     
     //all the images to be used
     imageData = [[NSArray alloc] initWithObjects:
-                                    @"gm_0_logo.", @"fd_0_logo",
-                                    @"gm_1_cruze", @"fd_1_fiesta",
-                                    @"gm_2_malibu", @"fd_2_fusion",
-                                    @"gm_3_spark", @"fd_3_focus",
+                                    @"gm_0_logo.jpg", @"fd_0_logo.jpg",
+                                    @"gm_1_cruze.jpg", @"fd_1_fiesta.jpg",
+                                    @"gm_2_malibu.jpg", @"fd_2_fusion.jpg",
+                                    @"gm_3_spark.jpg", @"fd_3_focus.jpg",
                  nil];
     
     for (int i = 0; i < [gmTableData count]; i++) {
@@ -48,7 +49,7 @@
         
         [myAlert show];
          */
-        NSLog(@"Object %d: %@", i, [gmTableData objectAtIndex: i]);
+       // NSLog(@"Object %d: %@", i, [gmTableData objectAtIndex: i]);
     }
 }
 
@@ -60,25 +61,28 @@
 
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section {
-    return [[self theDict] count];
+    return [theMake count];//[[self theDict] count] - 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *simpleTableIdentifier = @"SimpleTableID";
-    
+    static NSString *simpleTableIdentifier = @"CellPrototypeID";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     
-    cell.imageView.image = [UIImage imageNamed:@"snowman"];
+    cell.imageView.image = [UIImage imageNamed: imageData[indexPath.row]];
     
-    cell.textLabel.text = [gmTableData objectAtIndex:indexPath.row];
-    //cell.detailTextLabel.text = [myDetailData objectAtIndex:indexPath.row];
+    cell.textLabel.text = [theMake objectAtIndex:indexPath.row];
+    cell.detailTextLabel.text = [[NSString alloc] initWithFormat: @"%d", [gmTableData count]];
     
     return cell;
+}
+
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 72;
 }
 
 //reads a plist dictionary and returns it as a mutableDictionary
