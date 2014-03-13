@@ -14,7 +14,7 @@
 
 @implementation EGViewController
 
-@synthesize gmTableData, fdTableData, theDict, myTableView, filePath, imageData, theMake;
+@synthesize gmTableData, fdTableData, theDict, myTableView, filePath, logos, theMake;
 
 - (void)viewDidLoad
 {
@@ -32,12 +32,10 @@
     fdTableData = [theDict objectForKey:@"Ford"];
     
     //all the images to be used
-    imageData = [[NSArray alloc] initWithObjects:
-                                    @"gm_0_logo.jpg", @"fd_0_logo.jpg",
-                                    @"gm_1_cruze.jpg", @"fd_1_fiesta.jpg",
-                                    @"gm_2_malibu.jpg", @"fd_2_fusion.jpg",
-                                    @"gm_3_spark.jpg", @"fd_3_focus.jpg",
-                 nil];
+    
+    NSString *imageFilePath = [[NSBundle mainBundle] pathForResource:@"Images" ofType:@"plist"];
+    NSDictionary *imageDict = [[NSDictionary alloc] initWithContentsOfFile: imageFilePath];
+    logos = [imageDict objectForKey: @"Logos"];
     
     for (int i = 0; i < [gmTableData count]; i++) {
         /*
@@ -69,13 +67,14 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *simpleTableIdentifier = @"MakerPrototypeID";
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     
-    cell.imageView.image = [UIImage imageNamed: imageData[indexPath.row]];
+    cell.imageView.image = [UIImage imageNamed: logos[indexPath.row]];
     
     cell.textLabel.text = [theMake objectAtIndex:indexPath.row];
     cell.detailTextLabel.text = [[NSString alloc] initWithFormat: @"%d Car Models", [gmTableData count]];

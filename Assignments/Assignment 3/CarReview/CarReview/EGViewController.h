@@ -13,7 +13,7 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
 
-@property (strong, nonatomic) NSArray *imageData;
+@property (strong, nonatomic) NSArray *logos;
 @property (strong, nonatomic) NSArray *theMake;
 @property (strong, nonatomic) NSMutableArray *gmTableData;
 @property (strong, nonatomic) NSMutableArray *fdTableData;

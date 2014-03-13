@@ -10,7 +10,7 @@
 
 @implementation EGModelViewController
 
-@synthesize tableData, theTitle, theTitleBar, myTableView;
+@synthesize tableData, theTitle, theTitleBar, myTableView, ratingsFilePath, theRatings, theImages, imagesFilePath;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -25,10 +25,17 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    ratingsFilePath = [[NSBundle mainBundle] pathForResource:@"Ratings" ofType:@"plist"];
+    theRatings = [[NSArray alloc] initWithContentsOfFile: ratingsFilePath];
+    imagesFilePath = [[NSBundle mainBundle] pathForResource:@"Images" ofType:@"plist"];
+    NSDictionary *imagesDict = [[NSDictionary alloc] initWithContentsOfFile: imagesFilePath];
+    theImages = [imagesDict objectForKey: theTitle];
     
-    [theTitleBar setTitle: theTitle];
+    [theTitleBar setTitle: [[NSString alloc] initWithFormat: @"%@ %@", [theTitleBar title], theTitle]];
+    
+//    NSLog(@"%d", [tableData count]);
     for (int i = 0; i < [tableData count]; i++) {
-        NSLog(@"Object %d: %@", i, [tableData objectAtIndex: i]);
+//        NSLog(@"Object %d: %@", i, [tableData objectAtIndex: i]);
     }
 
 }
@@ -42,7 +49,6 @@
 //number of table cells
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section {
-    
     return [tableData count];
 }
 
@@ -56,11 +62,13 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     
-    //cell.imageView.image = [UIImage imageNamed: imageData[indexPath.row]];
+    NSDictionary *theModel = [tableData objectAtIndex:indexPath.row];
+    cell.imageView.image = [UIImage imageNamed: theImages[indexPath.row]];
+    cell.textLabel.text = [theModel objectForKey: @"Model"];
     
-    cell.textLabel.text = [[tableData objectAtIndex:indexPath.row] name];
-    
-    //cell.detailTextLabel.text = [[NSString alloc] initWithFormat: @"%d Car Models", [tableData count]];
+    NSNumber *rating = [theModel objectForKey: @"Rating"];
+    int intRating = [rating intValue];
+    cell.detailTextLabel.text = theRatings[intRating];
     
     return cell;
 }
