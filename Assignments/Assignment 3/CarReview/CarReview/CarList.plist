@@ -4,15 +4,69 @@
 <dict>
 	<key>GM</key>
 	<array>
-		<string>Cruze</string>
-		<string>Malibu</string>
-		<string>Spark</string>
+		<dict>
+			<key>Model</key>
+			<string>Cruze</string>
+			<key>Rating</key>
+			<integer>0</integer>
+			<key>Image</key>
+			<string>gm_1_cruze.jpg</string>
+			<key>Description</key>
+			<string>This car is best used for cruising.</string>
+		</dict>
+		<dict>
+			<key>Model</key>
+			<string>Malibu</string>
+			<key>Rating</key>
+			<integer>0</integer>
+			<key>Image</key>
+			<string>gm_2_malibu.jpg</string>
+			<key>Description</key>
+			<string>This car is best used in Los Angelos County.</string>
+		</dict>
+		<dict>
+			<key>Model</key>
+			<string>Spark</string>
+			<key>Rating</key>
+			<integer>0</integer>
+			<key>Image</key>
+			<string>gm_3_spark.jpg</string>
+			<key>Description</key>
+			<string>This car is best used for flying keys attached to kites.</string>
+		</dict>
 	</array>
 	<key>Ford</key>
 	<array>
-		<string>Fiesta</string>
-		<string>Fusion</string>
-		<string>Focus</string>
+		<dict>
+			<key>Model</key>
+			<string>Fiesta</string>
+			<key>Rating</key>
+			<integer>0</integer>
+			<key>Image</key>
+			<string>fd_1_fiesta.jpg</string>
+			<key>Description</key>
+			<string>Siempre es tiempo de fiesta!</string>
+		</dict>
+		<dict>
+			<key>Model</key>
+			<string>Fusion</string>
+			<key>Rating</key>
+			<integer>0</integer>
+			<key>Image</key>
+			<string>fd_2_fusion.jpg</string>
+			<key>Description</key>
+			<string>Should be implemented with a dance or earings.</string>
+		</dict>
+		<dict>
+			<key>Model</key>
+			<string>Focus</string>
+			<key>Rating</key>
+			<integer>0</integer>
+			<key>Image</key>
+			<string>fd_3_focus.jpg</string>
+			<key>Description</key>
+			<string>This car is best used for cruising.</string>
+		</dict>
 	</array>
 </dict>
 </plist>

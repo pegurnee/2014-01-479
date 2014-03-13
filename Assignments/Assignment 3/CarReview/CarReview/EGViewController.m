@@ -58,6 +58,29 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (NSInteger)tableView:(UITableView *)tableView
+ numberOfRowsInSection:(NSInteger)section {
+    return [[self theDict] count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *simpleTableIdentifier = @"SimpleTableID";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+    }
+    
+    cell.imageView.image = [UIImage imageNamed:@"snowman"];
+    
+    cell.textLabel.text = [gmTableData objectAtIndex:indexPath.row];
+    //cell.detailTextLabel.text = [myDetailData objectAtIndex:indexPath.row];
+    
+    return cell;
+}
+
 //reads a plist dictionary and returns it as a mutableDictionary
 - (NSMutableDictionary*)dictionaryFromPlist {
     NSMutableDictionary* propertyListValues = [[NSMutableDictionary alloc] initWithContentsOfFile:filePath];
