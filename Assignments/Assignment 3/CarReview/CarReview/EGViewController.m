@@ -59,11 +59,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+//number of table cells
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section {
-    return [theMake count];//[[self theDict] count] - 1;
+    return [theMake count];
 }
 
+//what to do with each cell
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *simpleTableIdentifier = @"MakerPrototypeID";

@@ -10,6 +10,9 @@
 
 @interface EGModelViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITableView *myTableView;
+@property (weak, nonatomic) IBOutlet UINavigationItem *theTitleBar;
+
 @property (strong, nonatomic) NSMutableArray *tableData;
 @property (strong, nonatomic) NSString *theTitle;
 
