@@ -185,7 +185,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="VdT-Oo-Wtj">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="xIu-kb-zs2"/>
+                        <barButtonItem key="backBarButtonItem" title="Back" id="xIu-kb-zs2">
+                            <connections>
+                                <segue destination="PZz-HF-Ci3" kind="unwind" unwindAction="unwindToEGModelViewController:" id="lW6-3g-iHb"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="descriptionLabel" destination="LbK-uv-j3j" id="uVf-Ad-NLt"/>
@@ -194,6 +198,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v6c-xH-8Le" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="PZz-HF-Ci3" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="915" y="123"/>
         </scene>

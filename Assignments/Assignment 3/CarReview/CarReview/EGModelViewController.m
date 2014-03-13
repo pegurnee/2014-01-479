@@ -10,7 +10,7 @@
 
 @implementation EGModelViewController
 
-@synthesize tableData, theTitle, theTitleBar, myTableView, ratingsFilePath, theRatings;
+@synthesize tableData, theTitle, theTitleBar, myTableView, ratingsFilePath, theRatings, theDict;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,6 +28,8 @@
     ratingsFilePath = [[NSBundle mainBundle] pathForResource:@"Ratings" ofType:@"plist"];
     theRatings = [[NSArray alloc] initWithContentsOfFile: ratingsFilePath];
     
+    
+    tableData = [theDict objectForKey: theTitle];
     [theTitleBar setTitle: [[NSString alloc] initWithFormat: @"%@ %@", [theTitleBar title], theTitle]];
     
     for (int i = 0; i < [tableData count]; i++) {
@@ -77,10 +79,20 @@
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString: @"toDetailView"]) {
         NSIndexPath *indexPath = [self.myTableView indexPathForSelectedRow];
-        EGDetailViewController *modelVC = segue.destinationViewController;
-        [modelVC setTheCar: [tableData objectAtIndex: indexPath.row]];
-        [modelVC setMaker: theTitle];
+        EGDetailViewController *detailVC = segue.destinationViewController;
+        [detailVC setTheCar: [tableData objectAtIndex: indexPath.row]];
+        [detailVC setMaker: theTitle];
+        [detailVC setCarLocation: indexPath.row];
+        [detailVC setTheDict: theDict];
+        
+        NSLog(@"old rating %@", [[tableData objectAtIndex: indexPath.row] objectForKey: @"Rating"]);
     }
+}
+
+- (IBAction)unwindToEGModelViewController:(UIStoryboardSegue *)segue {
+    //nothing goes here
+    EGDetailViewController *returnVC = segue.sourceViewController;
+    theDict = returnVC.theDict;
 }
 
 @end

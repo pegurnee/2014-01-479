@@ -20,11 +20,26 @@
 {
     [super viewDidLoad];
     
+    NSString *destPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    destPath = [destPath stringByAppendingPathComponent:@"CarList.plist"];
+    
+    // If the file doesn't exist in the Documents Folder, copy it.
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    if (![fileManager fileExistsAtPath:destPath]) {
+        NSLog(@"New List");
+        NSString *sourcePath = [[NSBundle mainBundle] pathForResource:@"CarList" ofType:@"plist"];
+        [fileManager copyItemAtPath:sourcePath toPath:destPath error:nil];
+    }
+    
+    // Load the Property List.
+    theDict = [[NSMutableDictionary alloc] initWithContentsOfFile:destPath];
+    
     //establish the filePath at the correct location of CarList.plist
     filePath = [[NSBundle mainBundle] pathForResource:@"CarList" ofType:@"plist"];
     
     //loads the dictionary from the plist
-    theDict = [self dictionaryFromPlist];
+    //theDict = [self dictionaryFromPlist];
     
     //loads the maker arrays from the dictionary
     theMake = [theDict allKeys];
@@ -91,10 +106,10 @@
 //sends title and table data for the model
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString: @"toModelView"]) {
-        NSIndexPath *indexPath = [self.myTableView indexPathForSelectedRow];
         EGModelViewController *modelVC = segue.destinationViewController;
+        NSIndexPath *indexPath = [self.myTableView indexPathForSelectedRow];
         [modelVC setTheTitle: [theMake objectAtIndex: indexPath.row]];
-        [modelVC setTableData: [theDict objectForKey: [theMake objectAtIndex: indexPath.row]]];
+        [modelVC setTheDict: theDict];
     }
 }
 
