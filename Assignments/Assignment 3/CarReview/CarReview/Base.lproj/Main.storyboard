@@ -146,11 +146,11 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nkD-Q0-gyG">
-                                <rect key="frame" x="0.0" y="62" width="320" height="247"/>
+                                <rect key="frame" x="0.0" y="102" width="320" height="247"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="LbK-uv-j3j">
-                                <rect key="frame" x="20" y="317" width="280" height="75"/>
+                                <rect key="frame" x="20" y="348" width="280" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -181,18 +181,26 @@
                                     <outlet property="delegate" destination="Fzt-0P-BDa" id="eti-jh-QRH"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EOg-jA-yCR">
+                                <rect key="frame" x="20" y="73" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="VdT-Oo-Wtj">
                         <barButtonItem key="backBarButtonItem" title="Back" id="xIu-kb-zs2">
                             <connections>
-                                <segue destination="PZz-HF-Ci3" kind="unwind" unwindAction="unwindToEGModelViewController:" id="lW6-3g-iHb"/>
+                                <segue destination="PZz-HF-Ci3" kind="unwind" identifier="unwindToEGModelViewControllerID" unwindAction="unwindToEGModelViewController:" id="lW6-3g-iHb"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="descriptionLabel" destination="LbK-uv-j3j" id="uVf-Ad-NLt"/>
+                        <outlet property="ratingLabel" destination="EOg-jA-yCR" id="Yqa-3X-8z4"/>
                         <outlet property="theImage" destination="nkD-Q0-gyG" id="2xb-vx-Z1S"/>
                         <outlet property="theTitleBar" destination="VdT-Oo-Wtj" id="f8E-ey-wYo"/>
                     </connections>

@@ -91,8 +91,7 @@
 
 - (void)viewWillDisappear:(BOOL)animated {
     if ([self.navigationController.viewControllers indexOfObject:self] == NSNotFound) {
-        
-        //[self performSegueWithIdentifier:@"myReturnSegue" sender:self];
+        [self performSegueWithIdentifier:@"unwindToEGModelViewControllerID" sender:self];
     }
     [super viewWillDisappear:animated];
 }

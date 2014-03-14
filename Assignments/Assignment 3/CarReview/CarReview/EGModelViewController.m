@@ -75,6 +75,12 @@
     return 72;
 }
 
+//whenever the view shows up the data reloads from the dictionary
+-(void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear: animated];
+    [self.myTableView reloadData];
+}
+
 //sends title and table data for the model
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString: @"toDetailView"]) {
