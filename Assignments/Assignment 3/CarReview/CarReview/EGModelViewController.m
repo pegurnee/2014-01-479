@@ -31,10 +31,6 @@
     
     tableData = [theDict objectForKey: theTitle];
     [theTitleBar setTitle: [[NSString alloc] initWithFormat: @"%@ %@", [theTitleBar title], theTitle]];
-    
-    for (int i = 0; i < [tableData count]; i++) {
-//        NSLog(@"Object %d: %@", i, [tableData objectAtIndex: i]);
-    }
 }
 
 - (void)didReceiveMemoryWarning

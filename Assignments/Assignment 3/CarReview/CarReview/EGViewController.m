@@ -47,23 +47,9 @@
     fdTableData = [theDict objectForKey:@"Ford"];
     
     
-    //all the images to be used
-    
+    //the logos to be used
     NSString *imageFilePath = [[NSBundle mainBundle] pathForResource:@"Images" ofType:@"plist"];
     logos = [[NSArray alloc] initWithContentsOfFile: imageFilePath];
-    
-    for (int i = 0; i < [gmTableData count]; i++) {
-        /*
-        NSString *msg = [[NSString alloc] initWithFormat:@"You've selected %@", [myTableData objectAtIndex: i]];
-        UIAlertView *myAlert = [[UIAlertView alloc] initWithTitle:@"Row Select"
-                                                          message:msg delegate:nil
-                                                cancelButtonTitle:@"OK"
-                                                otherButtonTitles:nil];
-        
-        [myAlert show];
-         */
-       // NSLog(@"Object %d: %@", i, [gmTableData objectAtIndex: i]);
-    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -72,7 +58,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-//number of table cells
+//number of table rows
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section {
     return [theMake count];
@@ -102,6 +88,17 @@
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 72;
 }
+
+/*
+//everytime the view shows up, save the data
+-(void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear: animated];
+    [self.myTableView reloadData];
+    if ([self writeDictionaryToPlist: theDict]) {
+        NSLog(@"whaddup!");
+    }
+}
+*/
 
 //sends title and table data for the model
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
