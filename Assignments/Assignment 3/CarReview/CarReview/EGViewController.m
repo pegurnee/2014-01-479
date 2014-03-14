@@ -87,16 +87,14 @@
     return 72;
 }
 
-/*
 //everytime the view shows up, save the data
 -(void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear: animated];
     [self.myTableView reloadData];
     if ([self writeDictionaryToPlist: theDict]) {
-        NSLog(@"whaddup!");
+        //NSLog(@"whaddup!");
     }
 }
-*/
 
 //sends title and table data for the model
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
