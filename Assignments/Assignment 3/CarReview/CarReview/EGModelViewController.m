@@ -28,7 +28,6 @@
     NSString *ratingsFilePath = [[NSBundle mainBundle] pathForResource:@"Ratings" ofType:@"plist"];
     theRatings = [[NSArray alloc] initWithContentsOfFile: ratingsFilePath];
     
-    
     tableData = [theDict objectForKey: theTitle];
     [theTitleBar setTitle: [[NSString alloc] initWithFormat: @"%@ %@", [theTitleBar title], theTitle]];
 }
@@ -55,13 +54,11 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     
-    NSDictionary *theModel = [tableData objectAtIndex:indexPath.row];
+    NSDictionary *theModel = [tableData objectAtIndex: indexPath.row];
+    
     cell.imageView.image = [UIImage imageNamed: [theModel objectForKey: @"Image"]];
     cell.textLabel.text = [theModel objectForKey: @"Model"];
-    
-    NSNumber *rating = [theModel objectForKey: @"Rating"];
-    int intRating = [rating intValue];
-    cell.detailTextLabel.text = theRatings[intRating];
+    cell.detailTextLabel.text = theRatings[[[theModel objectForKey: @"Rating"] intValue]];
     
     return cell;
 }
@@ -78,11 +75,12 @@
 }
 
 //sends title and table data for the model
--(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+-(void) prepareForSegue:(UIStoryboardSegue *)segue
+                 sender:(id)sender {
     if ([segue.identifier isEqualToString: @"toDetailView"]) {
         NSIndexPath *indexPath = [self.myTableView indexPathForSelectedRow];
         EGDetailViewController *detailVC = segue.destinationViewController;
-        [detailVC setTheCar: [tableData objectAtIndex: indexPath.row]];
+        
         [detailVC setMaker: theTitle];
         [detailVC setCarLocation: indexPath.row];
         [detailVC setTheDict: theDict];

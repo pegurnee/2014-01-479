@@ -25,8 +25,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.[[NSString alloc] initWithFormat: @"%@ %@", [theTitleBar title], theTitle]]
+    theCar = [theDict objectForKey: maker][carLocation];
+    
     theTitleBar.title = [[NSString alloc] initWithFormat: @"%@ %@", maker, [theCar objectForKey: @"Model"]];
     NSString *ratingsFilePath = [[NSBundle mainBundle] pathForResource:@"Ratings" ofType:@"plist"];
+    
     theRatings = [[NSArray alloc] initWithContentsOfFile: ratingsFilePath];
     theImage.image = [UIImage imageNamed: [theCar objectForKey: @"Image"]];
     descriptionLabel.text = [theCar objectForKey: @"Description"];
