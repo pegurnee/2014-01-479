@@ -14,7 +14,7 @@
 
 @implementation EGViewController
 
-@synthesize gmTableData, fdTableData, theDict, myTableView, filePath, logos, theMake;
+@synthesize theDict, myTableView, filePath, logos, theMake;
 
 - (void)viewDidLoad
 {
@@ -43,8 +43,6 @@
     
     //loads the maker arrays from the dictionary
     theMake = [theDict allKeys];
-    gmTableData = [theDict objectForKey:@"GM"];
-    fdTableData = [theDict objectForKey:@"Ford"];
     
     
     //the logos to be used
@@ -118,8 +116,6 @@
 
 //writes to the plist a user definted dictionary
 - (BOOL)writeDictionaryToPlist:(NSDictionary*)plistDict{
-    [theDict setObject:gmTableData forKey:@"GM"];
-    [theDict setObject:fdTableData forKey:@"Ford"];
     BOOL result = [plistDict writeToFile:filePath atomically:YES];
     return result;
 }

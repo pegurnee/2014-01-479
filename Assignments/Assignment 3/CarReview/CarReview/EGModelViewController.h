@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UINavigationItem *theTitleBar;
 
 @property (strong, nonatomic) NSMutableDictionary *theDict;
+
 @property (strong, nonatomic) NSMutableArray *tableData;
 @property (strong, nonatomic) NSArray *theRatings;
 @property (strong, nonatomic) NSString *theTitle;

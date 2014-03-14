@@ -13,11 +13,10 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
 
+@property (strong, nonatomic) NSMutableDictionary *theDict;
+
 @property (strong, nonatomic) NSArray *logos;
 @property (strong, nonatomic) NSArray *theMake;
-@property (strong, nonatomic) NSMutableArray *gmTableData;
-@property (strong, nonatomic) NSMutableArray *fdTableData;
-@property (strong, nonatomic) NSMutableDictionary *theDict;
 @property (strong, nonatomic) NSString *filePath;
 
 -(NSMutableDictionary*)dictionaryFromPlist;
