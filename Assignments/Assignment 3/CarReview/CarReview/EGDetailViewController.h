@@ -24,6 +24,5 @@
 
 @property (strong, nonatomic) NSDictionary *theCar;
 @property (strong, nonatomic) NSArray *theRatings;
-@property (strong, nonatomic) NSNumber *currentRating;
 
 @end

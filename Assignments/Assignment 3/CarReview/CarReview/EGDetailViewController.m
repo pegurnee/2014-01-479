@@ -10,7 +10,7 @@
 
 @implementation EGDetailViewController
 
-@synthesize theCar, theTitleBar, maker, theRatings, theImage, descriptionLabel, ratingLabel, currentRating, carLocation, theDict;
+@synthesize theCar, theTitleBar, maker, theRatings, theImage, descriptionLabel, ratingLabel, carLocation, theDict;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -34,8 +34,6 @@
     theImage.image = [UIImage imageNamed: [theCar objectForKey: @"Image"]];
     descriptionLabel.text = [theCar objectForKey: @"Description"];
     ratingLabel.text = theRatings[[[theCar objectForKey: @"Rating"] intValue]];
-    
-    currentRating = [theCar objectForKey: @"Rating"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -72,7 +70,6 @@
 
 //all the actions when a rating is chosen
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    currentRating = [NSNumber numberWithInt: indexPath.row];
     ratingLabel.text = theRatings[indexPath.row];
     
     [[theDict objectForKey: maker][carLocation] setObject: [NSNumber numberWithInt: indexPath.row]
