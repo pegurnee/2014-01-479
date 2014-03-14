@@ -10,7 +10,7 @@
 
 @implementation EGModelViewController
 
-@synthesize tableData, theTitle, theTitleBar, myTableView, ratingsFilePath, theRatings, theDict;
+@synthesize tableData, theTitle, theTitleBar, myTableView, theRatings, theDict;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -25,7 +25,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    ratingsFilePath = [[NSBundle mainBundle] pathForResource:@"Ratings" ofType:@"plist"];
+    NSString *ratingsFilePath = [[NSBundle mainBundle] pathForResource:@"Ratings" ofType:@"plist"];
     theRatings = [[NSArray alloc] initWithContentsOfFile: ratingsFilePath];
     
     
@@ -90,17 +90,13 @@
         [detailVC setMaker: theTitle];
         [detailVC setCarLocation: indexPath.row];
         [detailVC setTheDict: theDict];
-        
-        NSLog(@"old rating %@", [[tableData objectAtIndex: indexPath.row] objectForKey: @"Rating"]);
     }
 }
 
 - (IBAction)unwindToEGModelViewController:(UIStoryboardSegue *)segue {
-    //nothing goes here
     EGDetailViewController *returnVC = segue.sourceViewController;
     tableData = [returnVC.theDict objectForKey: theTitle];
     theDict = returnVC.theDict;
-    NSLog(@"Something");
 }
 
 @end

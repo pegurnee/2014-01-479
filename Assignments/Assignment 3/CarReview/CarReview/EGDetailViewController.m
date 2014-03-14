@@ -10,7 +10,7 @@
 
 @implementation EGDetailViewController
 
-@synthesize theCar, theTitleBar, maker, theRatings, theImage, descriptionLabel, currentRating, carLocation, theDict;
+@synthesize theCar, theTitleBar, maker, theRatings, theImage, descriptionLabel, ratingLabel, currentRating, carLocation, theDict;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,8 +30,10 @@
     theRatings = [[NSArray alloc] initWithContentsOfFile: ratingsFilePath];
     theImage.image = [UIImage imageNamed: [theCar objectForKey: @"Image"]];
     descriptionLabel.text = [theCar objectForKey: @"Description"];
+    ratingLabel.text = theRatings[[[theCar objectForKey: @"Rating" ] intValue]];
+    currentRating = [theCar objectForKey: @"Rating"];
     
-    theDict = [self dictionaryFromPlist];
+    //theDict = [self dictionaryFromPlist];
 }
 
 - (void)didReceiveMemoryWarning
@@ -66,26 +68,21 @@
     return 20;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-
-    NSLog(@"%d", indexPath.row); // you can see selected row number in your console;
+//all the actions when a rating is chosen
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     currentRating = [NSNumber numberWithInt: indexPath.row];
-    
+    ratingLabel.text = theRatings[indexPath.row];
     
     [[theDict objectForKey: maker][carLocation] setObject: currentRating forKey: @"Rating"];
 }
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     EGModelViewController *modelVC = segue.destinationViewController;
     //[modelVC setTheTitle: maker];
     //[modelVC setTableData: [theDict objectForKey: [theMake objectAtIndex: indexPath.row]]];
     [modelVC.tableData[carLocation] setObject:currentRating forKey: @"Rating"];
-    NSLog(@"new rating %@", currentRating);
     if ([self writeDictionaryToPlist: theDict]) {
         NSLog(@"Victory");
-    }
-    if ([segue.identifier isEqualToString:@"myReturnSegue"]) {
-        //currentRating = @"****";
     }
 }
 
