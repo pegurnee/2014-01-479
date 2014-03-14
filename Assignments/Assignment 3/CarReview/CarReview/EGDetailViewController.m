@@ -24,19 +24,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.[[NSString alloc] initWithFormat: @"%@ %@", [theTitleBar title], theTitle]]
+	// Do any additional setup after loading the view.
     theCar = [theDict objectForKey: maker][carLocation];
     
-    theTitleBar.title = [[NSString alloc] initWithFormat: @"%@ %@", maker, [theCar objectForKey: @"Model"]];
     NSString *ratingsFilePath = [[NSBundle mainBundle] pathForResource:@"Ratings" ofType:@"plist"];
-    
     theRatings = [[NSArray alloc] initWithContentsOfFile: ratingsFilePath];
+    
+    theTitleBar.title = [[NSString alloc] initWithFormat: @"%@ %@", maker, [theCar objectForKey: @"Model"]];
     theImage.image = [UIImage imageNamed: [theCar objectForKey: @"Image"]];
     descriptionLabel.text = [theCar objectForKey: @"Description"];
-    ratingLabel.text = theRatings[[[theCar objectForKey: @"Rating" ] intValue]];
-    currentRating = [theCar objectForKey: @"Rating"];
+    ratingLabel.text = theRatings[[[theCar objectForKey: @"Rating"] intValue]];
     
-    //theDict = [self dictionaryFromPlist];
+    currentRating = [theCar objectForKey: @"Rating"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -76,40 +75,16 @@
     currentRating = [NSNumber numberWithInt: indexPath.row];
     ratingLabel.text = theRatings[indexPath.row];
     
-    [[theDict objectForKey: maker][carLocation] setObject: currentRating forKey: @"Rating"];
+    [[theDict objectForKey: maker][carLocation] setObject: [NSNumber numberWithInt: indexPath.row]
+                                                   forKey: @"Rating"];
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    EGModelViewController *modelVC = segue.destinationViewController;
-    //[modelVC setTheTitle: maker];
-    //[modelVC setTableData: [theDict objectForKey: [theMake objectAtIndex: indexPath.row]]];
-    [modelVC.tableData[carLocation] setObject:currentRating forKey: @"Rating"];
-    if ([self writeDictionaryToPlist: theDict]) {
-        NSLog(@"Victory");
-    }
-}
-
+//while the view is closing
 - (void)viewWillDisappear:(BOOL)animated {
     if ([self.navigationController.viewControllers indexOfObject:self] == NSNotFound) {
         [self performSegueWithIdentifier:@"unwindToEGModelViewControllerID" sender:self];
     }
     [super viewWillDisappear:animated];
-}
-
-- (NSMutableDictionary*)dictionaryFromPlist {
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"CarList" ofType:@"plist"];
-    NSMutableDictionary* propertyListValues = [[NSMutableDictionary alloc] initWithContentsOfFile:filePath];
-    return propertyListValues;
-}
-
-//writes to the plist a user definted dictionary
-- (BOOL)writeDictionaryToPlist:(NSDictionary*)plistDict{
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"CarList" ofType:@"plist"];
-    
-    [[theDict objectForKey: maker][carLocation] setObject: currentRating forKey: @"Rating"];
-    
-    BOOL result = [plistDict writeToFile:filePath atomically:YES];
-    return result;
 }
 
 @end
