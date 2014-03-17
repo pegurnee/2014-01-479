@@ -34,6 +34,7 @@
 		2CAE30FC18D2345600819E00 /* Ratings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CAE30FB18D2345500819E00 /* Ratings.plist */; };
 		2CAE30FE18D237A900819E00 /* Images.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CAE30FD18D237A900819E00 /* Images.plist */; };
 		2CAE310118D23CA200819E00 /* EGDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAE310018D23CA200819E00 /* EGDetailViewController.m */; };
+		2CBAFDC418D78C2200FCDADC /* EGAddCarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CBAFDC318D78C2200FCDADC /* EGAddCarViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,8 @@
 		2CAE30FD18D237A900819E00 /* Images.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Images.plist; sourceTree = "<group>"; };
 		2CAE30FF18D23CA200819E00 /* EGDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGDetailViewController.h; sourceTree = "<group>"; };
 		2CAE310018D23CA200819E00 /* EGDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGDetailViewController.m; sourceTree = "<group>"; };
+		2CBAFDC218D78C2200FCDADC /* EGAddCarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGAddCarViewController.h; sourceTree = "<group>"; };
+		2CBAFDC318D78C2200FCDADC /* EGAddCarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGAddCarViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +152,8 @@
 				2CAE30F918D1FDEB00819E00 /* EGModelViewController.m */,
 				2CAE30FF18D23CA200819E00 /* EGDetailViewController.h */,
 				2CAE310018D23CA200819E00 /* EGDetailViewController.m */,
+				2CBAFDC218D78C2200FCDADC /* EGAddCarViewController.h */,
+				2CBAFDC318D78C2200FCDADC /* EGAddCarViewController.m */,
 				2C4BFF4818CE5554007CDFCA /* Images.xcassets */,
 				2C4BFF3718CE5554007CDFCA /* Supporting Files */,
 			);
@@ -307,6 +312,7 @@
 				2CAE310118D23CA200819E00 /* EGDetailViewController.m in Sources */,
 				2C4BFF4718CE5554007CDFCA /* EGViewController.m in Sources */,
 				2C4BFF4118CE5554007CDFCA /* EGAppDelegate.m in Sources */,
+				2CBAFDC418D78C2200FCDADC /* EGAddCarViewController.m in Sources */,
 				2CAE30FA18D1FDEB00819E00 /* EGModelViewController.m in Sources */,
 				2C4BFF3D18CE5554007CDFCA /* main.m in Sources */,
 			);
