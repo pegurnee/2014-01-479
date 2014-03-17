@@ -20,34 +20,37 @@
 {
     [super viewDidLoad];
     
+    //all of this was working before the new update... -_-
+    /*
+    //establish the filePath at the correct location of CarList.plist, in the documents folder of the iOS
     NSString *destPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
-    destPath = [destPath stringByAppendingPathComponent:@"CarList.plist"];
+    filePath = [destPath stringByAppendingPathComponent:@"CarList.plist"];
     
     // If the file doesn't exist in the Documents Folder, copy it.
     NSFileManager *fileManager = [NSFileManager defaultManager];
     
-    if (![fileManager fileExistsAtPath:destPath]) {
-        NSLog(@"New List");
+    if ([fileManager fileExistsAtPath:destPath]) {
+        NSLog(@"should happen");
         NSString *sourcePath = [[NSBundle mainBundle] pathForResource:@"CarList" ofType:@"plist"];
+        NSLog(sourcePath);
         [fileManager copyItemAtPath:sourcePath toPath:destPath error:nil];
     }
+    NSLog(filePath);
+    */
+    
+    NSString *destPath = [[NSBundle mainBundle] pathForResource:@"CarList" ofType:@"plist"];
     
     // Load the Property List.
     theDict = [[NSMutableDictionary alloc] initWithContentsOfFile:destPath];
     
-    //establish the filePath at the correct location of CarList.plist
-    filePath = [[NSBundle mainBundle] pathForResource:@"CarList" ofType:@"plist"];
-    
-    //loads the dictionary from the plist
-    //theDict = [self dictionaryFromPlist];
-    
     //loads the maker arrays from the dictionary
     theMake = [theDict allKeys];
-    
     
     //the logos to be used
     NSString *imageFilePath = [[NSBundle mainBundle] pathForResource:@"Images" ofType:@"plist"];
     logos = [[NSArray alloc] initWithContentsOfFile: imageFilePath];
+    
+    [self.myTableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -76,8 +79,8 @@
     cell.imageView.image = [UIImage imageNamed: logos[indexPath.row]];
     
     cell.textLabel.text = [theMake objectAtIndex:indexPath.row];
-    cell.detailTextLabel.text = [[NSString alloc] initWithFormat: @"%d Car Models",
-                                 [[theDict objectForKey: theMake[indexPath.row]] count]];
+    cell.detailTextLabel.text = [[NSString alloc] initWithFormat: @"%lu Car Models",
+                                 (unsigned long)[[theDict objectForKey: theMake[indexPath.row]] count]];
     
     return cell;
 }
