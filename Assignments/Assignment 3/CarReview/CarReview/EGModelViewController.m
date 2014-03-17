@@ -84,13 +84,20 @@
         [detailVC setMaker: theTitle];
         [detailVC setCarLocation: (int)indexPath.row];
         [detailVC setTheDict: theDict];
+    } else if ([segue.identifier isEqualToString: @"toAddCarView"]) {
+        EGAddCarViewController *addVC = segue.destinationViewController;
+        
+        [addVC setMaker: theTitle];
+        [addVC setTheDict: theDict];
     }
 }
 
 - (IBAction)unwindToEGModelViewController:(UIStoryboardSegue *)segue {
-    EGDetailViewController *returnVC = segue.sourceViewController;
-    tableData = [returnVC.theDict objectForKey: theTitle];
-    theDict = returnVC.theDict;
+    if ([segue.identifier isEqualToString: @"unwindToEGModelViewControllerFromDetailID"]) {
+        EGDetailViewController *returnVC = segue.sourceViewController;
+        tableData = [returnVC.theDict objectForKey: theTitle];
+        theDict = returnVC.theDict;
+    }
 }
 
 @end

@@ -79,7 +79,7 @@
 //while the view is closing
 - (void)viewWillDisappear:(BOOL)animated {
     if ([self.navigationController.viewControllers indexOfObject:self] == NSNotFound) {
-        [self performSegueWithIdentifier:@"unwindToEGModelViewControllerID" sender:self];
+        [self performSegueWithIdentifier:@"unwindToEGModelViewControllerFromDetailID" sender:self];
     }
     [super viewWillDisappear:animated];
 }

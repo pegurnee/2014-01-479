@@ -224,7 +224,7 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="iGF-RN-LuZ"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="zEe-Fp-Not">
                             <connections>
-                                <segue destination="thx-aB-yig" kind="modal" id="oqd-HM-nUt"/>
+                                <segue destination="thx-aB-yig" kind="modal" identifier="toAddCarView" id="oqd-HM-nUt"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -298,7 +298,7 @@
                     <navigationItem key="navigationItem" id="VdT-Oo-Wtj">
                         <barButtonItem key="backBarButtonItem" title="Back" id="xIu-kb-zs2">
                             <connections>
-                                <segue destination="PZz-HF-Ci3" kind="unwind" identifier="unwindToEGModelViewControllerID" unwindAction="unwindToEGModelViewController:" id="lW6-3g-iHb"/>
+                                <segue destination="PZz-HF-Ci3" kind="unwind" identifier="unwindToEGModelViewControllerFromDetailID" unwindAction="unwindToEGModelViewController:" id="lW6-3g-iHb"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

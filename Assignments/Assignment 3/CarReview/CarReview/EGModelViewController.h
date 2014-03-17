@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "EGDetailViewController.h"
+#import "EGAddCarViewController.h"
 
 @interface EGModelViewController : UIViewController
 
