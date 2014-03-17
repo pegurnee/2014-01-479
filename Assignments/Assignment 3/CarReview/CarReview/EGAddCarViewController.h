@@ -15,4 +15,9 @@
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
 @property (weak, nonatomic) IBOutlet UINavigationBar *titleBar;
 
+@property (strong, nonatomic) NSMutableDictionary *theDict;
+
+@property (strong, nonatomic) NSArray *theRatings;
+@property (strong, nonatomic) NSString *maker;
+
 @end

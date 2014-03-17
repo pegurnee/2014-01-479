@@ -8,11 +8,9 @@
 
 #import "EGAddCarViewController.h"
 
-@interface EGAddCarViewController ()
-
-@end
-
 @implementation EGAddCarViewController
+
+@synthesize theDict, theRatings, ratingLabel, maker;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,6 +25,11 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    NSString *ratingsFilePath = [[NSBundle mainBundle] pathForResource:@"Ratings" ofType:@"plist"];
+    theRatings = [[NSArray alloc] initWithContentsOfFile: ratingsFilePath];
+    
+    ratingLabel.text = theRatings[0];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,5 +48,40 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+//number of table cells
+- (NSInteger)tableView:(UITableView *)tableView
+ numberOfRowsInSection:(NSInteger)section {
+    return [theRatings count];
+}
+
+//what to do with each cell
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *simpleTableIdentifier = @"RatingPrototypeID";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+    }
+    
+    cell.textLabel.text = theRatings[indexPath.row];
+    
+    return cell;
+}
+
+//sets the height of each cell
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 20;
+}
+
+//all the actions when a rating is chosen
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    ratingLabel.text = theRatings[indexPath.row];
+    
+    /*
+    [[theDict objectForKey: maker][carLocation] setObject: [NSNumber numberWithInt: (int)indexPath.row]
+     */
+}
 
 @end
