@@ -72,7 +72,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     ratingLabel.text = theRatings[indexPath.row];
     
-    [[theDict objectForKey: maker][carLocation] setObject: [NSNumber numberWithInt: indexPath.row]
+    [[theDict objectForKey: maker][carLocation] setObject: [NSNumber numberWithInt: (int)indexPath.row]
                                                    forKey: @"Rating"];
 }
 

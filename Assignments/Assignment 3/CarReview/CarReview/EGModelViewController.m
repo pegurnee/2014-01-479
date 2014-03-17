@@ -82,7 +82,7 @@
         EGDetailViewController *detailVC = segue.destinationViewController;
         
         [detailVC setMaker: theTitle];
-        [detailVC setCarLocation: indexPath.row];
+        [detailVC setCarLocation: (int)indexPath.row];
         [detailVC setTheDict: theDict];
     }
 }
