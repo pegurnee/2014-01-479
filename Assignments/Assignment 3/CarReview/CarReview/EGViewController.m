@@ -21,7 +21,7 @@
     [super viewDidLoad];
     
     //all of this was working before the new update... -_-
-    /*
+    
     //establish the filePath at the correct location of CarList.plist, in the documents folder of the iOS
     NSString *destPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
     filePath = [destPath stringByAppendingPathComponent:@"CarList.plist"];
@@ -29,19 +29,13 @@
     // If the file doesn't exist in the Documents Folder, copy it.
     NSFileManager *fileManager = [NSFileManager defaultManager];
     
-    if ([fileManager fileExistsAtPath:destPath]) {
-        NSLog(@"should happen");
+    if (![fileManager fileExistsAtPath:filePath]) {
         NSString *sourcePath = [[NSBundle mainBundle] pathForResource:@"CarList" ofType:@"plist"];
-        NSLog(sourcePath);
-        [fileManager copyItemAtPath:sourcePath toPath:destPath error:nil];
+        [fileManager copyItemAtPath:sourcePath toPath:filePath error:nil];
     }
-    NSLog(filePath);
-    */
-    
-    NSString *destPath = [[NSBundle mainBundle] pathForResource:@"CarList" ofType:@"plist"];
     
     // Load the Property List.
-    theDict = [[NSMutableDictionary alloc] initWithContentsOfFile:destPath];
+    theDict = [[NSMutableDictionary alloc] initWithContentsOfFile:filePath];
     
     //loads the maker arrays from the dictionary
     theMake = [theDict allKeys];
