@@ -72,12 +72,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     ratingLabel.text = theRatings[indexPath.row];
     //NSLog(@"%@", [theDict objectForKey: maker][carLocation]);
-    NSLog(@"%@", theDict);
+    //NSLog(@"%@", theDict);
     
 //    [[theDict objectForKey: maker][carLocation] setValue: [[NSNumber alloc] initWithLong: indexPath.row]
 //                                                   forKey: @"Rating"];
-    [[theDict objectForKey: maker][carLocation] setValue: [NSNumber numberWithLong: indexPath.row]
-                                                   forKey: @"Rating"];
+//    [[theDict objectForKey: maker][carLocation] setValue: [NSNumber numberWithLong: indexPath.row]
+//                                                   forKey: @"Rating"];
+    [[theDict objectForKey: maker][carLocation] setValue:@"CAR!" forKey:@"Model"];
     
     NSLog(@"error here");
 }

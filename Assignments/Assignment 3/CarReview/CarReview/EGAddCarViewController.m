@@ -116,6 +116,12 @@
     theNewCar = [[NSDictionary alloc] initWithObjects: data forKeys:carKeys];
     [[theDict objectForKey: maker] addObject: theNewCar];
     
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    UINavigationController *rootVC = (UINavigationController*)window.rootViewController;
+    EGViewController *homebase = [rootVC viewControllers][0];
+    [homebase writeDictionaryToPlist: theDict];
+    
+    theDict = [homebase dictionaryFromPlist];
     [self performSegueWithIdentifier:@"unwindToEGModelViewControllerFromAddID" sender:self];
 }
 @end

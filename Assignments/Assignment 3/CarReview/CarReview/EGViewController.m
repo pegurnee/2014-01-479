@@ -88,9 +88,7 @@
 -(void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear: animated];
     [self.myTableView reloadData];
-    if ([self writeDictionaryToPlist: theDict]) {
-        //NSLog(@"whaddup!");
-    }
+    [self writeDictionaryToPlist: theDict];
 }
 
 //sends title and table data for the model
