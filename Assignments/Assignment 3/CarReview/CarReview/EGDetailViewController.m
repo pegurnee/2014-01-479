@@ -72,8 +72,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     ratingLabel.text = theRatings[indexPath.row];
     NSLog(@"%@", [theDict objectForKey: maker][carLocation]);
-    [[theDict objectForKey: maker][carLocation] setObject: [NSNumber numberWithInt: (int)indexPath.row]
+    
+    [[theDict objectForKey: maker][carLocation] setObject: (NSNumber*)[NSNumber numberWithInt: 1]
                                                    forKey: @"Rating"];
+//    [[theDict objectForKey: maker][carLocation] setObject: [NSNumber numberWithInt: (int)indexPath.row]
+//                                                   forKey: @"Rating"];
+    
+    NSLog(@"error here");
 }
 
 //while the view is closing
