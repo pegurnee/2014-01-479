@@ -77,7 +77,7 @@
 //    [[theDict objectForKey: maker][carLocation] setValue: [[NSNumber alloc] initWithLong: indexPath.row]
 //                                                   forKey: @"Rating"];
     [[theDict objectForKey: maker][carLocation] setValue: [NSNumber numberWithLong: indexPath.row]
-                                                   forKey: @"Rating"];
+                                                   forKey: @"Ratingtest"];
     
     NSLog(@"error here");
 }
