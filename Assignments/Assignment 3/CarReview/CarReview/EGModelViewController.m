@@ -102,6 +102,7 @@
     }
 }
 
+//data passing
 - (IBAction)unwindToEGModelViewController:(UIStoryboardSegue *)segue {
     if ([segue.identifier isEqualToString: @"unwindToEGModelViewControllerFromDetailID"]) {
         EGDetailViewController *returnVC = segue.sourceViewController;
@@ -112,6 +113,7 @@
     }
 }
 
+//write to the plist
 -(void) viewWillDisappear:(BOOL)animated {
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
     UINavigationController *rootVC = (UINavigationController*)window.rootViewController;

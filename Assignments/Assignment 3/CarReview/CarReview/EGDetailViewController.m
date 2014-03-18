@@ -96,6 +96,7 @@
     [super viewWillDisappear:animated];
 }
 
+//popup to confirm deleting
 - (IBAction)deleteThisDude:(id)sender {
     UIAlertView *confirm = [[UIAlertView alloc] initWithTitle:@"Confirm Delete"
                                                       message:@"Would you like to delete this car?"
@@ -107,6 +108,7 @@
     [confirm show];
 }
 
+//if the button was clicked
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     

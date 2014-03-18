@@ -64,7 +64,6 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     
-    cell.textLabel.textAlignment = NSTextAlignmentCenter;
     cell.textLabel.text = theRatings[indexPath.row];
     
     return cell;
@@ -81,6 +80,7 @@
     ratingNumber = [[NSNumber alloc] initWithLong: indexPath.row];
 }
 
+//touch anywhere else to remove keyboard
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [descriptionTextView resignFirstResponder];
     [modelTextField resignFirstResponder];
