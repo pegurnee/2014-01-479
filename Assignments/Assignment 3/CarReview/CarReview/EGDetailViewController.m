@@ -77,7 +77,7 @@
 //    [[theDict objectForKey: maker][carLocation] setValue: [[NSNumber alloc] initWithLong: indexPath.row]
 //                                                   forKey: @"Rating"];
     [[theDict objectForKey: maker][carLocation] setValue: [NSNumber numberWithLong: indexPath.row]
-                                                   forKey: @"Ratingtest"];
+                                                   forKey: @"Rating"];
     
     NSLog(@"error here");
 }
@@ -87,6 +87,11 @@
     if ([self.navigationController.viewControllers indexOfObject:self] == NSNotFound) {
         [self performSegueWithIdentifier:@"unwindToEGModelViewControllerFromDetailID" sender:self];
     }
+    
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    UINavigationController *rootVC = (UINavigationController*)window.rootViewController;
+    EGViewController *homebase = [rootVC viewControllers][0];
+    [homebase writeDictionaryToPlist: theDict];
     [super viewWillDisappear:animated];
 }
 

@@ -114,8 +114,9 @@
 
 -(void) viewWillDisappear:(BOOL)animated {
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
-    EG *rootVC = [UIApplication sharedApplication].keyWindow.rootViewController;
-    rootVC write
+    UINavigationController *rootVC = (UINavigationController*)window.rootViewController;
+    EGViewController *homebase = [rootVC viewControllers][0];
+    [homebase writeDictionaryToPlist: theDict];
     [super viewWillDisappear:animated];
 }
 
