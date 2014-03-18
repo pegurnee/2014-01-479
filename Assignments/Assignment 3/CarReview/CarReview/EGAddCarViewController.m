@@ -46,17 +46,8 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
+#pragma mark tableStuff
 //number of table cells
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section {
@@ -88,11 +79,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     ratingLabel.text = theRatings[indexPath.row];
     ratingNumber = [[NSNumber alloc] initWithLong: indexPath.row];
-    /*
-    [[theDict objectForKey: maker][carLocation] setObject: [NSNumber numberWithInt: (int)indexPath.row]
-     */
 }
 
+#pragma mark navigation
 //while the view is closing
 - (void)viewWillDisappear:(BOOL)animated {
     if ([self.navigationController.viewControllers indexOfObject:self] == NSNotFound) {
@@ -101,21 +90,23 @@
     [super viewWillDisappear:animated];
 }
 
+//data to be sent
 -(void) prepareForSegue:(UIStoryboardSegue *)segue
                  sender:(id)sender {
         EGModelViewController *modelVC = segue.destinationViewController;
-        NSLog(@"save?");
+    
         [modelVC setTheDict: theDict];
 }
 
+//the save button creates a dictionary of the data that exists, then unwinds to the model view
 - (IBAction)saveBtn:(id)sender {
     //rating, model, image, description
     NSArray *data = [[NSArray alloc] initWithObjects:
-                     ratingNumber,
-                     modelTextField.text,
-                     imageName,
-                     descriptionTextView.text,
-                     nil];
+                         ratingNumber,
+                         modelTextField.text,
+                         imageName,
+                         descriptionTextView.text,
+                         nil];
     NSArray *carKeys = [[theDict objectForKey: maker][0] allKeys];
     theNewCar = [[NSDictionary alloc] initWithObjects: data forKeys:carKeys];
     [[theDict objectForKey: maker] addObject: theNewCar];

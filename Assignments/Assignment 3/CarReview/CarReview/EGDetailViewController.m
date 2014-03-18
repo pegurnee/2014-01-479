@@ -71,12 +71,13 @@
 //all the actions when a rating is chosen
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     ratingLabel.text = theRatings[indexPath.row];
-    NSLog(@"%@", [theDict objectForKey: maker][carLocation]);
+    //NSLog(@"%@", [theDict objectForKey: maker][carLocation]);
+    NSLog(@"%@", theDict);
     
-    [[theDict objectForKey: maker][carLocation] setObject: (NSNumber*)[NSNumber numberWithInt: 1]
-                                                   forKey: @"Rating"];
-//    [[theDict objectForKey: maker][carLocation] setObject: [NSNumber numberWithInt: (int)indexPath.row]
+//    [[theDict objectForKey: maker][carLocation] setValue: [[NSNumber alloc] initWithLong: indexPath.row]
 //                                                   forKey: @"Rating"];
+    [[theDict objectForKey: maker][carLocation] setValue: [NSNumber numberWithLong: indexPath.row]
+                                                   forKey: @"Rating"];
     
     NSLog(@"error here");
 }
