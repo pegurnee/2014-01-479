@@ -10,7 +10,7 @@
 
 @implementation EGAddCarViewController
 
-@synthesize theDict, theRatings, ratingLabel, maker, willSave, theTitleBar;
+@synthesize theDict, theRatings, ratingLabel, maker, willSave, theTitleBar, theNewCar;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

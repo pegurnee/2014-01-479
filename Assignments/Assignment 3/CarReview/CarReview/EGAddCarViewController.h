@@ -20,6 +20,7 @@
 
 @property (strong, nonatomic) NSMutableDictionary *theDict;
 
+@property (strong, nonatomic) NSMutableDictionary *theNewCar;
 @property (strong, nonatomic) NSArray *theRatings;
 @property (strong, nonatomic) NSString *maker;
 @property BOOL willSave;
