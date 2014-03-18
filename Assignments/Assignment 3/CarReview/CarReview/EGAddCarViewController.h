@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EGModelViewController.h"
 
 @interface EGAddCarViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
@@ -20,7 +21,7 @@
 
 @property (strong, nonatomic) NSMutableDictionary *theDict;
 
-@property (strong, nonatomic) NSMutableDictionary *theNewCar;
+@property (strong, nonatomic) NSDictionary *theNewCar;
 @property (strong, nonatomic) NSArray *theRatings;
 @property (strong, nonatomic) NSString *maker;
 @property (strong, nonatomic) NSString *imageName;

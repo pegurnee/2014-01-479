@@ -116,13 +116,12 @@
                                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="3Un-Gj-tl2">
                                             <connections>
                                                 <action selector="cancelBtn:" destination="thx-aB-yig" id="eTx-MH-bwb"/>
-                                                <segue destination="N91-Kf-mo0" kind="unwind" identifier="unwindToEGModelViewControllerFromAddCancelID" unwindAction="unwindToEGModelViewController:" id="8P6-Yh-xZw"/>
+                                                <segue destination="N91-Kf-mo0" kind="unwind" identifier="unwindToEGModelViewControllerFromAddID" unwindAction="unwindToEGModelViewController:" id="8P6-Yh-xZw"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Save" id="B6Y-Ud-Zcy">
                                             <connections>
                                                 <action selector="saveBtn:" destination="thx-aB-yig" id="xCQ-ld-gJg"/>
-                                                <segue destination="N91-Kf-mo0" kind="unwind" identifier="unwindToEGModelViewControllerFromAddSaveID" unwindAction="unwindToEGModelViewController:" id="9gu-qu-rj6"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>

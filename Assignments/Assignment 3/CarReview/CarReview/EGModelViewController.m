@@ -71,6 +71,8 @@
 //whenever the view shows up the data reloads from the dictionary
 -(void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear: animated];
+    
+    tableData = [theDict objectForKey: theTitle];
     [self.myTableView reloadData];
 }
 
@@ -97,8 +99,11 @@
         EGDetailViewController *returnVC = segue.sourceViewController;
         tableData = [returnVC.theDict objectForKey: theTitle];
         theDict = returnVC.theDict;
-    } else if ([segue.identifier isEqualToString: @"unwindToEGModelViewControllerFromAddCancelID"]) {
-        
+    } else if ([segue.identifier isEqualToString: @"unwindToEGModelViewControllerFromAddID"]) {
+        EGAddCarViewController *returnVC = segue.sourceViewController;
+        //tableData = [returnVC.theDict objectForKey: theTitle];
+        theDict = returnVC.theDict;
+        NSLog(@"error");
     }
 }
 

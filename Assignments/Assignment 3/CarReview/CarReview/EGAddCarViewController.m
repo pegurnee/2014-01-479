@@ -10,7 +10,7 @@
 
 @implementation EGAddCarViewController
 
-@synthesize theDict, theRatings, ratingLabel, maker, willSave, theTitleBar, theNewCar, descriptionTextView, modelTextField;
+@synthesize theDict, theRatings, ratingLabel, maker, willSave, theTitleBar, theNewCar, descriptionTextView, modelTextField, ratingNumber, imageName;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,10 +27,18 @@
     // Do any additional setup after loading the view.
     NSString *ratingsFilePath = [[NSBundle mainBundle] pathForResource:@"Ratings" ofType:@"plist"];
     theRatings = [[NSArray alloc] initWithContentsOfFile: ratingsFilePath];
+    NSArray *logos = [[NSArray alloc] initWithContentsOfFile: [[NSBundle mainBundle] pathForResource:@"Images" ofType:@"plist"]];
     
+    if ([maker isEqualToString: @"GM"]) {
+        imageName = logos[1];
+    } else {
+        imageName = logos[0];
+    }
+    
+    ratingNumber = [[NSNumber alloc] initWithLong: 0];
     ratingLabel.text = theRatings[0];
     willSave = NO;
-    theTitleBar.title = [[NSString alloc] initWithFormat: @"Add a new %@ vehicle", maker];
+    theTitleBar.title = [[NSString alloc] initWithFormat: @"Add New %@", maker];
 }
 
 - (void)didReceiveMemoryWarning
@@ -80,7 +88,7 @@
 //all the actions when a rating is chosen
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     ratingLabel.text = theRatings[indexPath.row];
-    
+    ratingNumber = [[NSNumber alloc] initWithLong: indexPath.row];
     /*
     [[theDict objectForKey: maker][carLocation] setObject: [NSNumber numberWithInt: (int)indexPath.row]
      */
@@ -89,13 +97,16 @@
 //while the view is closing
 - (void)viewWillDisappear:(BOOL)animated {
     if ([self.navigationController.viewControllers indexOfObject:self] == NSNotFound) {
-        if (willSave) {
-            [self performSegueWithIdentifier:@"unwindToEGModelViewControllerFromAddSaveID" sender:self];
-        } else {
-            [self performSegueWithIdentifier:@"unwindToEGModelViewControllerFromAddCancelID" sender:self];
-        }
+        [self performSegueWithIdentifier:@"unwindToEGModelViewControllerFromAddID" sender:self];
     }
     [super viewWillDisappear:animated];
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue
+                 sender:(id)sender {
+        EGModelViewController *modelVC = segue.destinationViewController;
+        NSLog(@"save?");
+        [modelVC setTheDict: theDict];
 }
 
 - (IBAction)cancelBtn:(id)sender {
@@ -104,7 +115,20 @@
 - (IBAction)saveBtn:(id)sender {
     willSave = YES;
     //model, rating, image, description
-    NSArray *data = [NSArray alloc] initWithObjects: modelTextField.text, ,descriptionTextView.text, nil
-    theNewCar = [NSDictionary alloc] initWithObjects:<#(NSArray *)#> forKeys:<#(NSArray *)#>
+    NSArray *data = [[NSArray alloc] initWithObjects:
+                     ratingNumber,
+                     modelTextField.text,
+                     imageName,
+                     descriptionTextView.text,
+                     nil];
+    NSArray *carKeys = [[theDict objectForKey: maker][0] allKeys];
+    for (int i = 0; i < [carKeys count]; i++) {
+        NSLog(@"%@", carKeys[i]);
+    }
+    theNewCar = [[NSDictionary alloc] initWithObjects: data forKeys:carKeys];
+    [[theDict objectForKey: maker] addObject: theNewCar];
+    NSLog(@"here");
+    
+    [self performSegueWithIdentifier:@"unwindToEGModelViewControllerFromAddID" sender:self];
 }
 @end
