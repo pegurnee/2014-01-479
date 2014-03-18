@@ -71,7 +71,7 @@
 //all the actions when a rating is chosen
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     ratingLabel.text = theRatings[indexPath.row];
-    
+    NSLog(@"%@", [theDict objectForKey: maker][carLocation]);
     [[theDict objectForKey: maker][carLocation] setObject: [NSNumber numberWithInt: (int)indexPath.row]
                                                    forKey: @"Rating"];
 }

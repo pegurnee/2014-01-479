@@ -10,7 +10,7 @@
 
 @implementation EGAddCarViewController
 
-@synthesize theDict, theRatings, ratingLabel, maker, willSave, theTitleBar, theNewCar, descriptionTextView, modelTextField, ratingNumber, imageName;
+@synthesize theDict, theRatings, ratingLabel, maker, theTitleBar, theNewCar, descriptionTextView, modelTextField, ratingNumber, imageName;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -37,7 +37,6 @@
     
     ratingNumber = [[NSNumber alloc] initWithLong: 0];
     ratingLabel.text = theRatings[0];
-    willSave = NO;
     theTitleBar.title = [[NSString alloc] initWithFormat: @"Add New %@", maker];
 }
 
@@ -110,8 +109,7 @@
 }
 
 - (IBAction)saveBtn:(id)sender {
-    willSave = YES;
-    //model, rating, image, description
+    //rating, model, image, description
     NSArray *data = [[NSArray alloc] initWithObjects:
                      ratingNumber,
                      modelTextField.text,
@@ -119,12 +117,8 @@
                      descriptionTextView.text,
                      nil];
     NSArray *carKeys = [[theDict objectForKey: maker][0] allKeys];
-    for (int i = 0; i < [carKeys count]; i++) {
-        NSLog(@"%@", carKeys[i]);
-    }
     theNewCar = [[NSDictionary alloc] initWithObjects: data forKeys:carKeys];
     [[theDict objectForKey: maker] addObject: theNewCar];
-    NSLog(@"here");
     
     [self performSegueWithIdentifier:@"unwindToEGModelViewControllerFromAddID" sender:self];
 }
