@@ -10,7 +10,7 @@
 
 @implementation EGDetailViewController
 
-@synthesize theCar, theTitleBar, maker, theRatings, theImage, descriptionLabel, ratingLabel, carLocation, theDict;
+@synthesize theCar, theTitleBar, maker, theRatings, theImage, descriptionLabel, ratingLabel, carLocation, theDict, willDelete;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,6 +29,8 @@
     
     NSString *ratingsFilePath = [[NSBundle mainBundle] pathForResource:@"Ratings" ofType:@"plist"];
     theRatings = [[NSArray alloc] initWithContentsOfFile: ratingsFilePath];
+    
+    willDelete = NO;
     
     theTitleBar.title = [[NSString alloc] initWithFormat: @"%@ %@", maker, [theCar objectForKey: @"Model"]];
     theImage.image = [UIImage imageNamed: [theCar objectForKey: @"Image"]];
@@ -71,16 +73,9 @@
 //all the actions when a rating is chosen
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     ratingLabel.text = theRatings[indexPath.row];
-    //NSLog(@"%@", [theDict objectForKey: maker][carLocation]);
-    //NSLog(@"%@", theDict);
     
-//    [[theDict objectForKey: maker][carLocation] setValue: [[NSNumber alloc] initWithLong: indexPath.row]
-//                                                   forKey: @"Rating"];
-//    [[theDict objectForKey: maker][carLocation] setValue: [NSNumber numberWithLong: indexPath.row]
-//                                                   forKey: @"Rating"];
-    [[theDict objectForKey: maker][carLocation] setValue:@"CAR!" forKey:@"Model"];
-    
-    NSLog(@"error here");
+    [[theDict objectForKey: maker][carLocation] setValue: [NSNumber numberWithLong: indexPath.row]
+                                                  forKey: @"Rating"];
 }
 
 //while the view is closing
@@ -88,12 +83,38 @@
     if ([self.navigationController.viewControllers indexOfObject:self] == NSNotFound) {
         [self performSegueWithIdentifier:@"unwindToEGModelViewControllerFromDetailID" sender:self];
     }
+    NSLog(@"leaving");
     
+    if (willDelete) {
+        [[theDict objectForKey: maker] removeObjectAtIndex: carLocation];
+    }
+    NSLog(@"error");
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
     UINavigationController *rootVC = (UINavigationController*)window.rootViewController;
     EGViewController *homebase = [rootVC viewControllers][0];
     [homebase writeDictionaryToPlist: theDict];
+
     [super viewWillDisappear:animated];
 }
 
+- (IBAction)deleteThisDude:(id)sender {
+    UIAlertView *confirm = [[UIAlertView alloc] initWithTitle:@"Confirm Delete"
+                                                      message:@"Would you like to delete this car?"
+                                                     delegate:self
+                                            cancelButtonTitle:@"Yes"
+                                            otherButtonTitles:@"No",
+                            nil];
+  
+    [confirm show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    
+    if (buttonIndex == 0)
+    {
+        willDelete = YES;
+    }
+    
+}
 @end

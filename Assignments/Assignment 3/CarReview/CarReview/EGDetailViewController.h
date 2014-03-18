@@ -23,5 +23,8 @@
 
 @property (strong, nonatomic) NSDictionary *theCar;
 @property (strong, nonatomic) NSArray *theRatings;
+@property BOOL willDelete;
+
+- (IBAction)deleteThisDude:(id)sender;
 
 @end

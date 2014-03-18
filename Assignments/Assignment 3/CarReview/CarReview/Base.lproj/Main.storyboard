@@ -317,7 +317,11 @@
                                 <segue destination="PZz-HF-Ci3" kind="unwind" identifier="unwindToEGModelViewControllerFromDetailID" unwindAction="unwindToEGModelViewController:" id="lW6-3g-iHb"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="eRD-EW-3So"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="eRD-EW-3So">
+                            <connections>
+                                <action selector="deleteThisDude:" destination="Fzt-0P-BDa" id="eAa-SD-oWg"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="descriptionLabel" destination="LbK-uv-j3j" id="uVf-Ad-NLt"/>
