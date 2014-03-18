@@ -13,7 +13,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *modelTextField;
 @property (weak, nonatomic) IBOutlet UILabel *ratingLabel;
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
-@property (weak, nonatomic) IBOutlet UINavigationBar *titleBar;
+@property (weak, nonatomic) IBOutlet UINavigationItem *theTitleBar;
+
 - (IBAction)cancelBtn:(id)sender;
 - (IBAction)saveBtn:(id)sender;
 

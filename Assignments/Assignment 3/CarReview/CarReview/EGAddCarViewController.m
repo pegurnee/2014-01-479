@@ -10,7 +10,7 @@
 
 @implementation EGAddCarViewController
 
-@synthesize theDict, theRatings, ratingLabel, maker, willSave;
+@synthesize theDict, theRatings, ratingLabel, maker, willSave, theTitleBar;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,6 +30,7 @@
     
     ratingLabel.text = theRatings[0];
     willSave = NO;
+    theTitleBar.title = [[NSString alloc] initWithFormat: @"Add a new %@ vehicle", maker];
     
 }
 
@@ -66,6 +67,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     
+    cell.textLabel.textAlignment = NSTextAlignmentCenter;
     cell.textLabel.text = theRatings[indexPath.row];
     
     return cell;
@@ -73,7 +75,7 @@
 
 //sets the height of each cell
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 20;
+    return 30;
 }
 
 //all the actions when a rating is chosen
