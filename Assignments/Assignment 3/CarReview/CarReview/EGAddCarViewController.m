@@ -81,6 +81,11 @@
     ratingNumber = [[NSNumber alloc] initWithLong: indexPath.row];
 }
 
+- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [descriptionTextView resignFirstResponder];
+    [modelTextField resignFirstResponder];
+}
+
 #pragma mark navigation
 //while the view is closing
 - (void)viewWillDisappear:(BOOL)animated {
