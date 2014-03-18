@@ -10,7 +10,7 @@
 
 @implementation EGAddCarViewController
 
-@synthesize theDict, theRatings, ratingLabel, maker, willSave, theTitleBar, theNewCar;
+@synthesize theDict, theRatings, ratingLabel, maker, willSave, theTitleBar, theNewCar, descriptionTextView, modelTextField;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,7 +31,6 @@
     ratingLabel.text = theRatings[0];
     willSave = NO;
     theTitleBar.title = [[NSString alloc] initWithFormat: @"Add a new %@ vehicle", maker];
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -104,5 +103,8 @@
 
 - (IBAction)saveBtn:(id)sender {
     willSave = YES;
+    //model, rating, image, description
+    NSArray *data = [NSArray alloc] initWithObjects: modelTextField.text, ,descriptionTextView.text, nil
+    theNewCar = [NSDictionary alloc] initWithObjects:<#(NSArray *)#> forKeys:<#(NSArray *)#>
 }
 @end
