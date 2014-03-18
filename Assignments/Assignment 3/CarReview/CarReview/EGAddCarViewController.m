@@ -10,7 +10,7 @@
 
 @implementation EGAddCarViewController
 
-@synthesize theDict, theRatings, ratingLabel, maker;
+@synthesize theDict, theRatings, ratingLabel, maker, willSave;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,6 +29,7 @@
     theRatings = [[NSArray alloc] initWithContentsOfFile: ratingsFilePath];
     
     ratingLabel.text = theRatings[0];
+    willSave = NO;
     
 }
 
@@ -84,4 +85,22 @@
      */
 }
 
+//while the view is closing
+- (void)viewWillDisappear:(BOOL)animated {
+    if ([self.navigationController.viewControllers indexOfObject:self] == NSNotFound) {
+        if (willSave) {
+            [self performSegueWithIdentifier:@"unwindToEGModelViewControllerFromAddSaveID" sender:self];
+        } else {
+            [self performSegueWithIdentifier:@"unwindToEGModelViewControllerFromAddCancelID" sender:self];
+        }
+    }
+    [super viewWillDisappear:animated];
+}
+
+- (IBAction)cancelBtn:(id)sender {
+}
+
+- (IBAction)saveBtn:(id)sender {
+    willSave = YES;
+}
 @end

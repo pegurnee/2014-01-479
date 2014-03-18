@@ -14,10 +14,13 @@
 @property (weak, nonatomic) IBOutlet UILabel *ratingLabel;
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
 @property (weak, nonatomic) IBOutlet UINavigationBar *titleBar;
+- (IBAction)cancelBtn:(id)sender;
+- (IBAction)saveBtn:(id)sender;
 
 @property (strong, nonatomic) NSMutableDictionary *theDict;
 
 @property (strong, nonatomic) NSArray *theRatings;
 @property (strong, nonatomic) NSString *maker;
+@property BOOL willSave;
 
 @end

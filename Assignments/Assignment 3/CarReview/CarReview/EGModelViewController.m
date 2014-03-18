@@ -97,6 +97,8 @@
         EGDetailViewController *returnVC = segue.sourceViewController;
         tableData = [returnVC.theDict objectForKey: theTitle];
         theDict = returnVC.theDict;
+    } else if ([segue.identifier isEqualToString: @"unwindToEGModelViewControllerFromAddCancelID"]) {
+        
     }
 }
 
