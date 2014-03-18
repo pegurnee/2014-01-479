@@ -80,10 +80,6 @@
 
 //while the view is closing
 - (void)viewWillDisappear:(BOOL)animated {
-    if ([self.navigationController.viewControllers indexOfObject:self] == NSNotFound) {
-        [self performSegueWithIdentifier:@"unwindToEGModelViewControllerFromDetailID" sender:self];
-    }
-    
     if (willDelete) {
         [[theDict objectForKey: maker] removeObjectAtIndex: carLocation];
     }
@@ -92,6 +88,10 @@
     UINavigationController *rootVC = (UINavigationController*)window.rootViewController;
     EGViewController *homebase = [rootVC viewControllers][0];
     [homebase writeDictionaryToPlist: theDict];
+    
+    if ([self.navigationController.viewControllers indexOfObject:self] == NSNotFound) {
+        [self performSegueWithIdentifier:@"unwindToEGModelViewControllerFromDetailID" sender:self];
+    }
 
     [super viewWillDisappear:animated];
 }

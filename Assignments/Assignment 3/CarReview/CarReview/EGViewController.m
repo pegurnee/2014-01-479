@@ -42,7 +42,7 @@
     
     //the logos to be used
     NSString *imageFilePath = [[NSBundle mainBundle] pathForResource:@"Images" ofType:@"plist"];
-    logos = [[NSArray alloc] initWithContentsOfFile: imageFilePath];
+    logos = [[NSDictionary alloc] initWithContentsOfFile: imageFilePath];
     
     [self.myTableView reloadData];
 }
@@ -70,11 +70,11 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     
-    cell.imageView.image = [UIImage imageNamed: logos[indexPath.row]];
-    
-    cell.textLabel.text = [theMake objectAtIndex:indexPath.row];
+    NSString *makeForCell = [theMake objectAtIndex:indexPath.row];
+    cell.textLabel.text = makeForCell;
+    cell.imageView.image = [UIImage imageNamed: [logos objectForKey: makeForCell]];
     cell.detailTextLabel.text = [[NSString alloc] initWithFormat: @"%lu Car Models",
-                                 (unsigned long)[[theDict objectForKey: theMake[indexPath.row]] count]];
+                                 (unsigned long)[[theDict objectForKey: makeForCell] count]];
     
     return cell;
 }
@@ -87,8 +87,8 @@
 //everytime the view shows up, save the data
 -(void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear: animated];
+    theDict = [self dictionaryFromPlist];
     [self.myTableView reloadData];
-    [self writeDictionaryToPlist: theDict];
 }
 
 //sends title and table data for the model

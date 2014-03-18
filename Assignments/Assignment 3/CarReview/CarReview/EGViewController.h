@@ -15,7 +15,7 @@
 
 @property (strong, nonatomic) NSMutableDictionary *theDict;
 
-@property (strong, nonatomic) NSArray *logos;
+@property (strong, nonatomic) NSDictionary *logos;
 @property (strong, nonatomic) NSArray *theMake;
 @property (strong, nonatomic) NSString *filePath;
 

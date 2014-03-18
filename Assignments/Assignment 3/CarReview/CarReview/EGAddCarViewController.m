@@ -27,13 +27,8 @@
     // Do any additional setup after loading the view.
     NSString *ratingsFilePath = [[NSBundle mainBundle] pathForResource:@"Ratings" ofType:@"plist"];
     theRatings = [[NSArray alloc] initWithContentsOfFile: ratingsFilePath];
-    NSArray *logos = [[NSArray alloc] initWithContentsOfFile: [[NSBundle mainBundle] pathForResource:@"Images" ofType:@"plist"]];
-    
-    if ([maker isEqualToString: @"GM"]) {
-        imageName = logos[1];
-    } else {
-        imageName = logos[0];
-    }
+    NSDictionary *logos = [[NSDictionary alloc] initWithContentsOfFile: [[NSBundle mainBundle] pathForResource:@"Images" ofType:@"plist"]];
+    imageName = [logos objectForKey: maker];
     
     ratingNumber = [[NSNumber alloc] initWithLong: 0];
     ratingLabel.text = theRatings[0];
