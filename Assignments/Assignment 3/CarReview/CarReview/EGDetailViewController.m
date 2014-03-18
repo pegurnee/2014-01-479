@@ -83,12 +83,11 @@
     if ([self.navigationController.viewControllers indexOfObject:self] == NSNotFound) {
         [self performSegueWithIdentifier:@"unwindToEGModelViewControllerFromDetailID" sender:self];
     }
-    NSLog(@"leaving");
     
     if (willDelete) {
         [[theDict objectForKey: maker] removeObjectAtIndex: carLocation];
     }
-    NSLog(@"error");
+    
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
     UINavigationController *rootVC = (UINavigationController*)window.rootViewController;
     EGViewController *homebase = [rootVC viewControllers][0];
