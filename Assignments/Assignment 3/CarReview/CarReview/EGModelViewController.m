@@ -76,6 +76,14 @@
     [self.myTableView reloadData];
 }
 
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        //add code here for when you hit delete
+        [[theDict objectForKey: theTitle] removeObjectAtIndex: indexPath.row];
+        [myTableView reloadData];
+    }
+}
+
 //sends title and table data for the model
 -(void) prepareForSegue:(UIStoryboardSegue *)segue
                  sender:(id)sender {
@@ -105,7 +113,9 @@
 }
 
 -(void) viewWillDisappear:(BOOL)animated {
-    
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    EG *rootVC = [UIApplication sharedApplication].keyWindow.rootViewController;
+    rootVC write
     [super viewWillDisappear:animated];
 }
 
