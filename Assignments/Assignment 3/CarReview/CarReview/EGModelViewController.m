@@ -97,14 +97,17 @@
 - (IBAction)unwindToEGModelViewController:(UIStoryboardSegue *)segue {
     if ([segue.identifier isEqualToString: @"unwindToEGModelViewControllerFromDetailID"]) {
         EGDetailViewController *returnVC = segue.sourceViewController;
-        tableData = [returnVC.theDict objectForKey: theTitle];
         theDict = returnVC.theDict;
     } else if ([segue.identifier isEqualToString: @"unwindToEGModelViewControllerFromAddID"]) {
         EGAddCarViewController *returnVC = segue.sourceViewController;
-        //tableData = [returnVC.theDict objectForKey: theTitle];
         theDict = returnVC.theDict;
-        NSLog(@"error");
     }
 }
+
+-(void) viewWillDisappear:(BOOL)animated {
+    
+    [super viewWillDisappear:animated];
+}
+
 
 @end

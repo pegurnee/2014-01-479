@@ -115,7 +115,6 @@
                                     <navigationItem title="Title" id="RUA-I9-Idz">
                                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="3Un-Gj-tl2">
                                             <connections>
-                                                <action selector="cancelBtn:" destination="thx-aB-yig" id="eTx-MH-bwb"/>
                                                 <segue destination="N91-Kf-mo0" kind="unwind" identifier="unwindToEGModelViewControllerFromAddID" unwindAction="unwindToEGModelViewController:" id="8P6-Yh-xZw"/>
                                             </connections>
                                         </barButtonItem>

@@ -109,9 +109,6 @@
         [modelVC setTheDict: theDict];
 }
 
-- (IBAction)cancelBtn:(id)sender {
-}
-
 - (IBAction)saveBtn:(id)sender {
     willSave = YES;
     //model, rating, image, description

@@ -16,7 +16,6 @@
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
 @property (weak, nonatomic) IBOutlet UINavigationItem *theTitleBar;
 
-- (IBAction)cancelBtn:(id)sender;
 - (IBAction)saveBtn:(id)sender;
 
 @property (strong, nonatomic) NSMutableDictionary *theDict;
