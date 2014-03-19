@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ByTheWay</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="smart_id">Hint: You are smart</string>
+    <string name="click_command">CLICK HERE</string>
+    <string name="u_r_smrt_str">You are smart!</string>
+
+</resources>
