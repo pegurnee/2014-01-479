@@ -87,7 +87,6 @@
 //sends title and table data for the model
 -(void) prepareForSegue:(UIStoryboardSegue *)segue
                  sender:(id)sender {
-    NSLog(@"%@", [segue.destinationViewController class]);
     if ([segue.identifier isEqualToString: @"toDetailView"]) {
         NSIndexPath *indexPath = [self.myTableView indexPathForSelectedRow];
         EGDetailViewController *detailVC = segue.destinationViewController;
