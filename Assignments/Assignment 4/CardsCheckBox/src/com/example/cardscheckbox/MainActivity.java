@@ -12,7 +12,7 @@ import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ImageView;
 
-@TargetApi(Build.VERSION_CODES.HONEYCOMB) public class MainActivity extends Activity {
+@TargetApi(Build.VERSION_CODES.JELLY_BEAN) public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,16 +43,16 @@ import android.widget.ImageView;
 				boolean isChecked) {
 			switch (theBox.getId()) {
 			case R.id.c_chbx:
-				((ImageView)MainActivity.this.findViewById(R.id.c_img)).setAlpha(isChecked ? 1.0f : .3f);
+				((ImageView)MainActivity.this.findViewById(R.id.c_img)).setImageAlpha(isChecked ? 255 : 76);
 				break;
 			case R.id.d_chbx:
-				((ImageView)MainActivity.this.findViewById(R.id.d_img)).setAlpha(isChecked ? 1.0f : .3f);
+				((ImageView)MainActivity.this.findViewById(R.id.d_img)).setImageAlpha(isChecked ? 255 : 76);
 				break;
 			case R.id.h_chbx:
-				((ImageView)MainActivity.this.findViewById(R.id.h_img)).setAlpha(isChecked ? 1.0f : .3f);
+				((ImageView)MainActivity.this.findViewById(R.id.h_img)).setImageAlpha(isChecked ? 255 : 76);
 				break;
 			case R.id.s_chbx:
-				((ImageView)MainActivity.this.findViewById(R.id.s_img)).setAlpha(isChecked ? 1.0f : .3f);
+				((ImageView)MainActivity.this.findViewById(R.id.s_img)).setImageAlpha(isChecked ? 255 : 76);
 				break;
 			}
 		}
@@ -63,7 +63,17 @@ import android.widget.ImageView;
 
 		@Override
 		public void onClick(View v) {
-			
+			if (v.getId() == R.id.hide_btn) {
+				((ImageView)MainActivity.this.findViewById(R.id.c_img)).setImageAlpha(76);
+				((ImageView)MainActivity.this.findViewById(R.id.d_img)).setImageAlpha(76);
+				((ImageView)MainActivity.this.findViewById(R.id.h_img)).setImageAlpha(76);
+				((ImageView)MainActivity.this.findViewById(R.id.s_img)).setImageAlpha(76);
+			} else {
+				((ImageView)MainActivity.this.findViewById(R.id.c_img)).setImageAlpha(255);
+				((ImageView)MainActivity.this.findViewById(R.id.d_img)).setImageAlpha(255);
+				((ImageView)MainActivity.this.findViewById(R.id.h_img)).setImageAlpha(255);
+				((ImageView)MainActivity.this.findViewById(R.id.s_img)).setImageAlpha(255);
+			}
 			
 		}
     	
