@@ -38,7 +38,6 @@
         android:id="@+id/imageView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/imageView4"
         android:layout_alignLeft="@+id/textView1"
         android:src="@drawable/clubs_pic" />
 
@@ -46,7 +45,6 @@
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/imageView4"
         android:layout_toLeftOf="@+id/imageView3"
         android:layout_toRightOf="@+id/imageView1"
         android:src="@drawable/diamd_pic" />
@@ -55,17 +53,8 @@
         android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/imageView4"
         android:layout_centerHorizontal="true"
         android:src="@drawable/heart_pic" />
-
-    <CheckBox
-        android:id="@+id/checkBox1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignTop="@+id/imageView4"
-        android:text="CheckBox" />
 
     <CheckBox
         android:id="@+id/checkBox2"
@@ -96,7 +85,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/button2"
-        android:layout_centerVertical="true"
+        android:layout_alignTop="@+id/imageView3"
+        android:layout_marginLeft="14dp"
         android:src="@drawable/spade_pic" />
+
+    <CheckBox
+        android:id="@+id/checkBox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageView1"
+        android:layout_below="@+id/imageView1"
+        android:layout_marginTop="73dp"
+        android:text="CheckBox" />
 
 </RelativeLayout>
