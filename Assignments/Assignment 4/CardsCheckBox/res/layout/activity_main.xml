@@ -9,93 +9,90 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
-
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/hide_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="24dp"
-        android:text="Button" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button1"
-        android:layout_alignBottom="@+id/button1"
+        android:layout_alignBaseline="@+id/show_btn"
+        android:layout_alignBottom="@+id/show_btn"
         android:layout_alignParentRight="true"
         android:layout_marginRight="36dp"
-        android:text="Button" />
+        android:text="@string/hide_all_str" />
 
     <ImageView
-        android:id="@+id/imageView1"
+        android:id="@+id/h_img"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:src="@drawable/clubs_pic" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toLeftOf="@+id/imageView3"
-        android:layout_toRightOf="@+id/imageView1"
-        android:src="@drawable/diamd_pic" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
+        android:layout_alignBottom="@+id/s_img"
+        android:layout_alignTop="@+id/s_img"
+        android:layout_toLeftOf="@+id/d_img"
+        android:layout_toRightOf="@+id/s_img"
         android:src="@drawable/heart_pic" />
 
-    <CheckBox
-        android:id="@+id/checkBox2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/checkBox1"
-        android:layout_below="@+id/checkBox1"
-        android:text="CheckBox" />
-
-    <CheckBox
-        android:id="@+id/checkBox3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/checkBox2"
-        android:layout_below="@+id/checkBox2"
-        android:text="CheckBox" />
-
-    <CheckBox
-        android:id="@+id/checkBox4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/checkBox3"
-        android:layout_below="@+id/checkBox3"
-        android:text="CheckBox" />
-
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/s_img"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button2"
-        android:layout_alignTop="@+id/imageView3"
-        android:layout_marginLeft="14dp"
+        android:layout_marginTop="35dp"
         android:src="@drawable/spade_pic" />
 
     <CheckBox
-        android:id="@+id/checkBox1"
+        android:id="@+id/h_chbx"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/imageView1"
-        android:layout_below="@+id/imageView1"
-        android:layout_marginTop="73dp"
-        android:text="CheckBox" />
+        android:layout_alignLeft="@+id/s_chbx"
+        android:layout_below="@+id/s_chbx"
+        android:text="@string/h_str" />
+
+    <CheckBox
+        android:id="@+id/d_chbx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/s_chbx"
+        android:layout_below="@+id/h_chbx"
+        android:text="@string/d_str" />
+
+    <CheckBox
+        android:id="@+id/c_chbx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/s_chbx"
+        android:layout_below="@+id/d_chbx"
+        android:text="@string/c_str" />
+
+    <ImageView
+        android:id="@+id/d_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/h_img"
+        android:layout_marginRight="22dp"
+        android:layout_toLeftOf="@+id/c_img"
+        android:src="@drawable/diamd_pic" />
+
+    <CheckBox
+        android:id="@+id/s_chbx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/s_img"
+        android:layout_centerVertical="true"
+        android:text="@string/s_str" />
+
+    <ImageView
+        android:id="@+id/c_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/d_img"
+        android:layout_marginRight="23dp"
+        android:src="@drawable/clubs_pic" />
+
+    <Button
+        android:id="@+id/show_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/d_chbx"
+        android:layout_below="@+id/c_chbx"
+        android:layout_marginTop="33dp"
+        android:text="@string/show_all_str" />
 
 </RelativeLayout>

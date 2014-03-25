@@ -4,5 +4,11 @@
     <string name="app_name">CardsCheckBox</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="s_str">Spade</string>
+    <string name="h_str">Heart</string>
+    <string name="d_str">Diamond</string>
+    <string name="c_str">Club</string>
+    <string name="show_all_str">Show All</string>
+    <string name="hide_all_str">Hide All</string>
 
 </resources>
