@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="myBlack">#000000</color>
+    <color name="myDarkBlue">#000099</color>
+    <color name="myDarkGreen">#009900</color>
+    <color name="myDarkTeal">#009999</color>
+    <color name="myDarkRed">#990000</color>
+    <color name="myDarkMagenta">#990099</color>
+    <color name="myDarkYellow">#999900</color>
+    <color name="myLightGray">#CCCCCC</color>
+    <color name="myDarkGray">#999999</color>
+    <color name="myBlue">#0000FF</color>
+    <color name="myGreen">#00FF00</color>
+    <color name="myCyan">#00FFFF</color>
+    <color name="myRed">#FF0000</color>
+    <color name="myMagenta">#FF00FF</color>
+    <color name="myYellow">#FFFF00</color>
+    <color name="myWhite">#FFFFFF</color>
+
+</resources>

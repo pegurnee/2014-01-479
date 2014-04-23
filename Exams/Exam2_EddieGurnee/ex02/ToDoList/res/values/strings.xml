@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ToDoList</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="editHint">type here</string>
+    
+    <string name="myBlack">#000000</string>
+    <string name="myDarkBlue">#000099</string>
+    <string name="myDarkGreen">#009900</string>
+    <string name="myDarkTeal">#009999</string>
+    <string name="myDarkRed">#990000</string>
+    <string name="myDarkMagenta">#990099</string>
+    <string name="myDarkYellow">#999900</string>
+    <string name="myLightGray">#CCCCCC</string>
+    <string name="myDarkGray">#999999</string>
+    <string name="myBlue">#0000FF</string>
+    <string name="myGreen">#00FF00</string>
+    <string name="myCyan">#00FFFF</string>
+    <string name="myRed">#FF0000</string>
+    <string name="myMagenta">#FF00FF</string>
+    <string name="myYellow">#FFFF00</string>
+    <string name="myWhite">#FFFFFF</string>
+    
+  
+
+</resources>
